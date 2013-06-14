@@ -1,0 +1,29 @@
+@(file: String)
+
+<!-- Navigation -->
+<div class="navbar navbar-inverse navbar-fixed-top" id="navigation">
+	<div class="navbar-inner" id="navigation">
+        <div class="container">
+          	<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse" style="margin-top:25px; margin-right:20px;">
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            	<span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="index.html">
+            	<img src="@routes.Assets.at("images/icons/seapal_normal.png")" alt='Icon-Small-50' width='50' height='50' style="float: left; padding-top: 5px; padding-left: 20px"/>
+            	<h2 style="float: left; padding-left:10px; margin-right:100px; font-weight: normal;">Seapal</h2>
+            </a>
+            <div class="nav-collapse collapse">
+            	<ul class="nav nav-pills" style="padding-left:0px; padding-top: 24px; font-size: 18px;">
+			        @if(file == "index") { <li class="active"> } else { <li> } <a href='index.html'>Home</a></li>
+			        @if(file == "app_map") { <li class="active"> } else { <li> } <a href='app_map.html'>App</a></li>
+			        @if(file == "userguide") { <li class="active"> } else { <li> } <a href='userguide.html'>User Guide</a></li>
+			        @if(file == "screenshots") { <li class="active"> } else { <li> } <a href='screenshots.html'>Screenshots</a></li>
+			        @if(file == "about") { <li class="active"> } else { <li> } <a href='about.html'>About</a></li>
+			        @if(file == "contact") { <li class="active"> } else { <li> } <a href='contact.html'>Contact</a></li>
+		        </ul>
+		    </div>
+        </div>
+    </div>
+</div>
+

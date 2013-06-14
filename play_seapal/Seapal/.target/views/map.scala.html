@@ -1,0 +1,82 @@
+@(header: Html)(header_app: Html)(navigation: Html)(navigation_app: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    
+    	<!-- Header -->
+        @header
+        
+        <!-- Header App -->
+        @header_app
+        
+    </head>
+    <body onload="initialize();">
+    
+    	<!-- Navigation -->
+    	@navigation
+    	
+    	<!-- Container -->
+    	<div class="container-fluid">
+    	
+    		<!-- Navigation -->
+    		@navigation_app
+
+			<!-- Route Menu -->
+			<div id="routeMenuContainer">
+		    	<div id="routeMenu" class="well">
+		    		<h4>Routen Menü</h4>
+		        	<div class="btn-group btn-group-vertical">
+		                <input type="button" class="btn" value="l&ouml;schen" id="deleteRouteButton" class="routeButton" onclick="javascript: deleteRoute()" />
+		                <input type="button" class="btn" value="speichern" id="saveRouteButton" class="routeButton" onclick="javascript: saveRoute()" />
+		                <input type="button" class="btn" value="beenden" id="stopRouteButton" class="routeButton" onclick="javascript: stopRouteMode()" />
+		            </div>
+		        	<br><br>
+		            <div id="route_distance">Routen-L&auml;nge: <span id="route_distance_number"></span> m</div>
+		        </div>
+		    </div>
+		    
+		    <!-- Distance Menu -->
+		    <div id="distanceToolContainer">
+		        <div id="distanceToolMenu" class="well">
+		        	<h4>Distanztool</h4>
+		        	<input type="button" class="btn" value="beenden" id="stopDistanceToolButton" class="distanceToolbutton" onclick="javascript: stopDistanceToolMode()" />
+		        	<br><br>
+		        	<div id="distanceTool_distance">Distanz: <span id="distanceTool_number"></span> m</div>
+		        </div>
+		    </div>
+		    
+		     <!-- Navigation Menu -->
+		    <div id="navigationContainer">
+		        <div id="navigationMenu" class="well">
+		        	<h4>Navigation</h4>
+		        	<input type="button" class="btn" value="beenden" id="stopNavigationButton" class="distanceToolbutton" onclick="javascript: stopNavigationMode()" />
+		        	<br><br>
+		        	<div id="navigation_distance">Distanz: <span id="navigation_number"></span> m</div>
+		        </div>
+		    </div>
+		    
+		    <!-- Current Position -->
+		    <div id="followCurrentPositionContainer">
+		        <div id="followCurrentPosition_button" class="well">
+		            <input type="button" class="btn" value="Eigener Position folgen" id="followCurrentPositionbutton" onclick="javascript: toggleFollowCurrentPosition()" />
+		        </div>
+		    </div>
+		    
+		    <!-- Map -->
+		    <div id="appWrapper">
+		        <div id="map_canvas"></div>
+		    </div>
+		
+		    <!-- Context Menus -->
+		    <div id="temporaryMarkerContextMenu"></div>
+		    <div id="fixedMarkerContextMenu"></div>
+		    <div id="routeContextMenu_active"></div>
+		    <div id="routeContextMenu_inactive"></div>	
+			<div id="chat" align="center">
+		        <div id="chat-area" style="height:200px; width:200px; background-color: white; overflow: auto;"></div>
+			</div>
+		</div><!-- Container -->
+	</body>
+</html>

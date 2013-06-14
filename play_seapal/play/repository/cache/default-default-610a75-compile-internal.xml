@@ -1,0 +1,1258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="default"
+		module="default-610a75"
+		revision="0.1-SNAPSHOT"
+		extra-sbtVersion="0.11.3"
+		extra-scalaVersion="2.9.1"
+		conf="compile-internal"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom"
+		date="20130606215230"/>
+	<dependencies>
+		<module organisation="play" name="sbt-plugin">
+			<revision name="2.0.4" status="release" pubdate="20120928103344" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" extra-sbtVersion="0.11.3" extra-scalaVersion="2.9.1" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="0">
+				<metadata-artifact status="successful" details="" size="4002" time="647" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/scala_2.9.1/sbt_0.11.3/play/sbt-plugin/ivy-2.0.4.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/scala_2.9.1/sbt_0.11.3/play/sbt-plugin/ivy-2.0.4.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.1/sbt_0.11.3/2.0.4/ivys/ivy.xml"/>
+				<caller organisation="default" name="default-610a75" conf="optional, compile, provided, compile-internal" rev="2.0.4" rev-constraint-default="2.0.4" rev-constraint-dynamic="2.0.4" callerrev="0.1-SNAPSHOT" extra-sbtVersion="0.11.3" extra-scalaVersion="2.9.1"/>
+				<artifacts>
+					<artifact name="sbt-plugin" type="jar" ext="jar" status="successful" details="" size="496226" time="1560" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/scala_2.9.1/sbt_0.11.3/play/sbt-plugin/jars/sbt-plugin-2.0.4.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/play/sbt-plugin/scala_2.9.1/sbt_0.11.3/2.0.4/jars/sbt-plugin.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.mpeltonen" name="sbt-idea">
+			<revision name="1.1.0-M2-TYPESAFE" status="release" pubdate="20120505230716" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" extra-sbtVersion="0.11.3" extra-scalaVersion="2.9.1" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="59">
+				<metadata-artifact status="successful" details="" size="1905" time="605" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/scala_2.9.1/sbt_0.11.3/com.github.mpeltonen/sbt-idea/ivy-1.1.0-M2-TYPESAFE.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/scala_2.9.1/sbt_0.11.3/com.github.mpeltonen/sbt-idea/ivy-1.1.0-M2-TYPESAFE.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/com.github.mpeltonen/sbt-idea/scala_2.9.1/sbt_0.11.3/1.1.0-M2-TYPESAFE/ivys/ivy.xml"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="1.1.0-M2-TYPESAFE" rev-constraint-default="1.1.0-M2-TYPESAFE" rev-constraint-dynamic="1.1.0-M2-TYPESAFE" callerrev="2.0.4" extra-sbtVersion="0.11.3" extra-scalaVersion="2.9.1"/>
+				<artifacts>
+					<artifact name="sbt-idea" type="jar" ext="jar" status="successful" details="" size="262959" time="853" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/scala_2.9.1/sbt_0.11.3/com.github.mpeltonen/sbt-idea/jars/sbt-idea-1.1.0-M2-TYPESAFE.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/com.github.mpeltonen/sbt-idea/scala_2.9.1/sbt_0.11.3/1.1.0-M2-TYPESAFE/jars/sbt-idea.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.sbteclipse" name="sbteclipse-core">
+			<revision name="2.1.0-M2" status="release" pubdate="20120507081625" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" extra-sbtVersion="0.11.3" extra-scalaVersion="2.9.1" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="57">
+				<metadata-artifact status="successful" details="" size="1752" time="743" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/scala_2.9.1/sbt_0.11.3/com.typesafe.sbteclipse/sbteclipse-core/ivy-2.1.0-M2.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/scala_2.9.1/sbt_0.11.3/com.typesafe.sbteclipse/sbteclipse-core/ivy-2.1.0-M2.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbteclipse/sbteclipse-core/scala_2.9.1/sbt_0.11.3/2.1.0-M2/ivys/ivy.xml"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="2.1.0-M2" rev-constraint-default="2.1.0-M2" rev-constraint-dynamic="2.1.0-M2" callerrev="2.0.4" extra-sbtVersion="0.11.3" extra-scalaVersion="2.9.1"/>
+				<artifacts>
+					<artifact name="sbteclipse-core" type="jar" ext="jar" status="successful" details="" size="210796" time="846" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/scala_2.9.1/sbt_0.11.3/com.typesafe.sbteclipse/sbteclipse-core/jars/sbteclipse-core-2.1.0-M2.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbteclipse/sbteclipse-core/scala_2.9.1/sbt_0.11.3/2.1.0-M2/jars/sbteclipse-core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scalaz" name="scalaz-core_2.9.1">
+			<revision name="6.0.3" status="release" pubdate="20120905001001" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="58">
+				<metadata-artifact status="no" details="" size="2378" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scalaz/scalaz-core_2.9.1/ivy-6.0.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scalaz/scalaz-core_2.9.1/6.0.3/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scalaz/scalaz-core_2.9.1/6.0.3/ivys/ivy.xml"/>
+				<caller organisation="com.typesafe.sbteclipse" name="sbteclipse-core" conf="compile" rev="6.0.3" rev-constraint-default="6.0.3" rev-constraint-dynamic="6.0.3" callerrev="2.1.0-M2"/>
+				<artifacts>
+					<artifact name="scalaz-core_2.9.1" type="jar" ext="jar" status="no" details="" size="4353133" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scalaz/scalaz-core_2.9.1/6.0.3/jars/scalaz-core_2.9.1.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scalaz/scalaz-core_2.9.1/6.0.3/jars/scalaz-core_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.pegdown" name="pegdown">
+			<revision name="1.1.0" status="release" pubdate="20120905000956" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="50">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2888" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.pegdown/pegdown/ivy-1.1.0.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.pegdown/pegdown/1.1.0/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.pegdown/pegdown/1.1.0/ivys/ivy.xml"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="1.1.0" rev-constraint-default="1.1.0" rev-constraint-dynamic="1.1.0" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="pegdown" type="jar" ext="jar" status="no" details="" size="60345" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.pegdown/pegdown/1.1.0/jars/pegdown.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.pegdown/pegdown/1.1.0/jars/pegdown.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.parboiled" name="parboiled-java">
+			<revision name="1.0.2" status="release" pubdate="20120905000956" resolver="local" artresolver="local" homepage="http://parboiled.org/" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="52">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2974" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.parboiled/parboiled-java/ivy-1.0.2.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.parboiled/parboiled-java/1.0.2/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.parboiled/parboiled-java/1.0.2/ivys/ivy.xml"/>
+				<caller organisation="org.pegdown" name="pegdown" conf="default, compile, runtime, master" rev="1.0.2" rev-constraint-default="1.0.2" rev-constraint-dynamic="1.0.2" callerrev="1.1.0"/>
+				<artifacts>
+					<artifact name="parboiled-java" type="jar" ext="jar" status="no" details="" size="83356" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.parboiled/parboiled-java/1.0.2/jars/parboiled-java.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.parboiled/parboiled-java/1.0.2/jars/parboiled-java.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="asm" name="asm-analysis">
+			<revision name="3.3.1" status="release" pubdate="20120905000959" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="56">
+				<metadata-artifact status="no" details="" size="3410" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/asm/asm-analysis/ivy-3.3.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-analysis/3.3.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-analysis/3.3.1/ivys/ivy.xml"/>
+				<caller organisation="org.parboiled" name="parboiled-java" conf="compile, runtime" rev="3.3.1" rev-constraint-default="3.3.1" rev-constraint-dynamic="3.3.1" callerrev="1.0.2"/>
+				<artifacts>
+					<artifact name="asm-analysis" type="jar" ext="jar" status="no" details="" size="18358" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-analysis/3.3.1/jars/asm-analysis.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-analysis/3.3.1/jars/asm-analysis.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="asm" name="asm-util">
+			<revision name="3.3.1" status="release" pubdate="20120905000958" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="54">
+				<metadata-artifact status="no" details="" size="3402" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/asm/asm-util/ivy-3.3.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-util/3.3.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-util/3.3.1/ivys/ivy.xml"/>
+				<caller organisation="org.parboiled" name="parboiled-java" conf="compile, runtime" rev="3.3.1" rev-constraint-default="3.3.1" rev-constraint-dynamic="3.3.1" callerrev="1.0.2"/>
+				<artifacts>
+					<artifact name="asm-util" type="jar" ext="jar" status="no" details="" size="36964" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-util/3.3.1/jars/asm-util.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-util/3.3.1/jars/asm-util.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="asm" name="asm-tree">
+			<revision name="3.3.1" status="release" pubdate="20120905000959" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="55">
+				<metadata-artifact status="no" details="" size="3397" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/asm/asm-tree/ivy-3.3.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-tree/3.3.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-tree/3.3.1/ivys/ivy.xml"/>
+				<caller organisation="asm" name="asm-util" conf="compile, runtime" rev="3.3.1" rev-constraint-default="3.3.1" rev-constraint-dynamic="3.3.1" callerrev="3.3.1"/>
+				<caller organisation="org.parboiled" name="parboiled-java" conf="compile, runtime" rev="3.3.1" rev-constraint-default="3.3.1" rev-constraint-dynamic="3.3.1" callerrev="1.0.2"/>
+				<caller organisation="asm" name="asm-analysis" conf="compile, runtime" rev="3.3.1" rev-constraint-default="3.3.1" rev-constraint-dynamic="3.3.1" callerrev="3.3.1"/>
+				<artifacts>
+					<artifact name="asm-tree" type="jar" ext="jar" status="no" details="" size="21507" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-tree/3.3.1/jars/asm-tree.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm-tree/3.3.1/jars/asm-tree.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="asm" name="asm">
+			<revision name="3.3.1" status="release" pubdate="20120905000957" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="53">
+				<metadata-artifact status="no" details="" size="2814" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/asm/asm/ivy-3.3.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm/3.3.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm/3.3.1/ivys/ivy.xml"/>
+				<caller organisation="org.parboiled" name="parboiled-java" conf="compile, runtime" rev="3.3.1" rev-constraint-default="3.3.1" rev-constraint-dynamic="3.3.1" callerrev="1.0.2"/>
+				<caller organisation="asm" name="asm-tree" conf="compile, runtime" rev="3.3.1" rev-constraint-default="3.3.1" rev-constraint-dynamic="3.3.1" callerrev="3.3.1"/>
+				<artifacts>
+					<artifact name="asm" type="jar" ext="jar" status="no" details="" size="43581" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm/3.3.1/jars/asm.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/asm/asm/3.3.1/jars/asm.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.parboiled" name="parboiled-core">
+			<revision name="1.0.2" status="release" pubdate="20120904235118" resolver="local" artresolver="local" homepage="http://parboiled.org/" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="51">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2306" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.parboiled/parboiled-core/ivy-1.0.2.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.parboiled/parboiled-core/1.0.2/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.parboiled/parboiled-core/1.0.2/ivys/ivy.xml"/>
+				<caller organisation="org.parboiled" name="parboiled-java" conf="compile, runtime" rev="1.0.2" rev-constraint-default="1.0.2" rev-constraint-dynamic="1.0.2" callerrev="1.0.2"/>
+				<caller organisation="org.pegdown" name="pegdown" conf="default, compile, runtime, master" rev="1.0.2" rev-constraint-default="1.0.2" rev-constraint-dynamic="1.0.2" callerrev="1.1.0"/>
+				<artifacts>
+					<artifact name="parboiled-core" type="jar" ext="jar" status="no" details="" size="211833" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.parboiled/parboiled-core/1.0.2/jars/parboiled-core.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.parboiled/parboiled-core/1.0.2/jars/parboiled-core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.javascript" name="closure-compiler">
+			<revision name="rr2079.1" status="release" pubdate="20120905005331" resolver="local" artresolver="local" homepage="http://code.google.com/p/closure-compiler/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="48">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="3986" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.google.javascript/closure-compiler/ivy-rr2079.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.javascript/closure-compiler/rr2079.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.javascript/closure-compiler/rr2079.1/ivys/ivy.xml"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="rr2079.1" rev-constraint-default="rr2079.1" rev-constraint-dynamic="rr2079.1" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="closure-compiler" type="jar" ext="jar" status="no" details="" size="3399207" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.javascript/closure-compiler/rr2079.1/jars/closure-compiler.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.javascript/closure-compiler/rr2079.1/jars/closure-compiler.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="rhino" name="js">
+			<revision name="1.7R2" status="release" pubdate="20120905000954" resolver="local" artresolver="local" homepage="http://www.mozilla.org/rhino/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="47">
+				<license name="Mozilla Public License" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
+				<metadata-artifact status="no" details="" size="2468" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/rhino/js/ivy-1.7R2.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/rhino/js/1.7R2/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/rhino/js/1.7R2/ivys/ivy.xml"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="1.7R2" rev-constraint-default="1.7R2" rev-constraint-dynamic="1.7R2" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="js" type="jar" ext="jar" status="no" details="" size="871260" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/rhino/js/1.7R2/jars/js.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/rhino/js/1.7R2/jars/js.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.config" name="config">
+			<revision name="0.2.1" status="release" pubdate="20120905000954" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="46">
+				<metadata-artifact status="no" details="" size="2610" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.typesafe.config/config/ivy-0.2.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.config/config/0.2.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.config/config/0.2.1/ivys/ivy.xml"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="0.2.1" rev-constraint-default="0.2.1" rev-constraint-dynamic="0.2.1" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="config" type="jar" ext="jar" status="no" details="" size="140079" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.config/config/0.2.1/jars/config.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.config/config/0.2.1/jars/config.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="play" name="console_2.9.1">
+			<revision name="2.0.4" status="release" pubdate="20121001111014" resolver="local" artresolver="local" downloaded="false" searched="true" default="false" conf="default(compile), compile" position="45">
+				<metadata-artifact status="no" details="" size="1750" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/play/console_2.9.1/ivy-2.0.4.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/console_2.9.1/2.0.4/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/console_2.9.1/2.0.4/ivys/ivy.xml"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="2.0.4" rev-constraint-default="2.0.4" rev-constraint-dynamic="2.0.4" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="console_2.9.1" type="jar" ext="jar" status="no" details="" size="33289" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/console_2.9.1/2.0.4/jars/console_2.9.1.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/console_2.9.1/2.0.4/jars/console_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="play" name="play_2.9.1">
+			<revision name="2.0.4" status="release" pubdate="20121001111312" resolver="local" artresolver="local" downloaded="false" searched="true" default="false" conf="default(compile), compile" position="1">
+				<metadata-artifact status="no" details="" size="8129" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/play/play_2.9.1/ivy-2.0.4.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/play_2.9.1/2.0.4/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/play_2.9.1/2.0.4/ivys/ivy.xml"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="2.0.4" rev-constraint-default="2.0.4" rev-constraint-dynamic="2.0.4" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="play_2.9.1" type="jar" ext="jar" status="no" details="" size="4725939" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/play_2.9.1/2.0.4/jars/play_2.9.1.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/play_2.9.1/2.0.4/jars/play_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="net.sf.ehcache" name="ehcache-core">
+			<revision name="2.5.0" status="release" pubdate="20120905000952" resolver="local" artresolver="local" homepage="http://ehcache.org" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="44">
+				<license name="The Apache Software License, Version 2.0" url="src/assemble/EHCACHE-CORE-LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="16997" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/net.sf.ehcache/ehcache-core/ivy-2.5.0.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/net.sf.ehcache/ehcache-core/2.5.0/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/net.sf.ehcache/ehcache-core/2.5.0/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="2.5.0" rev-constraint-default="2.5.0" rev-constraint-dynamic="2.5.0" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="ehcache-core" type="jar" ext="jar" status="no" details="" size="1209286" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/net.sf.ehcache/ehcache-core/2.5.0/jars/ehcache-core.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/net.sf.ehcache/ehcache-core/2.5.0/jars/ehcache-core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="jaxen" name="jaxen">
+			<revision name="1.1.3" status="release" pubdate="20120905000951" resolver="local" artresolver="local" homepage="http://jaxen.codehaus.org/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="43">
+				<license name="The Werken Company License" url="http://jaxen.codehaus.org/license.html"/>
+				<metadata-artifact status="no" details="" size="3485" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/jaxen/jaxen/ivy-1.1.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/jaxen/jaxen/1.1.3/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/jaxen/jaxen/1.1.3/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.1.3" rev-constraint-default="1.1.3" rev-constraint-dynamic="1.1.3" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="jaxen" type="jar" ext="jar" status="no" details="" size="223395" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/jaxen/jaxen/1.1.3/jars/jaxen.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/jaxen/jaxen/1.1.3/jars/jaxen.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="tyrex" name="tyrex">
+			<revision name="1.0.1" status="release" pubdate="20120905000950" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="42">
+				<metadata-artifact status="no" details="" size="2176" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/tyrex/tyrex/ivy-1.0.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/tyrex/tyrex/1.0.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/tyrex/tyrex/1.0.1/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="tyrex" type="jar" ext="jar" status="no" details="" size="201315" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/tyrex/tyrex/1.0.1/jars/tyrex.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/tyrex/tyrex/1.0.1/jars/tyrex.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.servlet" name="javax.servlet-api">
+			<revision name="3.0.1" status="release" pubdate="20120905000947" resolver="local" artresolver="local" homepage="http://servlet-spec.java.net" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="40">
+				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
+				<metadata-artifact status="no" details="" size="3676" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/javax.servlet/javax.servlet-api/ivy-3.0.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.servlet/javax.servlet-api/3.0.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.servlet/javax.servlet-api/3.0.1/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="javax.servlet-api" type="jar" ext="jar" status="no" details="" size="85353" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.servlet/javax.servlet-api/3.0.1/jars/javax.servlet-api.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.servlet/javax.servlet-api/3.0.1/jars/javax.servlet-api.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.reflections" name="reflections">
+			<revision name="0.9.6" status="release" pubdate="20120905000944" resolver="local" artresolver="local" homepage="http://code.google.com/p/reflections/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="39">
+				<metadata-artifact status="no" details="" size="3800" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.reflections/reflections/ivy-0.9.6.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.reflections/reflections/0.9.6/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.reflections/reflections/0.9.6/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="0.9.6" rev-constraint-default="0.9.6" rev-constraint-dynamic="0.9.6" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="reflections" type="jar" ext="jar" status="no" details="" size="99030" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.reflections/reflections/0.9.6/jars/reflections.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.reflections/reflections/0.9.6/jars/reflections.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javassist" name="javassist">
+			<revision name="3.12.1.GA" status="release" pubdate="20120905000930" resolver="local" artresolver="local" homepage="http://www.javassist.org/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="49">
+				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
+				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="2832" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/javassist/javassist/ivy-3.12.1.GA.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javassist/javassist/3.12.1.GA/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javassist/javassist/3.12.1.GA/ivys/ivy.xml"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="3.12.1.GA" rev-constraint-default="3.12.1.GA" rev-constraint-dynamic="3.12.1.GA" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="javassist" type="jar" ext="jar" status="no" details="" size="644148" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javassist/javassist/3.12.1.GA/jars/javassist.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javassist/javassist/3.12.1.GA/jars/javassist.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.codahale" name="jerkson_2.9.1">
+			<revision name="0.5.0" status="release" pubdate="20120905000939" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="36">
+				<license name="The MIT License" url="http://codahale.com/mit.txt"/>
+				<metadata-artifact status="no" details="" size="3329" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.codahale/jerkson_2.9.1/ivy-0.5.0.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.codahale/jerkson_2.9.1/0.5.0/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.codahale/jerkson_2.9.1/0.5.0/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="0.5.0" rev-constraint-default="0.5.0" rev-constraint-dynamic="0.5.0" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="jerkson_2.9.1" type="jar" ext="jar" status="no" details="" size="741139" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.codahale/jerkson_2.9.1/0.5.0/jars/jerkson_2.9.1.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.codahale/jerkson_2.9.1/0.5.0/jars/jerkson_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.jackson" name="jackson-mapper-asl">
+			<revision name="1.9.10" status="release" pubdate="20120924074431" resolver="local" artresolver="local" homepage="http://jackson.codehaus.org" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="38">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2655" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.codehaus.jackson/jackson-mapper-asl/ivy-1.9.10.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.codehaus.jackson/jackson-mapper-asl/1.9.10/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.codehaus.jackson/jackson-mapper-asl/1.9.10/ivys/ivy.xml"/>
+				<caller organisation="com.codahale" name="jerkson_2.9.1" conf="default, compile, runtime, master" rev="[1.9.0,2.0.0)" rev-constraint-default="[1.9.0,2.0.0)" rev-constraint-dynamic="[1.9.0,2.0.0)" callerrev="0.5.0"/>
+				<artifacts>
+					<artifact name="jackson-mapper-asl" type="jar" ext="jar" status="no" details="" size="780421" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.codehaus.jackson/jackson-mapper-asl/1.9.10/jars/jackson-mapper-asl.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.codehaus.jackson/jackson-mapper-asl/1.9.10/jars/jackson-mapper-asl.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.codehaus.jackson" name="jackson-core-asl">
+			<revision name="1.9.10" status="release" pubdate="20120924091557" resolver="local" artresolver="local" homepage="http://jackson.codehaus.org" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="37">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2438" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.codehaus.jackson/jackson-core-asl/ivy-1.9.10.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.codehaus.jackson/jackson-core-asl/1.9.10/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.codehaus.jackson/jackson-core-asl/1.9.10/ivys/ivy.xml"/>
+				<caller organisation="org.codehaus.jackson" name="jackson-mapper-asl" conf="compile, runtime" rev="1.9.10" rev-constraint-default="1.9.10" rev-constraint-dynamic="1.9.10" callerrev="1.9.10"/>
+				<caller organisation="com.codahale" name="jerkson_2.9.1" conf="default, compile, runtime, master" rev="[1.9.0,2.0.0)" rev-constraint-default="[1.9.0,2.0.0)" rev-constraint-dynamic="[1.9.0,2.0.0)" callerrev="0.5.0"/>
+				<artifacts>
+					<artifact name="jackson-core-asl" type="jar" ext="jar" status="no" details="" size="232119" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.codehaus.jackson/jackson-core-asl/1.9.10/jars/jackson-core-asl.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.codehaus.jackson/jackson-core-asl/1.9.10/jars/jackson-core-asl.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="oauth.signpost" name="signpost-core">
+			<revision name="1.2.1.1" status="release" pubdate="20120905000935" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="34">
+				<metadata-artifact status="no" details="" size="3106" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/oauth.signpost/signpost-core/ivy-1.2.1.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/oauth.signpost/signpost-core/1.2.1.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/oauth.signpost/signpost-core/1.2.1.1/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.2.1.1" rev-constraint-default="1.2.1.1" rev-constraint-dynamic="1.2.1.1" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="signpost-core" type="jar" ext="jar" status="no" details="" size="44557" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/oauth.signpost/signpost-core/1.2.1.1/jars/signpost-core.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/oauth.signpost/signpost-core/1.2.1.1/jars/signpost-core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-codec" name="commons-codec">
+			<revision name="1.3" status="release" pubdate="20120905000938" resolver="local" artresolver="local" homepage="http://jakarta.apache.org/commons/codec/" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="35">
+				<license name="The Apache Software License, Version 2.0" url="/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="2791" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/commons-codec/commons-codec/ivy-1.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-codec/commons-codec/1.3/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-codec/commons-codec/1.3/ivys/ivy.xml"/>
+				<caller organisation="commons-httpclient" name="commons-httpclient" conf="default, compile, runtime, master" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="3.1"/>
+				<caller organisation="oauth.signpost" name="signpost-core" conf="default, compile, runtime, master" rev="1.3" rev-constraint-default="1.3" rev-constraint-dynamic="1.3" callerrev="1.2.1.1"/>
+				<artifacts>
+					<artifact name="commons-codec" type="jar" ext="jar" status="no" details="" size="46725" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-codec/commons-codec/1.3/jars/commons-codec.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-codec/commons-codec/1.3/jars/commons-codec.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.2" status="release" pubdate="20051124062017" resolver="local" artresolver="local" evicted="latest-revision" evicted-reason="" homepage="" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<metadata-artifact status="no" details="" size="2537" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/commons-codec/commons-codec/ivy-1.2.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-codec/commons-codec/1.2/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-codec/commons-codec/1.2/ivys/ivy.xml"/>
+				<evicted-by rev="1.3"/>
+				<caller organisation="commons-httpclient" name="commons-httpclient" conf="default, compile, runtime, master" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="3.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.ning" name="async-http-client">
+			<revision name="1.7.6" status="release" pubdate="20120906182855" resolver="local" artresolver="local" homepage="http://github.com/sonatype/async-http-client" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="33">
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="7137" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.ning/async-http-client/ivy-1.7.6.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.ning/async-http-client/1.7.6/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.ning/async-http-client/1.7.6/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.7.6" rev-constraint-default="1.7.6" rev-constraint-dynamic="1.7.6" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="async-http-client" type="jar" ext="jar" status="no" details="" size="477054" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.ning/async-http-client/1.7.6/jars/async-http-client.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.ning/async-http-client/1.7.6/jars/async-http-client.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-io" name="commons-io">
+			<revision name="2.0.1" status="release" pubdate="20120905001002" resolver="local" artresolver="local" homepage="http://commons.apache.org/io/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="60">
+				<metadata-artifact status="no" details="" size="6238" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/commons-io/commons-io/ivy-2.0.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-io/commons-io/2.0.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-io/commons-io/2.0.1/ivys/ivy.xml"/>
+				<caller organisation="com.github.mpeltonen" name="sbt-idea" conf="compile" rev="2.0.1" rev-constraint-default="2.0.1" rev-constraint-dynamic="2.0.1" callerrev="1.1.0-M2-TYPESAFE"/>
+				<artifacts>
+					<artifact name="commons-io" type="jar" ext="jar" status="no" details="" size="159509" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-io/commons-io/2.0.1/jars/commons-io.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-io/commons-io/2.0.1/jars/commons-io.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.commons" name="commons-lang3">
+			<revision name="3.1" status="release" pubdate="20120905000604" resolver="local" artresolver="local" homepage="http://commons.apache.org/lang/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="32">
+				<metadata-artifact status="no" details="" size="7774" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.apache.commons/commons-lang3/ivy-3.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.apache.commons/commons-lang3/3.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.apache.commons/commons-lang3/3.1/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="commons-lang3" type="jar" ext="jar" status="no" details="" size="315805" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.apache.commons/commons-lang3/3.1/jars/commons-lang3.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.apache.commons/commons-lang3/3.1/jars/commons-lang3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.javassist" name="javassist">
+			<revision name="3.16.1-GA" status="release" pubdate="20120905005228" resolver="local" artresolver="local" homepage="http://www.javassist.org/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="31">
+				<license name="MPL 1.1" url="http://www.mozilla.org/MPL/MPL-1.1.html"/>
+				<license name="LGPL 2.1" url="http://www.gnu.org/licenses/lgpl-2.1.html"/>
+				<license name="Apache License 2.0" url="http://www.apache.org/licenses/"/>
+				<metadata-artifact status="no" details="" size="3064" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.javassist/javassist/ivy-3.16.1-GA.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.javassist/javassist/3.16.1-GA/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.javassist/javassist/3.16.1-GA/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="3.16.1-GA" rev-constraint-default="3.16.1-GA" rev-constraint-dynamic="3.16.1-GA" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="javassist" type="jar" ext="jar" status="no" details="" size="659343" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.javassist/javassist/3.16.1-GA/jars/javassist.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.javassist/javassist/3.16.1-GA/jars/javassist.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="2.0" status="release" pubdate="20120905000928" resolver="local" artresolver="local" homepage="http://joda-time.sourceforge.net" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="29">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3299" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/joda-time/joda-time/ivy-2.0.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/joda-time/joda-time/2.0/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/joda-time/joda-time/2.0/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="2.0" rev-constraint-default="2.0" rev-constraint-dynamic="2.0" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="joda-time" type="jar" ext="jar" status="no" details="" size="569231" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/joda-time/joda-time/2.0/jars/joda-time.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/joda-time/joda-time/2.0/jars/joda-time.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.joda" name="joda-convert">
+			<revision name="1.1" status="release" pubdate="20120905000929" resolver="local" artresolver="local" homepage="http://joda-convert.sourceforge.net" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="30">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3114" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.joda/joda-convert/ivy-1.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.joda/joda-convert/1.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.joda/joda-convert/1.1/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="joda-convert" type="jar" ext="jar" status="no" details="" size="36952" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.joda/joda-convert/1.1/jars/joda-convert.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.joda/joda-convert/1.1/jars/joda-convert.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-context">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20120905000924" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="26">
+				<metadata-artifact status="no" details="" size="10680" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.springframework/spring-context/ivy-3.0.7.RELEASE.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-context/3.0.7.RELEASE/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-context/3.0.7.RELEASE/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="spring-context" type="jar" ext="jar" status="no" details="" size="670388" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-context/3.0.7.RELEASE/jars/spring-context.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-context/3.0.7.RELEASE/jars/spring-context.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-beans">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20120905000928" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="28">
+				<metadata-artifact status="no" details="" size="7196" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.springframework/spring-beans/ivy-3.0.7.RELEASE.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-beans/3.0.7.RELEASE/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-beans/3.0.7.RELEASE/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="spring-beans" type="jar" ext="jar" status="no" details="" size="556747" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-beans/3.0.7.RELEASE/jars/spring-beans.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-beans/3.0.7.RELEASE/jars/spring-beans.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-core">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20120905000927" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="27">
+				<metadata-artifact status="no" details="" size="7547" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.springframework/spring-core/ivy-3.0.7.RELEASE.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-core/3.0.7.RELEASE/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-core/3.0.7.RELEASE/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="spring-core" type="jar" ext="jar" status="no" details="" size="383621" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-core/3.0.7.RELEASE/jars/spring-core.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.springframework/spring-core/3.0.7.RELEASE/jars/spring-core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.hibernate" name="hibernate-validator">
+			<revision name="4.2.0.Final" status="release" pubdate="20120905000922" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="24">
+				<metadata-artifact status="no" details="" size="10947" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.hibernate/hibernate-validator/ivy-4.2.0.Final.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.hibernate/hibernate-validator/4.2.0.Final/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.hibernate/hibernate-validator/4.2.0.Final/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="4.2.0.Final" rev-constraint-default="4.2.0.Final" rev-constraint-dynamic="4.2.0.Final" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="hibernate-validator" type="jar" ext="jar" status="no" details="" size="366592" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.hibernate/hibernate-validator/4.2.0.Final/jars/hibernate-validator.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.hibernate/hibernate-validator/4.2.0.Final/jars/hibernate-validator.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.validation" name="validation-api">
+			<revision name="1.0.0.GA" status="release" pubdate="20120905000924" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="25">
+				<license name="Apache License, Version 2.0" url="license.txt"/>
+				<metadata-artifact status="no" details="" size="2323" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/javax.validation/validation-api/ivy-1.0.0.GA.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.validation/validation-api/1.0.0.GA/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.validation/validation-api/1.0.0.GA/ivys/ivy.xml"/>
+				<caller organisation="org.hibernate" name="hibernate-validator" conf="default, compile, runtime, master" rev="1.0.0.GA" rev-constraint-default="1.0.0.GA" rev-constraint-dynamic="1.0.0.GA" callerrev="4.2.0.Final"/>
+				<artifacts>
+					<artifact name="validation-api" type="jar" ext="jar" status="no" details="" size="47433" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.validation/validation-api/1.0.0.GA/jars/validation-api.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.validation/validation-api/1.0.0.GA/jars/validation-api.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.yaml" name="snakeyaml">
+			<revision name="1.9" status="release" pubdate="20120905000921" resolver="local" artresolver="local" homepage="http://www.snakeyaml.org" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="23">
+				<license name="Apache License Version 2.0" url="LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="3407" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.yaml/snakeyaml/ivy-1.9.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.yaml/snakeyaml/1.9/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.yaml/snakeyaml/1.9/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.9" rev-constraint-default="1.9" rev-constraint-dynamic="1.9" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="snakeyaml" type="bundle" ext="jar" status="no" details="" size="265825" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.yaml/snakeyaml/1.9/bundles/snakeyaml.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.yaml/snakeyaml/1.9/bundles/snakeyaml.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.jolbox" name="bonecp">
+			<revision name="0.7.1.RELEASE" status="release" pubdate="20120905000919" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="22">
+				<metadata-artifact status="no" details="" size="9302" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.jolbox/bonecp/ivy-0.7.1.RELEASE.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.jolbox/bonecp/0.7.1.RELEASE/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.jolbox/bonecp/0.7.1.RELEASE/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="0.7.1.RELEASE" rev-constraint-default="0.7.1.RELEASE" rev-constraint-dynamic="0.7.1.RELEASE" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="bonecp" type="bundle" ext="jar" status="no" details="" size="115709" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.jolbox/bonecp/0.7.1.RELEASE/bundles/bonecp.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.jolbox/bonecp/0.7.1.RELEASE/bundles/bonecp.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-tools" name="scala-stm_2.9.1">
+			<revision name="0.5" status="release" pubdate="20120905000435" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="21">
+				<metadata-artifact status="no" details="" size="2502" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-tools/scala-stm_2.9.1/ivy-0.5.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools/scala-stm_2.9.1/0.5/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools/scala-stm_2.9.1/0.5/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="0.5" rev-constraint-default="0.5" rev-constraint-dynamic="0.5" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="scala-stm_2.9.1" type="jar" ext="jar" status="no" details="" size="600610" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools/scala-stm_2.9.1/0.5/jars/scala-stm_2.9.1.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools/scala-stm_2.9.1/0.5/jars/scala-stm_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.h2database" name="h2">
+			<revision name="1.3.158" status="release" pubdate="20120905000915" resolver="local" artresolver="local" homepage="http://www.h2database.com" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="20">
+				<license name="The H2 License, Version 1.0" url="http://h2database.com/html/license.html"/>
+				<metadata-artifact status="no" details="" size="2337" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.h2database/h2/ivy-1.3.158.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.h2database/h2/1.3.158/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.h2database/h2/1.3.158/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.3.158" rev-constraint-default="1.3.158" rev-constraint-dynamic="1.3.158" callerrev="2.0.4"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="1.3.158" rev-constraint-default="1.3.158" rev-constraint-dynamic="1.3.158" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="h2" type="jar" ext="jar" status="no" details="" size="1248544" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.h2database/h2/1.3.158/jars/h2.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.h2database/h2/1.3.158/jars/h2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.hibernate.javax.persistence" name="hibernate-jpa-2.0-api">
+			<revision name="1.0.1.Final" status="release" pubdate="20120905000915" resolver="local" artresolver="local" homepage="http://hibernate.org" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="19">
+				<license name="Unknown License" url="license.txt"/>
+				<metadata-artifact status="no" details="" size="2465" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/ivy-1.0.1.Final.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.1.Final/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.1.Final/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.0.1.Final" rev-constraint-default="1.0.1.Final" rev-constraint-dynamic="1.0.1.Final" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="hibernate-jpa-2.0-api" type="jar" ext="jar" status="no" details="" size="102661" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.1.Final/jars/hibernate-jpa-2.0-api.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.hibernate.javax.persistence/hibernate-jpa-2.0-api/1.0.1.Final/jars/hibernate-jpa-2.0-api.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.avaje" name="ebean">
+			<revision name="2.7.3" status="release" pubdate="20120905000912" resolver="local" artresolver="local" homepage="http://www.avaje.org" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="18">
+				<license name="LGPL version 2.1 or later" url="http://www.gnu.org/licenses/lgpl-2.1.txt"/>
+				<metadata-artifact status="no" details="" size="5145" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.avaje/ebean/ivy-2.7.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.avaje/ebean/2.7.3/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.avaje/ebean/2.7.3/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="2.0.4"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="2.7.3" rev-constraint-default="2.7.3" rev-constraint-dynamic="2.7.3" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="ebean" type="jar" ext="jar" status="no" details="" size="1976606" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.avaje/ebean/2.7.3/jars/ebean.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.avaje/ebean/2.7.3/jars/ebean.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.transaction" name="jta">
+			<revision name="1.1" status="release" pubdate="20120905000950" resolver="local" artresolver="local" homepage="http://java.sun.com/products/jta" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="41">
+				<metadata-artifact status="no" details="" size="2353" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/javax.transaction/jta/ivy-1.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.transaction/jta/1.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.transaction/jta/1.1/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="jta" type="jar" ext="jar" status="no" details="" size="15071" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.transaction/jta/1.1/jars/jta.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/javax.transaction/jta/1.1/jars/jta.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.guava" name="guava">
+			<revision name="10.0.1" status="release" pubdate="20120905000350" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="16">
+				<metadata-artifact status="no" details="" size="3835" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.google.guava/guava/ivy-10.0.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.guava/guava/10.0.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.guava/guava/10.0.1/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="10.0.1" rev-constraint-default="10.0.1" rev-constraint-dynamic="10.0.1" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="guava" type="jar" ext="jar" status="no" details="" size="1501575" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.guava/guava/10.0.1/jars/guava.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.guava/guava/10.0.1/jars/guava.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.google.code.findbugs" name="jsr305">
+			<revision name="1.3.9" status="release" pubdate="20120905000532" resolver="local" artresolver="local" homepage="http://findbugs.sourceforge.net/" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="17">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2393" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.google.code.findbugs/jsr305/ivy-1.3.9.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.code.findbugs/jsr305/1.3.9/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.code.findbugs/jsr305/1.3.9/ivys/ivy.xml"/>
+				<caller organisation="com.google.guava" name="guava" conf="default, compile, runtime, master" rev="1.3.9" rev-constraint-default="1.3.9" rev-constraint-dynamic="1.3.9" callerrev="10.0.1"/>
+				<artifacts>
+					<artifact name="jsr305" type="jar" ext="jar" status="no" details="" size="33015" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.code.findbugs/jsr305/1.3.9/jars/jsr305.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.google.code.findbugs/jsr305/1.3.9/jars/jsr305.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-slf4j">
+			<revision name="2.0.2" status="release" pubdate="20120904235054" resolver="local" artresolver="local" homepage="http://akka.io" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="15">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3006" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.typesafe.akka/akka-slf4j/ivy-2.0.2.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.akka/akka-slf4j/2.0.2/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.akka/akka-slf4j/2.0.2/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="2.0.2" rev-constraint-default="2.0.2" rev-constraint-dynamic="2.0.2" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="akka-slf4j" type="jar" ext="jar" status="no" details="" size="14415" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.akka/akka-slf4j/2.0.2/jars/akka-slf4j.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.akka/akka-slf4j/2.0.2/jars/akka-slf4j.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-actor">
+			<revision name="2.0.2" status="release" pubdate="20120904235034" resolver="local" artresolver="local" homepage="http://akka.io" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="7">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2496" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.typesafe.akka/akka-actor/ivy-2.0.2.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.akka/akka-actor/2.0.2/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.akka/akka-actor/2.0.2/ivys/ivy.xml"/>
+				<caller organisation="com.github.scala-incubator.io" name="scala-io-core_2.9.1" conf="compile, runtime" rev="2.0" rev-constraint-default="2.0" rev-constraint-dynamic="2.0" callerrev="0.4.0"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="2.0.2" rev-constraint-default="2.0.2" rev-constraint-dynamic="2.0.2" callerrev="2.0.4"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j" conf="default, compile, runtime, master" rev="2.0.2" rev-constraint-default="2.0.2" rev-constraint-dynamic="2.0.2" callerrev="2.0.2"/>
+				<artifacts>
+					<artifact name="akka-actor" type="jar" ext="jar" status="no" details="" size="1853029" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.akka/akka-actor/2.0.2/jars/akka-actor.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.typesafe.akka/akka-actor/2.0.2/jars/akka-actor.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*), master, default(compile)" position="-1">
+				<evicted-by rev="2.0.2"/>
+				<caller organisation="com.github.scala-incubator.io" name="scala-io-core_2.9.1" conf="compile, runtime" rev="2.0" rev-constraint-default="2.0" rev-constraint-dynamic="2.0" callerrev="0.4.0"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="2.0.2" rev-constraint-default="2.0.2" rev-constraint-dynamic="2.0.2" callerrev="2.0.4"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="ch.qos.logback" name="logback-classic">
+			<revision name="1.0.0" status="release" pubdate="20120905000424" resolver="local" artresolver="local" homepage="http://logback.qos.ch" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="14">
+				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="11444" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/ch.qos.logback/logback-classic/ivy-1.0.0.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/ch.qos.logback/logback-classic/1.0.0/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/ch.qos.logback/logback-classic/1.0.0/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="logback-classic" type="jar" ext="jar" status="no" details="" size="246709" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/ch.qos.logback/logback-classic/1.0.0/jars/logback-classic.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/ch.qos.logback/logback-classic/1.0.0/jars/logback-classic.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="ch.qos.logback" name="logback-core">
+			<revision name="1.0.0" status="release" pubdate="20120905000619" resolver="local" artresolver="local" homepage="http://logback.qos.ch" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="13">
+				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="9315" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/ch.qos.logback/logback-core/ivy-1.0.0.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/ch.qos.logback/logback-core/1.0.0/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/ch.qos.logback/logback-core/1.0.0/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="2.0.4"/>
+				<caller organisation="ch.qos.logback" name="logback-classic" conf="default, compile, runtime, master" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="1.0.0"/>
+				<artifacts>
+					<artifact name="logback-core" type="jar" ext="jar" status="no" details="" size="327911" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/ch.qos.logback/logback-core/1.0.0/jars/logback-core.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/ch.qos.logback/logback-core/1.0.0/jars/logback-core.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="jcl-over-slf4j">
+			<revision name="1.6.4" status="release" pubdate="20120905000904" resolver="local" artresolver="local" homepage="http://www.slf4j.org" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="12">
+				<metadata-artifact status="no" details="" size="4505" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.slf4j/jcl-over-slf4j/ivy-1.6.4.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/jcl-over-slf4j/1.6.4/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/jcl-over-slf4j/1.6.4/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.6.4" rev-constraint-default="1.6.4" rev-constraint-dynamic="1.6.4" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="jcl-over-slf4j" type="jar" ext="jar" status="no" details="" size="17308" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/jcl-over-slf4j/1.6.4/jars/jcl-over-slf4j.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/jcl-over-slf4j/1.6.4/jars/jcl-over-slf4j.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="jul-to-slf4j">
+			<revision name="1.6.4" status="release" pubdate="20120905000903" resolver="local" artresolver="local" homepage="http://www.slf4j.org" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="11">
+				<metadata-artifact status="no" details="" size="4541" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.slf4j/jul-to-slf4j/ivy-1.6.4.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/jul-to-slf4j/1.6.4/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/jul-to-slf4j/1.6.4/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.6.4" rev-constraint-default="1.6.4" rev-constraint-dynamic="1.6.4" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="jul-to-slf4j" type="jar" ext="jar" status="no" details="" size="4868" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/jul-to-slf4j/1.6.4/jars/jul-to-slf4j.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/jul-to-slf4j/1.6.4/jars/jul-to-slf4j.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="io.netty" name="netty">
+			<revision name="3.5.0.Final" status="release" pubdate="20120905000922" resolver="local" artresolver="local" homepage="http://netty.io/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="9">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="6423" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/io.netty/netty/ivy-3.5.0.Final.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/io.netty/netty/3.5.0.Final/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/io.netty/netty/3.5.0.Final/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="3.5.0.Final" rev-constraint-default="3.5.0.Final" rev-constraint-dynamic="3.5.0.Final" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="netty" type="bundle" ext="jar" status="no" details="" size="1110903" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/io.netty/netty/3.5.0.Final/bundles/netty.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/io.netty/netty/3.5.0.Final/bundles/netty.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.6.4" status="release" pubdate="20120904235055" resolver="local" artresolver="local" homepage="http://www.slf4j.org" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="10">
+				<metadata-artifact status="no" details="" size="4338" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.slf4j/slf4j-api/ivy-1.6.4.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/slf4j-api/1.6.4/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/slf4j-api/1.6.4/ivys/ivy.xml"/>
+				<caller organisation="org.slf4j" name="jul-to-slf4j" conf="default, compile, runtime, master" rev="1.6.4" rev-constraint-default="1.6.4" rev-constraint-dynamic="1.6.4" callerrev="1.6.4"/>
+				<caller organisation="net.sf.ehcache" name="ehcache-core" conf="default, compile, runtime, master" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="2.5.0"/>
+				<caller organisation="org.hibernate" name="hibernate-validator" conf="default, compile, runtime, master" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="4.2.0.Final"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.6.4" rev-constraint-default="1.6.4" rev-constraint-dynamic="1.6.4" callerrev="2.0.4"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j" conf="default, compile, runtime, master" rev="1.6.4" rev-constraint-default="1.6.4" rev-constraint-dynamic="1.6.4" callerrev="2.0.2"/>
+				<caller organisation="org.slf4j" name="jcl-over-slf4j" conf="default, compile, runtime, master" rev="1.6.4" rev-constraint-default="1.6.4" rev-constraint-dynamic="1.6.4" callerrev="1.6.4"/>
+				<caller organisation="ch.qos.logback" name="logback-classic" conf="default, compile, runtime, master" rev="1.6.4" rev-constraint-default="1.6.4" rev-constraint-dynamic="1.6.4" callerrev="1.0.0"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="25962" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/slf4j-api/1.6.4/jars/slf4j-api.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.slf4j/slf4j-api/1.6.4/jars/slf4j-api.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.6.1" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="default(compile), compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<evicted-by rev="1.6.4"/>
+				<caller organisation="net.sf.ehcache" name="ehcache-core" conf="default, compile, runtime, master" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="2.5.0"/>
+				<caller organisation="org.hibernate" name="hibernate-validator" conf="default, compile, runtime, master" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="4.2.0.Final"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.4" callerrev="2.0.4"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="play" name="anorm_2.9.1">
+			<revision name="2.0.4" status="release" pubdate="20121001111014" resolver="local" artresolver="local" downloaded="false" searched="true" default="false" conf="default(compile), compile" position="8">
+				<metadata-artifact status="no" details="" size="1197" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/play/anorm_2.9.1/ivy-2.0.4.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/anorm_2.9.1/2.0.4/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/anorm_2.9.1/2.0.4/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="2.0.4" rev-constraint-default="2.0.4" rev-constraint-dynamic="2.0.4" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="anorm_2.9.1" type="jar" ext="jar" status="no" details="" size="262133" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/anorm_2.9.1/2.0.4/jars/anorm_2.9.1.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/anorm_2.9.1/2.0.4/jars/anorm_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="play" name="templates_2.9.1">
+			<revision name="2.0.4" status="release" pubdate="20121001111014" resolver="local" artresolver="local" downloaded="false" searched="true" default="false" conf="default(compile), compile" position="2">
+				<metadata-artifact status="no" details="" size="1658" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/play/templates_2.9.1/ivy-2.0.4.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/templates_2.9.1/2.0.4/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/templates_2.9.1/2.0.4/ivys/ivy.xml"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="2.0.4" rev-constraint-default="2.0.4" rev-constraint-dynamic="2.0.4" callerrev="2.0.4"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="2.0.4" rev-constraint-default="2.0.4" rev-constraint-dynamic="2.0.4" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="templates_2.9.1" type="jar" ext="jar" status="no" details="" size="335706" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/templates_2.9.1/2.0.4/jars/templates_2.9.1.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/play/templates_2.9.1/2.0.4/jars/templates_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.scala-incubator.io" name="scala-io-file_2.9.1">
+			<revision name="0.4.0" status="release" pubdate="20120905000857" resolver="local" artresolver="local" homepage="http://jesseeichar.github.com/scala-io-doc/index.html" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="3">
+				<license name="Scala License" url="http://www.scala-lang.org/node/146"/>
+				<metadata-artifact status="no" details="" size="2837" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.github.scala-incubator.io/scala-io-file_2.9.1/ivy-0.4.0.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.scala-incubator.io/scala-io-file_2.9.1/0.4.0/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.scala-incubator.io/scala-io-file_2.9.1/0.4.0/ivys/ivy.xml"/>
+				<caller organisation="play" name="templates_2.9.1" conf="compile" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="2.0.4"/>
+				<caller organisation="play" name="console_2.9.1" conf="compile" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="2.0.4"/>
+				<caller organisation="play" name="play_2.9.1" conf="compile" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="2.0.4"/>
+				<caller organisation="play" name="sbt-plugin" conf="compile" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="2.0.4"/>
+				<artifacts>
+					<artifact name="scala-io-file_2.9.1" type="jar" ext="jar" status="no" details="" size="387652" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.scala-incubator.io/scala-io-file_2.9.1/0.4.0/jars/scala-io-file_2.9.1.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.scala-incubator.io/scala-io-file_2.9.1/0.4.0/jars/scala-io-file_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.scala-incubator.io" name="scala-io-core_2.9.1">
+			<revision name="0.4.0" status="release" pubdate="20120905000859" resolver="local" artresolver="local" homepage="http://jesseeichar.github.com/scala-io-doc/index.html" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="4">
+				<license name="Scala License" url="http://www.scala-lang.org/node/146"/>
+				<metadata-artifact status="no" details="" size="2969" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.github.scala-incubator.io/scala-io-core_2.9.1/ivy-0.4.0.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.scala-incubator.io/scala-io-core_2.9.1/0.4.0/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.scala-incubator.io/scala-io-core_2.9.1/0.4.0/ivys/ivy.xml"/>
+				<caller organisation="com.github.scala-incubator.io" name="scala-io-file_2.9.1" conf="default, compile, runtime, master" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="0.4.0"/>
+				<artifacts>
+					<artifact name="scala-io-core_2.9.1" type="jar" ext="jar" status="no" details="" size="1419807" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.scala-incubator.io/scala-io-core_2.9.1/0.4.0/jars/scala-io-core_2.9.1.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.scala-incubator.io/scala-io-core_2.9.1/0.4.0/jars/scala-io-core_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.jsuereth.scala-arm" name="scala-arm_2.9.1">
+			<revision name="1.1" status="release" pubdate="20120905000901" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="6">
+				<metadata-artifact status="no" details="" size="2747" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.github.jsuereth.scala-arm/scala-arm_2.9.1/ivy-1.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.jsuereth.scala-arm/scala-arm_2.9.1/1.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.jsuereth.scala-arm/scala-arm_2.9.1/1.1/ivys/ivy.xml"/>
+				<caller organisation="com.github.scala-incubator.io" name="scala-io-core_2.9.1" conf="compile, runtime" rev="1.1" rev-constraint-default="1.1" rev-constraint-dynamic="1.1" callerrev="0.4.0"/>
+				<artifacts>
+					<artifact name="scala-arm_2.9.1" type="jar" ext="jar" status="no" details="" size="68729" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.jsuereth.scala-arm/scala-arm_2.9.1/1.1/jars/scala-arm_2.9.1.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.github.jsuereth.scala-arm/scala-arm_2.9.1/1.1/jars/scala-arm_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="sbt_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185735" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="61">
+				<metadata-artifact status="successful" details="" size="2350" time="592" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/sbt_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/sbt_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="default" name="default-610a75" conf="optional, compile, provided, compile-internal" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="sbt_2.9.1" type="jar" ext="jar" status="successful" details="" size="16665" time="740" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/sbt_2.9.1/jars/sbt_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt_2.9.1/0.11.3/jars/sbt_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="precompiled-2_9_2">
+			<revision name="0.11.3" status="release" pubdate="20120505185648" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="96">
+				<metadata-artifact status="successful" details="" size="2034" time="606" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/precompiled-2_9_2/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/precompiled-2_9_2/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="sbt_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="compiler-interface-bin" type="jar" ext="jar" extra-component="compiler-interface-bin_2.9.2" status="successful" details="" size="132220" time="781" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/precompiled-2_9_2/jars/compiler-interface-bin-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_9_2/0.11.3/jars/compiler-interface-bin.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="precompiled-2_8_1">
+			<revision name="0.11.3" status="release" pubdate="20120505185648" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="95">
+				<metadata-artifact status="successful" details="" size="2040" time="590" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/precompiled-2_8_1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/precompiled-2_8_1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="sbt_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="compiler-interface-bin" type="jar" ext="jar" extra-component="compiler-interface-bin_2.8.1.final" status="successful" details="" size="128876" time="772" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/precompiled-2_8_1/jars/compiler-interface-bin-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_1/0.11.3/jars/compiler-interface-bin.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="precompiled-2_8_2">
+			<revision name="0.11.3" status="release" pubdate="20120505185648" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="94">
+				<metadata-artifact status="successful" details="" size="2040" time="598" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/precompiled-2_8_2/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/precompiled-2_8_2/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="sbt_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="compiler-interface-bin" type="jar" ext="jar" extra-component="compiler-interface-bin_2.8.2.final" status="successful" details="" size="129301" time="758" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/precompiled-2_8_2/jars/compiler-interface-bin-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/precompiled-2_8_2/0.11.3/jars/compiler-interface-bin.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="compiler-interface">
+			<revision name="0.11.3" status="release" pubdate="20120505185652" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="93">
+				<metadata-artifact status="successful" details="" size="2432" time="633" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/compiler-interface/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/compiler-interface/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="sbt_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="compiler-interface-bin" type="jar" ext="jar" extra-component="compiler-interface-bin_2.9.1.final" status="successful" details="" size="131326" time="769" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/compiler-interface/jars/compiler-interface-bin-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.11.3/jars/compiler-interface-bin.jar"/>
+					</artifact>
+					<artifact name="compiler-interface-src" type="jar" ext="jar" extra-component="compiler-interface-src" status="successful" details="" size="16827" time="758" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/compiler-interface/jars/compiler-interface-src-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compiler-interface/0.11.3/jars/compiler-interface-src.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="main_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185735" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="62">
+				<metadata-artifact status="successful" details="" size="2823" time="707" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/main_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/main_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="sbt_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="main_2.9.1" type="jar" ext="jar" status="successful" details="" size="1736002" time="1291" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/main_2.9.1/jars/main_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/main_2.9.1/0.11.3/jars/main_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="actions_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185709" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="63">
+				<metadata-artifact status="successful" details="" size="3756" time="590" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/actions_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/actions_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="main_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="actions_2.9.1" type="jar" ext="jar" status="successful" details="" size="262291" time="788" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/actions_2.9.1/jars/actions_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/actions_2.9.1/0.11.3/jars/actions_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="testing_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185652" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="91">
+				<metadata-artifact status="successful" details="" size="2078" time="1656" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/testing_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/testing_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="testing_2.9.1" type="jar" ext="jar" status="successful" details="" size="72849" time="767" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/testing_2.9.1/jars/testing_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/testing_2.9.1/0.11.3/jars/testing_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-tools.testing" name="test-interface">
+			<revision name="0.5" status="release" pubdate="20100328003658" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="92">
+				<metadata-artifact status="no" details="" size="2210" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-tools.testing/test-interface/ivy-0.5.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools.testing/test-interface/0.5/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools.testing/test-interface/0.5/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="testing_2.9.1" conf="compile" rev="0.5" rev-constraint-default="0.5" rev-constraint-dynamic="0.5" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="test-interface" type="jar" ext="jar" status="no" details="" size="4407" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools.testing/test-interface/0.5/jars/test-interface.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools.testing/test-interface/0.5/jars/test-interface.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="tracking_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185650" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="89">
+				<metadata-artifact status="successful" details="" size="1841" time="587" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/tracking_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/tracking_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="tracking_2.9.1" type="jar" ext="jar" status="successful" details="" size="43075" time="748" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/tracking_2.9.1/jars/tracking_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tracking_2.9.1/0.11.3/jars/tracking_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="cache_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185648" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="90">
+				<metadata-artifact status="successful" details="" size="1947" time="635" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/cache_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/cache_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="tracking_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="cache_2.9.1" type="jar" ext="jar" status="successful" details="" size="112482" time="848" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/cache_2.9.1/jars/cache_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/cache_2.9.1/0.11.3/jars/cache_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="task-system_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185652" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="87">
+				<metadata-artifact status="successful" details="" size="2467" time="623" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/task-system_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/task-system_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="task-system_2.9.1" type="jar" ext="jar" status="successful" details="" size="119854" time="770" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/task-system_2.9.1/jars/task-system_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/task-system_2.9.1/0.11.3/jars/task-system_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="tasks_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185648" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="88">
+				<metadata-artifact status="successful" details="" size="2061" time="589" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/tasks_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/tasks_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="task-system_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="tasks_2.9.1" type="jar" ext="jar" status="successful" details="" size="99942" time="766" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/tasks_2.9.1/jars/tasks_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/tasks_2.9.1/0.11.3/jars/tasks_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="run_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185652" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="86">
+				<metadata-artifact status="successful" details="" size="2077" time="616" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/run_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/run_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="main_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="run_2.9.1" type="jar" ext="jar" status="successful" details="" size="92537" time="1002" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/run_2.9.1/jars/run_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/run_2.9.1/0.11.3/jars/run_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="completion_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185648" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="84">
+				<metadata-artifact status="successful" details="" size="2308" time="612" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/completion_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/completion_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="completion_2.9.1" type="jar" ext="jar" status="successful" details="" size="290469" time="899" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/completion_2.9.1/jars/completion_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/completion_2.9.1/0.11.3/jars/completion_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="compile_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185658" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="78">
+				<metadata-artifact status="successful" details="" size="2911" time="618" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/compile_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/compile_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="compile_2.9.1" type="jar" ext="jar" status="successful" details="" size="117182" time="847" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/compile_2.9.1/jars/compile_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/compile_2.9.1/0.11.3/jars/compile_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="ivy_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185652" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="79">
+				<metadata-artifact status="successful" details="" size="2543" time="592" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/ivy_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/ivy_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="compile_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="main_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="ivy_2.9.1" type="jar" ext="jar" status="successful" details="" size="560105" time="1002" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/ivy_2.9.1/jars/ivy_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/ivy_2.9.1/0.11.3/jars/ivy_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-httpclient" name="commons-httpclient">
+			<revision name="3.1" status="release" pubdate="20070821154407" resolver="local" artresolver="local" homepage="http://jakarta.apache.org/httpcomponents/httpclient-3.x/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="82">
+				<license name="Apache License" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3153" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/commons-httpclient/commons-httpclient/ivy-3.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-httpclient/commons-httpclient/3.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-httpclient/commons-httpclient/3.1/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="ivy_2.9.1" conf="compile" rev="3.1" rev-constraint-default="3.1" rev-constraint-dynamic="3.1" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="commons-httpclient" type="jar" ext="jar" status="no" details="" size="305001" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-httpclient/commons-httpclient/3.1/jars/commons-httpclient.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-httpclient/commons-httpclient/3.1/jars/commons-httpclient.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="commons-logging" name="commons-logging">
+			<revision name="1.0.4" status="release" pubdate="20051108231641" resolver="local" artresolver="local" homepage="http://jakarta.apache.org/commons/logging/" downloaded="false" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="83">
+				<license name="The Apache Software License, Version 2.0" url="/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="2991" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/commons-logging/commons-logging/ivy-1.0.4.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-logging/commons-logging/1.0.4/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-logging/commons-logging/1.0.4/ivys/ivy.xml"/>
+				<caller organisation="commons-httpclient" name="commons-httpclient" conf="default, compile, runtime, master" rev="1.0.4" rev-constraint-default="1.0.4" rev-constraint-dynamic="1.0.4" callerrev="3.1"/>
+				<artifacts>
+					<artifact name="commons-logging" type="jar" ext="jar" status="no" details="" size="38015" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-logging/commons-logging/1.0.4/jars/commons-logging.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/commons-logging/commons-logging/1.0.4/jars/commons-logging.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.jcraft" name="jsch">
+			<revision name="0.1.46" status="release" pubdate="20120202133927" resolver="local" artresolver="local" homepage="http://www.jcraft.com/jsch/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="81">
+				<license name="Revised BSD" url="http://www.jcraft.com/jsch/LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="3203" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/com.jcraft/jsch/ivy-0.1.46.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.jcraft/jsch/0.1.46/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.jcraft/jsch/0.1.46/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="ivy_2.9.1" conf="compile" rev="0.1.46" rev-constraint-default="0.1.46" rev-constraint-dynamic="0.1.46" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="jsch" type="jar" ext="jar" status="no" details="" size="225751" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.jcraft/jsch/0.1.46/jars/jsch.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/com.jcraft/jsch/0.1.46/jars/jsch.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.apache.ivy" name="ivy">
+			<revision name="2.2.0" status="release" pubdate="20100924000647" resolver="local" artresolver="local" homepage="http://ant.apache.org/ivy/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="80">
+				<metadata-artifact status="no" details="" size="4629" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.apache.ivy/ivy/ivy-2.2.0.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.apache.ivy/ivy/2.2.0/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.apache.ivy/ivy/2.2.0/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="ivy_2.9.1" conf="compile" rev="2.2.0" rev-constraint-default="2.2.0" rev-constraint-dynamic="2.2.0" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="ivy" type="jar" ext="jar" status="no" details="" size="947592" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.apache.ivy/ivy/2.2.0/jars/ivy.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.apache.ivy/ivy/2.2.0/jars/ivy.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="persist_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185655" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="76">
+				<metadata-artifact status="successful" details="" size="1965" time="608" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/persist_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/persist_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="persist_2.9.1" type="jar" ext="jar" status="successful" details="" size="114739" time="759" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/persist_2.9.1/jars/persist_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/persist_2.9.1/0.11.3/jars/persist_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-tools.sbinary" name="sbinary_2.9.0">
+			<revision name="0.4.0" status="release" pubdate="20110518020638" resolver="local" artresolver="local" homepage="" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="77">
+				<metadata-artifact status="no" details="" size="2370" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-tools.sbinary/sbinary_2.9.0/ivy-0.4.0.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools.sbinary/sbinary_2.9.0/0.4.0/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools.sbinary/sbinary_2.9.0/0.4.0/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="cache_2.9.1" conf="compile" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="persist_2.9.1" conf="compile" rev="0.4.0" rev-constraint-default="0.4.0" rev-constraint-dynamic="0.4.0" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="sbinary_2.9.0" type="jar" ext="jar" status="no" details="" size="148882" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools.sbinary/sbinary_2.9.0/0.4.0/jars/sbinary_2.9.0.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-tools.sbinary/sbinary_2.9.0/0.4.0/jars/sbinary_2.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="incremental-compiler_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185652" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="73">
+				<metadata-artifact status="successful" details="" size="2492" time="596" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/incremental-compiler_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/incremental-compiler_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="persist_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="incremental-compiler_2.9.1" type="jar" ext="jar" status="successful" details="" size="153276" time="857" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/incremental-compiler_2.9.1/jars/incremental-compiler_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/incremental-compiler_2.9.1/0.11.3/jars/incremental-compiler_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="api_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185648" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="75">
+				<metadata-artifact status="successful" details="" size="1939" time="588" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/api_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/api_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="persist_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="incremental-compiler_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="api_2.9.1" type="jar" ext="jar" status="successful" details="" size="366896" time="888" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/api_2.9.1/jars/api_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/api_2.9.1/0.11.3/jars/api_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="collections_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185647" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="74">
+				<metadata-artifact status="successful" details="" size="1829" time="620" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/collections_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/collections_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="task-system_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="cache_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="completion_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="incremental-compiler_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="tasks_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="collections_2.9.1" type="jar" ext="jar" status="successful" details="" size="276987" time="1285" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/collections_2.9.1/jars/collections_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/collections_2.9.1/0.11.3/jars/collections_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="classpath_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185648" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="70">
+				<metadata-artifact status="successful" details="" size="1962" time="620" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/classpath_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/classpath_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="run_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="testing_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="compile_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="incremental-compiler_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="classpath_2.9.1" type="jar" ext="jar" status="successful" details="" size="83284" time="797" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/classpath_2.9.1/jars/classpath_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classpath_2.9.1/0.11.3/jars/classpath_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-compiler">
+			<revision name="2.9.1" status="release" pubdate="20110831104108" resolver="local" artresolver="local" homepage="http://www.scala-lang.org/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="72">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2604" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-lang/scala-compiler/ivy-2.9.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-lang/scala-compiler/2.9.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-lang/scala-compiler/2.9.1/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="classpath_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="launcher-interface_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185647" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="71">
+				<metadata-artifact status="successful" details="" size="1636" time="594" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/launcher-interface_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/launcher-interface_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="classpath_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="compile_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="main_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="ivy_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="launcher-interface_2.9.1" type="jar" ext="jar" status="successful" details="" size="8159" time="763" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/launcher-interface_2.9.1/jars/launcher-interface_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/launcher-interface_2.9.1/0.11.3/jars/launcher-interface_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="classfile_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185652" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="64">
+				<metadata-artifact status="successful" details="" size="2210" time="591" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/classfile_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/classfile_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="classfile_2.9.1" type="jar" ext="jar" status="successful" details="" size="83077" time="744" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/classfile_2.9.1/jars/classfile_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/classfile_2.9.1/0.11.3/jars/classfile_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="logging_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185650" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="68">
+				<metadata-artifact status="successful" details="" size="2188" time="634" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/logging_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/logging_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="run_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="classfile_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="task-system_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="testing_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="main_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="ivy_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="incremental-compiler_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="logging_2.9.1" type="jar" ext="jar" status="successful" details="" size="70762" time="761" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/logging_2.9.1/jars/logging_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/logging_2.9.1/0.11.3/jars/logging_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="jline" name="jline">
+			<revision name="0.9.94" status="release" pubdate="20080222205343" resolver="local" artresolver="local" homepage="http://jline.sourceforge.net" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="85">
+				<license name="BSD" url="LICENSE.txt"/>
+				<metadata-artifact status="no" details="" size="2836" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/jline/jline/ivy-0.9.94.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/jline/jline/0.9.94/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/jline/jline/0.9.94/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="precompiled-2_8_1" conf="compile" rev="0.9.94" rev-constraint-default="0.9.94" rev-constraint-dynamic="0.9.94" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="precompiled-2_8_2" conf="compile" rev="0.9.94" rev-constraint-default="0.9.94" rev-constraint-dynamic="0.9.94" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="precompiled-2_9_2" conf="compile" rev="0.9.94" rev-constraint-default="0.9.94" rev-constraint-dynamic="0.9.94" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="compiler-interface" conf="compile" rev="0.9.94" rev-constraint-default="0.9.94" rev-constraint-dynamic="0.9.94" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="completion_2.9.1" conf="compile" rev="0.9.94" rev-constraint-default="0.9.94" rev-constraint-dynamic="0.9.94" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="jline" type="jar" ext="jar" status="no" details="" size="87325" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/jline/jline/0.9.94/jars/jline.jar">
+						<origin-location is-local="true" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/jline/jline/0.9.94/jars/jline.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="process_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185648" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="69">
+				<metadata-artifact status="successful" details="" size="1698" time="608" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/process_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/process_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="run_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="task-system_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="logging_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="main_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="process_2.9.1" type="jar" ext="jar" status="successful" details="" size="112538" time="751" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/process_2.9.1/jars/process_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/process_2.9.1/0.11.3/jars/process_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="interface">
+			<revision name="0.11.3" status="release" pubdate="20120505185647" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" extra-component="xsbti" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="67">
+				<metadata-artifact status="successful" details="" size="1602" time="598" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/interface/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/interface/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<caller organisation="org.scala-sbt" name="precompiled-2_8_1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<caller organisation="org.scala-sbt" name="precompiled-2_8_2" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<caller organisation="org.scala-sbt" name="classfile_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<caller organisation="org.scala-sbt" name="logging_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<caller organisation="org.scala-sbt" name="compile_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<caller organisation="org.scala-sbt" name="api_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<caller organisation="org.scala-sbt" name="precompiled-2_9_2" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<caller organisation="org.scala-sbt" name="compiler-interface" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<caller organisation="org.scala-sbt" name="main_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<caller organisation="org.scala-sbt" name="ivy_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3" extra-component="xsbti"/>
+				<artifacts>
+					<artifact name="interface" type="jar" ext="jar" status="successful" details="" size="36453" time="1789" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/interface/jars/interface-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/interface/0.11.3/jars/interface.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="io_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185648" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="65">
+				<metadata-artifact status="successful" details="" size="1919" time="610" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/io_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/io_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="run_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="ivy_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="incremental-compiler_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="tracking_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="classfile_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="task-system_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="classpath_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="cache_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="testing_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="compile_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="main_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="completion_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="io_2.9.1" type="jar" ext="jar" status="successful" details="" size="252338" time="1092" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/io_2.9.1/jars/io_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/io_2.9.1/0.11.3/jars/io_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-sbt" name="control_2.9.1">
+			<revision name="0.11.3" status="release" pubdate="20120505185647" resolver="typesafe-ivy-releases" artresolver="typesafe-ivy-releases" downloaded="true" searched="true" default="false" conf="default(compile), compile" position="66">
+				<metadata-artifact status="successful" details="" size="1592" time="1076" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/control_2.9.1/ivy-0.11.3.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/control_2.9.1/ivy-0.11.3.xml.original" origin-is-local="false" origin-location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control_2.9.1/0.11.3/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="io_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="completion_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="tasks_2.9.1" conf="compile" rev="0.11.3" rev-constraint-default="0.11.3" rev-constraint-dynamic="0.11.3" callerrev="0.11.3"/>
+				<artifacts>
+					<artifact name="control_2.9.1" type="jar" ext="jar" status="successful" details="" size="12037" time="1168" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-sbt/control_2.9.1/jars/control_2.9.1-0.11.3.jar">
+						<origin-location is-local="false" location="http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/control_2.9.1/0.11.3/jars/control_2.9.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.9.1" status="release" pubdate="20110831103953" resolver="local" artresolver="local" homepage="http://www.scala-lang.org/" downloaded="false" searched="true" default="false" conf="default(compile), default, compile, master(*), runtime, compile(*), runtime(*), master" position="5">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2322" time="0" location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/cache/org.scala-lang/scala-library/ivy-2.9.1.xml" searched="true" original-local-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-lang/scala-library/2.9.1/ivys/ivy.xml" origin-is-local="true" origin-location="/home/robin/HTWG/Web_tech/play_seapal/play/framework/../repository/local/org.scala-lang/scala-library/2.9.1/ivys/ivy.xml"/>
+				<caller organisation="org.scala-sbt" name="run_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="precompiled-2_8_1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.8.1" callerrev="0.11.3"/>
+				<caller organisation="com.github.scala-incubator.io" name="scala-io-file_2.9.1" conf="default, compile, runtime, master" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.4.0"/>
+				<caller organisation="org.scala-sbt" name="logging_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="com.codahale" name="jerkson_2.9.1" conf="default, compile, runtime, master" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.5.0"/>
+				<caller organisation="org.scalaz" name="scalaz-core_2.9.1" conf="default, compile, runtime, master" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="6.0.3"/>
+				<caller organisation="org.scala-sbt" name="sbt_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="incremental-compiler_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="collections_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="actions_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="interface" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="com.github.scala-incubator.io" name="scala-io-core_2.9.1" conf="compile, runtime" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.4.0"/>
+				<caller organisation="org.scala-tools" name="scala-stm_2.9.1" conf="default, compile, runtime, master" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.5"/>
+				<caller organisation="org.scala-sbt" name="io_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="classpath_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="testing_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="precompiled-2_9_2" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.2" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="control_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="com.typesafe.akka" name="akka-slf4j" conf="default, compile, runtime, master" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.2" callerrev="2.0.2"/>
+				<caller organisation="org.scala-sbt" name="persist_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-lang" name="scala-compiler" conf="default, compile, runtime, master" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="2.9.1"/>
+				<caller organisation="org.scala-sbt" name="api_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="compiler-interface" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="process_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="default" name="default-610a75" conf="optional, compile, provided, compile-internal" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.1-SNAPSHOT"/>
+				<caller organisation="org.scala-sbt" name="ivy_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="com.typesafe.akka" name="akka-actor" conf="compile, runtime" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.2" callerrev="2.0.2"/>
+				<caller organisation="org.scala-sbt" name="tasks_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="tracking_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="precompiled-2_8_2" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.8.2" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="classfile_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="task-system_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="launcher-interface_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="cache_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="compile_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="main_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="org.scala-sbt" name="completion_2.9.1" conf="compile" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="0.11.3"/>
+				<caller organisation="com.github.jsuereth.scala-arm" name="scala-arm_2.9.1" conf="compile, runtime" rev="2.9.1" rev-constraint-default="2.9.1" rev-constraint-dynamic="2.9.1" callerrev="1.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

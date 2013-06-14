@@ -1,0 +1,82 @@
+@(header: Html)(navigation: Html)(footer: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    
+    	<!-- Header -->
+        @header
+        
+    </head>
+    <body>
+    
+    	<!-- Navigation -->
+    	@navigation
+
+		<!-- Container -->
+		<div class="container"> 
+	    	<div class="container-fluid">
+		    	<div class="row-fluid">
+		    	
+		    		<!-- Sidebar -->
+			    	<div class="span3">
+				    	<div class="sidebar-nav">
+					    	<ul class="nav nav-list bs-docs-sidenav affix" id="sidebar">
+						    	<li class="sidebar"><a href="#" class="legal">Legal responsibility</a></li>
+						    	<li class="sidebar"><a href="#" class="content">Content</a></li>
+						    	<li class="sidebar"><a href="#" class="design">Design</a></li>
+					        </ul>
+					    </div>
+					</div><!-- Sidebar -->
+	
+					<!-- Content -->
+					<div class="span9">
+						<div class="post" id="legal">
+							<h2>Legal responsibility</h2>
+							<div class="entry">
+								<p>IBN is a subsidiary of Druck- und Verlagshaus Hermann Daniel.</p>
+								<p>Druck- und Verlagshaus Hermann Daniel GmbH &amp; Co. KG. Betriebsgesellschaft<br><br>
+								Postfach 10 02 64<br>
+								72334 Balingen <br><br>
+								Grünewaldstr. 15<br>
+								72336 Balingen<br><br>
+								Tel.: (07433) 266-0<br>
+								Fax: (07433) 266-201<br>
+								eMail: zentrale at zak.de <br><br>
+								Geschäftsführer: Klaus Jetter<br>
+								Handelsregisternummer: HRA 410912<br>
+								Registergericht: Stuttgart<br>
+								USt-Id-Nr.: DE 219563581<strong>&nbsp;</strong></p> 
+							</div>
+						</div>
+						<div class="post" id="content">
+							<br><br>
+							<h2>Content</h2>
+							<div class="entry">
+								<p>
+									The content of this web site was created by Prof. Dr. Marko Boger in cooperation with IBN.
+								</p>
+							</div>
+						</div>
+						<div class="post" id="design">
+							<br><br>
+							<h2>Design</h2>
+							<div class="entry">
+								<p>
+									The design of this web site was created by Prof. Dr. Marko Boger.
+								</p>
+								<br><br>
+							</div>
+						</div>
+					</div><!-- Content -->
+		
+				</div>
+			</div>		
+		</div><!-- Container -->
+    
+		<!-- Footer -->
+    	@footer
+    	
+    </body>
+</html>

@@ -1,0 +1,17 @@
+@(file: String)
+
+<!-- App Navigation -->
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="container">		
+			<ul class="nav">
+				@if(file == "app_map") { <li class="active"> } else { <li> } <a href="app_map.html">Map</a></li>
+				@if(file == "app_boatinfo") { <li class="active"> } else { <li> } <a href="app_boatinfo.html">Logbuch</a></li>
+				@if(file == "app_trip" || file == "app_tripinfo" || file == "app_waypoint") { <li class="active"> } else { <li> } <a href="app_trip.html">Routen</a></li>
+			</ul>
+			<ul class="navbar-form pull-right" style="list-style-type: none;">
+				<li><a class="btn" id="startSimulation"><i class="icon-play"></i></a><li>
+			</ul>
+		</div>
+	</div>
+</div>

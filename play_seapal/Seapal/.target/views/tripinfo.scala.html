@@ -1,0 +1,136 @@
+@(header: Html)(navigation: Html)(navigation_app: Html)(data: String)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    
+    	<!-- Header -->
+        @header
+        
+    </head>
+    <body>
+    
+    	<!-- Navigation -->
+    	@navigation
+    	
+    	<!-- Container -->
+    	<div class="container-fluid">
+    	
+	    	<!-- Navigation -->
+	    	@navigation_app
+
+			<!-- Content -->
+			<div id="appWrapper" align="center">
+	            <br />
+	            <h2>Routen Informationen</h2>
+	            <br />
+	            <br />
+	            <br />
+	            <div class="container-fluid" align="center">
+	            	<form class="form-horizontal"> 
+		            	<div class="row well" style="margin-left: 0px;" align="center">
+		            		<div class="span4" align="center">	            		
+			            		<div class="control-group">
+			            			<label class="control-label">Name</label>
+			            			<input class="input-medium" type="text" id="name"/>
+			            		</div>
+			            		<div class="control-group">
+			            			<label class="control-label">Time</label>
+			            			<input class="input-medium" type="date" id="wdate"/>
+			                    </div>
+			                    <div class="control-group">
+			            			<label class="control-label">Date</label>
+			            			<input class="input-medium" type="date" id="wtime"/>
+			                    </div>
+		            		</div>
+		            		<div class="span4">
+		            			<div class="control-group">
+			            			<label class="control-label">Latitude</label>
+			            			<input class="input-medium" type="text" id="lat"/>
+			            		</div>
+			            		<div class="control-group">
+			            			<label class="control-label">Longitude</label>
+			            			<input class="input-medium" type="text" id="lng"/>
+			                    </div>
+			                    <div class="control-group">
+			            			<label class="control-label">Fahrt nach</label>
+			            			<select name="fahrtziel" id="marker" style="width: 165px;"></select>
+			                    </div>
+		            		</div>
+		            		<div class="span4">
+		            			<div class="control-group">
+			            			<label class="control-label">COG</label>
+			            			<input class="input-medium" type="text" id="cog"/>
+			                    </div>
+			                    <div class="control-group">
+			            			<label class="control-label">SOG</label>
+			            			<input class="input-medium" type="text" id="sog"/>
+			                    </div>  
+			                    <div class="control-group">
+			                    	<label class="control-label">Manoever</label>
+			            			<select name="manoever" id="manoever" style="width: 165px;"></select>
+			                    </div>                 
+		            		</div>
+		            		<div class="span4">
+		            			<div class="control-group">
+			            			<label class="control-label">BTM</label>
+			            			<input class="input-medium" type="text" id="btm"/>
+			                    </div>
+			                    <div class="control-group">
+			            			<label class="control-label">DTM</label>
+			            			<input class="input-medium" type="text" id="dtm"/>
+			                    </div>
+			                    <div class="control-group">
+			            			<label class="control-label">Vorsegel</label>
+			            			<select name="vorsegel" id="vorsegel" style="width: 165px;"></select>
+			            		</div>
+		            		</div>
+		            	</div>      	 
+		            	<div class="control-group">
+			            	<input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
+			                <input type="submit" class="btn" id="save" name="submit" value="Speichern" class="button"/>
+			            </div> 
+			            </form> 
+	            	</div>
+	            </div>
+	            <div class="appTableDiv" id="tripinfo" align="center">
+	                <table class="appTable table table-hover" cellspacing="0px" cellpadding="5px">
+	                    <thead>
+	                        <tr>
+	                            <th>Name</th>
+	                            <th>Breite</th>
+	                            <th>Laenge</th>
+	                            <th>Peilung</th>
+	                            <th>Abstand</th>
+	                            <th>Manoever</th>     
+	                            <th></th>
+	                        </tr>
+	                    </thead>
+	                    <tbody id="entries">
+	                        @Html(data)
+	                    </tbody>
+	                </table>
+	            </div>
+	        </div><!-- Content -->	
+	    </div><!-- Container -->
+		
+		<!-- Menu Modal -->
+		<div class="modal hide fade" id="messageBox">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 id="dialogTitle"></h3>
+			</div>
+			<div class="modal-body">
+				<p id="dialogMessage"></p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal"><i class="icon-ok"></i> ok</a>
+			</div>
+		</div>
+		
+		<!-- Additional Scripts -->
+		<script src="@routes.Assets.at("javascripts/app/ajax/tripinfo.js")" type="text/javascript"></script>
+		
+	</body>
+</html>

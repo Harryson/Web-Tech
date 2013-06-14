@@ -1,0 +1,96 @@
+
+label {
+    color: #DEE3E5;
+    margin-left: 20px;
+}
+
+#map_canvas {
+    width: 100%;
+    height: 800px;
+    margin: auto;
+}
+
+#appWrapper {
+    width: 100%;
+    height: 80%;
+    margin: auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DEE3E5;
+}
+
+#context-menu {
+    display: none;
+}
+
+.coordinate_info_box {
+    position: absolute;
+    font-weight: bold;
+}
+
+#routeMenuContainer, #distanceToolContainer, #followCurrentPositionContainer, #navigationContainer {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#followCurrentPosition_button {
+    position: absolute;
+    z-index: 2;
+}
+
+#routeMenu, #distanceToolMenu, #navigationMenu {
+    position: absolute;
+    z-index: 2;
+    white-space: nowrap;
+    text-align: center;
+}
+
+#route_distance, #distanceTool_distance, #navigation_distance {
+    font-weight: bolder;
+}
+
+.markerInfoBox {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+        
+#temporaryMarkerInfobox {
+    padding: 5px 5px 5px 5px;
+}
+        
+#fixedMarkerInfobox {
+    padding: 3px 3px 3px 3px;
+}
+        
+.context-menu-root {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding-top: 3px;
+    padding-bottom: 5px;
+}
+        
+#distanceToolContainer, #routeMenuContainer, #navigationContainer {
+    float: right;
+}
+        
+#routeMenu, #distanceToolMenu, #navigationMenu {
+    width: 201px;
+    padding: 5px 5px 5px 5px;
+    margin-left: 88.6%;
+    margin-top: 40px;
+}
+        
+.routeButton {
+    padding-top: 5px;
+}
+ 
+#followCurrentPosition_button {
+    padding: 5px 5px 5px 5px;
+    margin-top: 7px;
+    margin-left: 7px;
+}
+
