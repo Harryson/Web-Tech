@@ -17,13 +17,13 @@ public class Boatinfo extends Controller {
   
     DynamicForm data = form().bindFromRequest();
     Connection conn = DB.getConnection();
-		Statement query;            
+	Statement query;            
     ResultSet result;
     ObjectNode respJSON = Json.newObject();
     int nextId = 0;
 
     try {
-	      query = conn.createStatement();
+		query = conn.createStatement();
 
         query.execute("INSERT INTO seapal.bootinfo(bootname, registernummer, segelzeichen, heimathafen, yachtclub, eigner, versicherung,"
                 + "rufzeichen, typ, konstrukteur, laenge, breite, tiefgang, masthoehe, verdraengung, rigart,"

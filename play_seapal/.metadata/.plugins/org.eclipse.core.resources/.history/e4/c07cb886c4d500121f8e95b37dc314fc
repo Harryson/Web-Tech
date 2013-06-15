@@ -1,0 +1,14 @@
+package controllers;
+
+
+import play.mvc.*;
+
+import views.html.*;
+import views.html._include.*;
+
+public class Chat extends Controller {
+
+//	public static Result index() {
+//		return ok(chat.render(header.render(), navigation.render("Chat"), footer.render()));
+//	}
+}

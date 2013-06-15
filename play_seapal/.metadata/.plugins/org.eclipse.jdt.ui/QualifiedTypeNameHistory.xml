@@ -1,2 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="views.html._include.header"/>
+<fullyQualifiedTypeName name="views.html._include.navigation"/>
+</qualifiedTypeNameHistroy>
