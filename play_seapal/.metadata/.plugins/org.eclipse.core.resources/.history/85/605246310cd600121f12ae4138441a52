@@ -1,0 +1,51 @@
+package controllers;
+
+import play.*;
+import play.mvc.*;
+import play.libs.F.*;
+
+import views.html.*;
+import views.html._include.*;
+
+import org.codehaus.jackson.*;
+
+import models.*;
+
+public class Chat extends Controller {
+
+	public static Result index() {
+		return ok(chatSignIN.render(header.render(), navigation.render("Chat"), navigation_app.render("app_chat")));
+		//return ok(chat.render(header.render(), navigation.render("Chat"), navigation_app.render("app_chat")));
+	}
+	
+	/**
+     * Display the chat room.
+     */
+    public static Result chatRoom(String username) {
+        if(username == null || username.trim().equals("")) {
+            flash("error", "Please choose a valid username.");
+            return redirect(routes.Chat.index());
+        }
+        return ok(chatRoom.render(header.render(), navigation.render("Chat"), navigation_app.render("app_chat"), username));
+    }
+    
+    /**
+     * Handle the chat websocket.
+     */
+    public static WebSocket<JsonNode> chat(final String username) {
+        return new WebSocket<JsonNode>() {
+            
+            // Called when the Websocket Handshake is done.
+            public void onReady(WebSocket.In<JsonNode> in, WebSocket.Out<JsonNode> out){
+                
+                // Join the chat room.
+                try { 
+                    ChatRoom.join(username, in, out);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            }
+        };
+    }
+	
+}

@@ -1,10 +1,10 @@
-@(header: Html)(navigation: Html)(navigation_app: Html)
+@(header: Html)(navigation: Html)(navigation_app: Html)(connected: String)(content: Html)
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
     <head>
-    	<title>Comet Chat</title>
+    	<title>Wetter Chat</title>
 
 	    <link rel="stylesheet" href="chat.css" type="text/css" />
 	 
@@ -13,6 +13,12 @@
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	    
 		<script type="text/javascript" src="javascripts/app/ajax/chat.js"></script>
+
+
+		<link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script src="@routes.Assets.at("javascripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
 
     	<!-- Header -->
         @header
@@ -35,20 +41,50 @@
 		   
 		        <h2>Wetter Chat</h2>
 		        
-		        <div id="chat-area"></div>
 		        
-		        <form id="send-message-form">
-		            
-					<p>Your message: </p>
-
-					<textarea id="send-message-box" maxlength = '100' ></textarea>
-		        </form>  
 
 
-		        <div class="control-group">
-			        <input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
-			        <input type="submit" class="btn" id="send" name="submit" value="Senden" class="button"/>
-			    </div>
+
+
+
+		        <div class="topbar">
+		            <div class="fill">
+		                <div class="container">
+		                    <a class="brand" href="@routes.Chat.index()">Websocket Chat-Room</a>
+		                    
+		                    @if(connected != null) {
+		                        <p class="pull-right">
+		                            Logged in as @connected —
+		                            <a href="@routes.Chat.index()">Disconnect</a>
+		                        </p>
+							<!-- Da null übergeben wurde, wird dieser Inhalt angeziegt -->
+		                    } else {
+		                        <form action="@routes.Chat.chatRoom()" class="pull-right">
+		                            <input id="username" name="username" class="input-small" type="text" placeholder="Username">
+		                            <button class="btn" type="submit">Sign in</button>
+		                        </form>
+		                    }
+		                    
+		                </div>
+		            </div>
+		        </div>
+
+		        <div class="container">
+
+		            <div class="content">
+		                @content
+		            </div>
+
+		            <footer>
+		                <p>
+		                    <a href="http://www.playframework.org">www.playframework.org</a>
+		                </p>
+		            </footer>
+
+		        </div>
+
+
+
 
 		    </div><!-- Content -->
 
