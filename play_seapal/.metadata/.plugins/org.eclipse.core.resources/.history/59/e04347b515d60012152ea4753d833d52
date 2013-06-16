@@ -75,7 +75,7 @@ public class ChatRoom extends UntypedActor {
     }
     
     // Members of this room.
-    HashMap<String, WebSocket.Out<JsonNode>> members = new HashMap<String, WebSocket.Out<JsonNode>>();
+    Map<String, WebSocket.Out<JsonNode>> members = new HashMap<String, WebSocket.Out<JsonNode>>();
     
     public void onReceive(Object message) throws Exception {
         

@@ -25,9 +25,11 @@ public class Chat extends Controller {
     public static Result chatRoom(String username) {
         if(username == null || username.trim().equals("")) {
             flash("error", "Please choose a valid username.");
-            return redirect(routes.Chat.index());
+            return ok();
+            		//redirect(routes.Chat.index());
         }
-        return ok(chatRoom.render(header.render(), navigation.render("Chat"), navigation_app.render("app_chat"), username));
+        return ok();
+        		//chatRoom.render(header.render(), navigation.render("Chat"), navigation_app.render("app_chat"), username));
     }
     
     /**

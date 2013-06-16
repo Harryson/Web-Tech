@@ -3,4 +3,5 @@
 <fullyQualifiedTypeName name="views.html._include.header"/>
 <fullyQualifiedTypeName name="views.html._include.navigation"/>
 <fullyQualifiedTypeName name="play.api.templates.Html"/>
+<fullyQualifiedTypeName name="views.package."/>
 </qualifiedTypeNameHistroy>

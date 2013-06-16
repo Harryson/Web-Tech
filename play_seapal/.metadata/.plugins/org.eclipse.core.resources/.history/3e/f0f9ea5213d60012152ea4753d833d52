@@ -1,5 +1,7 @@
 package controllers;
 
+
+import play.api.templates.Html;
 import play.*;
 import play.mvc.*;
 import play.libs.F.*;
@@ -15,7 +17,7 @@ import models.*;
 public class Chat extends Controller {
 
 	public static Result index() {
-		return ok(chatSignIn.render(header.render(), navigation.render("Chat"), navigation_app.render("app_chat")));
+		return ok(chatSignIN.render(header.render(), navigation.render("Chat"), navigation_app.render("app_chat")));
 		//return ok(chat.render(header.render(), navigation.render("Chat"), navigation_app.render("app_chat")));
 	}
 	

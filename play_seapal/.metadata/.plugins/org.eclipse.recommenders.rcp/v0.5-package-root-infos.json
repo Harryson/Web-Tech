@@ -26,19 +26,6 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "jta",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "2ca09f0b36ca7d71b762e14ea2ff09d5eac57558",
-    "jarFileModificationDate": "2013-06-15T13:35:11.931+02:00",
-    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\javax.transaction\\jta\\1.1\\jars\\jta.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "scala-library",
     "version": {
       "major": -1,
@@ -49,6 +36,19 @@
     "jarFileFingerprint": "681ebd06c98c6f3ce583e5cf2e831a353b451c6c",
     "jarFileModificationDate": "2013-06-15T13:35:30.765+02:00",
     "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\framework\\sbt\\boot\\scala-2.9.1\\lib\\scala-library.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jta",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2ca09f0b36ca7d71b762e14ea2ff09d5eac57558",
+    "jarFileModificationDate": "2013-06-15T13:35:11.931+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\javax.transaction\\jta\\1.1\\jars\\jta.jar",
     "javaRuntime": false
   },
   {
@@ -104,19 +104,6 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "org.fluentlenium.fluentlenium-festassert",
-    "version": {
-      "major": 0,
-      "minor": 5,
-      "micro": 6,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "f1940a2123f37a5d85b564c5fad29c2d7ab35af7",
-    "jarFileModificationDate": "2013-06-15T13:35:25.567+02:00",
-    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.fluentlenium\\fluentlenium-festassert\\0.5.6\\jars\\fluentlenium-festassert.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "org.easytesting.fest-assert",
     "version": {
       "major": 1,
@@ -127,6 +114,19 @@
     "jarFileFingerprint": "88ec2d3bbc35a2e9613f584b29e26adb1bc2c515",
     "jarFileModificationDate": "2013-06-15T13:35:22.494+02:00",
     "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.easytesting\\fest-assert\\1.4\\jars\\fest-assert.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.fluentlenium.fluentlenium-festassert",
+    "version": {
+      "major": 0,
+      "minor": 5,
+      "micro": 6,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f1940a2123f37a5d85b564c5fad29c2d7ab35af7",
+    "jarFileModificationDate": "2013-06-15T13:35:25.567+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.fluentlenium\\fluentlenium-festassert\\0.5.6\\jars\\fluentlenium-festassert.jar",
     "javaRuntime": false
   },
   {
@@ -377,19 +377,6 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "org.seleniumhq.selenium.selenium-android-driver",
-    "version": {
-      "major": 2,
-      "minor": 16,
-      "micro": 1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "9d08e16f53d8463a337074009d40914468d7f312",
-    "jarFileModificationDate": "2013-06-15T13:35:39.697+02:00",
-    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-android-driver\\2.16.1\\jars\\selenium-android-driver.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "org.hibernate.javax.persistence.hibernate-jpa-2.0-api",
     "version": {
       "major": 1,
@@ -400,6 +387,19 @@
     "jarFileFingerprint": "3306a165afa81938fc3d8a0948e891de9f6b192b",
     "jarFileModificationDate": "2013-06-15T13:35:26.391+02:00",
     "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.hibernate.javax.persistence\\hibernate-jpa-2.0-api\\1.0.1.Final\\jars\\hibernate-jpa-2.0-api.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-android-driver",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9d08e16f53d8463a337074009d40914468d7f312",
+    "jarFileModificationDate": "2013-06-15T13:35:39.697+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-android-driver\\2.16.1\\jars\\selenium-android-driver.jar",
     "javaRuntime": false
   },
   {
@@ -494,19 +494,6 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "junit-interface",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "15ceda98556956040c8b8fcfbc41173875cb144c",
-    "jarFileModificationDate": "2013-06-15T13:35:08.491+02:00",
-    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.novocode\\junit-interface\\0.8\\jars\\junit-interface.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "org.hibernate.validator",
     "version": {
       "major": 4,
@@ -517,6 +504,19 @@
     "jarFileFingerprint": "eac2db0a9d86a9749724fe93d43afffa8106f25e",
     "jarFileModificationDate": "2013-06-15T13:35:26.114+02:00",
     "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.hibernate\\hibernate-validator\\4.2.0.Final\\jars\\hibernate-validator.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "junit-interface",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "15ceda98556956040c8b8fcfbc41173875cb144c",
+    "jarFileModificationDate": "2013-06-15T13:35:08.491+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.novocode\\junit-interface\\0.8\\jars\\junit-interface.jar",
     "javaRuntime": false
   },
   {
@@ -533,19 +533,6 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "net.sf.ehcache.ehcache-core",
-    "version": {
-      "major": 2,
-      "minor": 5,
-      "micro": 0,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "dceec96d3098e31ad8c8bc919115cfcc750d7752",
-    "jarFileModificationDate": "2013-06-15T13:35:16.266+02:00",
-    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.sf.ehcache\\ehcache-core\\2.5.0\\jars\\ehcache-core.jar",
-    "javaRuntime": false
-  },
-  {
     "symbolicName": "org.seleniumhq.selenium.selenium-support",
     "version": {
       "major": 2,
@@ -556,6 +543,19 @@
     "jarFileFingerprint": "1b2be98355d0b614abd403a2c5a5b71254bdb8e1",
     "jarFileModificationDate": "2013-06-15T13:35:41.856+02:00",
     "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-support\\2.16.1\\jars\\selenium-support.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "net.sf.ehcache.ehcache-core",
+    "version": {
+      "major": 2,
+      "minor": 5,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "dceec96d3098e31ad8c8bc919115cfcc750d7752",
+    "jarFileModificationDate": "2013-06-15T13:35:16.266+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.sf.ehcache\\ehcache-core\\2.5.0\\jars\\ehcache-core.jar",
     "javaRuntime": false
   },
   {
@@ -1248,16 +1248,16 @@
     "javaRuntime": false
   },
   {
-    "symbolicName": "commons-logging",
+    "symbolicName": "joda-time",
     "version": {
-      "major": 1,
-      "minor": 1,
-      "micro": 1,
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
       "qualifier": ""
     },
-    "jarFileFingerprint": "5043bfebc3db072ed80fbd362e7caf00e885d8ae",
-    "jarFileModificationDate": "2013-06-15T13:35:11.448+02:00",
-    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\commons-logging\\commons-logging\\1.1.1\\jars\\commons-logging.jar",
+    "jarFileFingerprint": "752c0fe8a5b2d6704c9d9d6f06d9abdcacf4045d",
+    "jarFileModificationDate": "2013-06-15T13:35:12.392+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\joda-time\\joda-time\\2.0\\jars\\joda-time.jar",
     "javaRuntime": false
   },
   {
@@ -1274,29 +1274,16 @@
     "javaRuntime": true
   },
   {
-    "symbolicName": "joda-time",
+    "symbolicName": "commons-logging",
     "version": {
-      "major": 2,
-      "minor": 0,
-      "micro": 0,
+      "major": 1,
+      "minor": 1,
+      "micro": 1,
       "qualifier": ""
     },
-    "jarFileFingerprint": "752c0fe8a5b2d6704c9d9d6f06d9abdcacf4045d",
-    "jarFileModificationDate": "2013-06-15T13:35:12.392+02:00",
-    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\joda-time\\joda-time\\2.0\\jars\\joda-time.jar",
-    "javaRuntime": false
-  },
-  {
-    "symbolicName": "htmlunit-core-js",
-    "version": {
-      "major": -1,
-      "minor": -1,
-      "micro": -1,
-      "qualifier": ""
-    },
-    "jarFileFingerprint": "c90d338dddd18dd92ef0f933244b66db568b9f79",
-    "jarFileModificationDate": "2013-06-15T13:35:17.107+02:00",
-    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.sourceforge.htmlunit\\htmlunit-core-js\\2.9\\jars\\htmlunit-core-js.jar",
+    "jarFileFingerprint": "5043bfebc3db072ed80fbd362e7caf00e885d8ae",
+    "jarFileModificationDate": "2013-06-15T13:35:11.448+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\commons-logging\\commons-logging\\1.1.1\\jars\\commons-logging.jar",
     "javaRuntime": false
   },
   {
@@ -1310,6 +1297,19 @@
     "jarFileFingerprint": "724e00d7a49f8dc6bbb4ce2f63662ad2330ccf84",
     "jarFileModificationDate": "2013-06-15T13:35:05.792+02:00",
     "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.github.scala-incubator.io\\scala-io-file_2.9.1\\0.4.0\\jars\\scala-io-file_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "htmlunit-core-js",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c90d338dddd18dd92ef0f933244b66db568b9f79",
+    "jarFileModificationDate": "2013-06-15T13:35:17.107+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.sourceforge.htmlunit\\htmlunit-core-js\\2.9\\jars\\htmlunit-core-js.jar",
     "javaRuntime": false
   }
 ]
