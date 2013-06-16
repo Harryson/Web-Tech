@@ -27,7 +27,7 @@ $(function() {
 	        $('#temperature').val(data['temperature']);
 	        $('#clouds').val(data['clouds']);
 	        $('#rain').val(data['rain']);
-	        $('#waveHight').val(data['waveHight']);
+	        $('#waveHeight').val(data['waveHeight']);
 	        $('#waveDirection').val(data['waveDirection']);
 	        
 
@@ -58,7 +58,7 @@ $(function() {
 	        "temperature": $('#temperature').val(),
 	        "clouds": $('#clouds').val(),
 	        "rain": $('#rain').val(),
-	        "waveHight": $('#waveHight').val(),
+	        "waveHeight": $('#waveHeight').val(),
 	        "waveDirection": $('#waveDirection').val()
 	    };
 
@@ -84,8 +84,16 @@ $(function() {
 	});
 
 	function masked(){
+		$.mask.definitions['~']='[EeWw]';
+		$.mask.definitions['+']='[NnSs]';
+		$.mask.definitions['-']='[-]';
+		$('#lat').mask("99°99.99+");
+		$('#lng').mask("999°99.99~");
 		$('#wdate').mask("99.99.9999");
 		$('#wtime').mask("99:99");
+		$('#temperature').mask("99 °C");
+		$('#waveHeight').mask("999 cm");
+		$('#airPressure').mask("999 mmHg");
 	}
 
 	var dateDDMMYYYRegex = '^(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d$';

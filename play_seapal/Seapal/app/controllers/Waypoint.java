@@ -58,6 +58,14 @@ public class Waypoint extends Controller {
         try {
             query = conn.createStatement();
 
+          String latitude = data.get("lat");
+          String longitude = data.get("lng");
+
+          latitude.replace("\'", "Q");
+          longitude.replace("\'", "Q");
+
+          //System.out.println("lat " + latitude + " lng = " + longitude);
+
             query.execute("UPDATE seapal.wegpunkte SET "
                     + "name = '" + data.get("name") + "', "
                     + "btm = '" + data.get("btm") + "', "
@@ -77,7 +85,7 @@ public class Waypoint extends Controller {
                     + "temperature = '" + data.get("temperature") + "', "
                     + "clouds = '" + data.get("clouds") + "', "
                     + "rain = '" + data.get("rain") + "', "
-                    + "waveHight = '" + data.get("waveHight") + "', "
+                    + "waveHeight = '" + data.get("waveHeight") + "', "
                     + "waveDirection = '" + data.get("waveDirection") + "'"
                     + "WHERE wnr = '" + wnr + "';");
 

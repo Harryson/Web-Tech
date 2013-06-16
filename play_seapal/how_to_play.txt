@@ -1,0 +1,18 @@
+1) install play and set PATH
+2) to test in cmd "play"
+3) play new demo2 -> use java or scala (prefered java)
+5) cd demo2 -> there are generated files
+6) play eclipse -> erzeugt datein, um mit eclipse zu arbeiten: z.b .project und .settings
+7) import extistining projects into workspace in eclipse
+8) wir brauchen verzeichnis "test" und "app" -> da wird entwickelt.
+In app are views and controllers. In views are scala.html files (see slides). -> view files with templates
+9) back to cmd. play run -> den server wird auf port 9000 laufen. -> localhost:9000 -> welcome to play!
+
+AUFGABE:
+alles, was wir bisher gemacht haben, von php auf play umstellen.
+
+play version (template) wird zur verfügung gestellt.
+dazu weather app hinzufügen
+
+PRÄSENTATION:
+einmal in PHP, einmal in PLAY
