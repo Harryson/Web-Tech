@@ -22,7 +22,7 @@ public class Chat extends Controller {
      * Display the home page.
      */
     public static Result index() {
-        return ok(chatIndex.render());
+        return ok(index.render());
     }
   
     /**
@@ -30,11 +30,10 @@ public class Chat extends Controller {
      */
     public static Result chatRoom(String username) {
         if(username == null || username.trim().equals("")) {
-            flash("error", "Bitte geben Sie einen richtigen Benutzername ein.");
-            return redirect(routes.Chat.index());
+            flash("error", "Please choose a valid username.");
+            return redirect(routes.Application.index());
         }
         return ok(chatRoom.render(username));
-      
     }
     
     /**

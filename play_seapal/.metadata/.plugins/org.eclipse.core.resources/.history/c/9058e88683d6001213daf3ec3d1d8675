@@ -33,7 +33,7 @@ public class Chat extends Controller {
             flash("error", "Bitte geben Sie einen richtigen Benutzername ein.");
             return redirect(routes.Chat.index());
         }
-        return ok(chatRoom.render(username));
+        return ok(chatRoom.render(username) + "Test");
       
     }
     

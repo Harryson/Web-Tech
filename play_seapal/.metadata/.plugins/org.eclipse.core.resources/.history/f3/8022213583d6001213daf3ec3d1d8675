@@ -31,7 +31,7 @@ public class Chat extends Controller {
     public static Result chatRoom(String username) {
         if(username == null || username.trim().equals("")) {
             flash("error", "Bitte geben Sie einen richtigen Benutzername ein.");
-            return redirect(routes.Chat.index());
+            return redirect(routes.Chat.index() + "Test");
         }
         return ok(chatRoom.render(username));
       
