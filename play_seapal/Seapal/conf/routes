@@ -26,9 +26,15 @@ POST    /app_tripinfo_insert.html   controllers.Tripinfo.insert()
 GET     /app_tripinfo_delete.html   controllers.Tripinfo.delete(wnr: Int)
 GET     /app_waypoint.html          controllers.Waypoint.index(wnr: Int)
 POST 	/app_waypoint_update.html	controllers.Waypoint.update(wnr: Int)
+
+GET     /app_sun.html          		controllers.Sun.index()
+
 GET     /app_chat.html          	controllers.Chat.index()
 GET     /room                       controllers.Chat.chatRoom(username: String ?= null)
 GET     /room/chat                  controllers.Chat.chat(username)
+
+GET     /app_clock.html          	controllers.NaviClock.index()
+GET     /clock                      controllers.NaviClock.liveClock()
 
 
 # Map static resources from the /public folder to the /assets URL path

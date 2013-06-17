@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;controllers.Clock&apos; to &apos;NaviClock&apos;&#x0D;&#x0A;- Original project: &apos;Seapal&apos;&#x0D;&#x0A;- Original element: &apos;controllers.Clock&apos;&#x0D;&#x0A;- Renamed element: &apos;controllers.NaviClock&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Clock&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/app&lt;controllers{Clock.java[Clock" matchStrategy="1" name="NaviClock" qualified="false" references="true" similarDeclarations="false" stamp="1371392378788" textual="false" version="1.0"/>
+</session>
