@@ -1,0 +1,1341 @@
+[
+  {
+    "symbolicName": "org.yaml.snakeyaml",
+    "version": {
+      "major": 1,
+      "minor": 9,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5372b16fee57380d07d027f7dd138b1dcf1bdb92",
+    "jarFileModificationDate": "2013-06-15T13:35:52.288+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.yaml\\snakeyaml\\1.9\\bundles\\snakeyaml.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "10585215f79fb361342cfdcea749dad586f34414",
+    "jarFileModificationDate": "2012-03-18T17:52:55.348+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jta",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2ca09f0b36ca7d71b762e14ea2ff09d5eac57558",
+    "jarFileModificationDate": "2013-06-15T13:35:11.931+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\javax.transaction\\jta\\1.1\\jars\\jta.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "scala-library",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "681ebd06c98c6f3ce583e5cf2e831a353b451c6c",
+    "jarFileModificationDate": "2013-06-15T13:35:30.765+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\framework\\sbt\\boot\\scala-2.9.1\\lib\\scala-library.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.lang",
+    "version": {
+      "major": 2,
+      "minor": 6,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0ce1edb914c94ebc388f086c6827e8bdeec71ac2",
+    "jarFileModificationDate": "2013-06-15T13:35:11.219+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\commons-lang\\commons-lang\\2.6\\jars\\commons-lang.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.json.json",
+    "version": {
+      "major": 20080701,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d652f102185530c93b66158b1859f35d45687258",
+    "jarFileModificationDate": "2013-06-15T13:35:26.910+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.json\\json\\20080701\\jars\\json.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-firefox-driver",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "704e31c21ca3c904164ae5d989205435a9fbdacc",
+    "jarFileModificationDate": "2013-06-15T13:35:40.102+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-firefox-driver\\2.16.1\\jars\\selenium-firefox-driver.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-iphone-driver",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9ca998be61f61604b1a586e1464f9d56286f0326",
+    "jarFileModificationDate": "2013-06-15T13:35:40.432+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-iphone-driver\\2.16.1\\jars\\selenium-iphone-driver.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.fluentlenium.fluentlenium-festassert",
+    "version": {
+      "major": 0,
+      "minor": 5,
+      "micro": 6,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f1940a2123f37a5d85b564c5fad29c2d7ab35af7",
+    "jarFileModificationDate": "2013-06-15T13:35:25.567+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.fluentlenium\\fluentlenium-festassert\\0.5.6\\jars\\fluentlenium-festassert.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.easytesting.fest-assert",
+    "version": {
+      "major": 1,
+      "minor": 4,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "88ec2d3bbc35a2e9613f584b29e26adb1bc2c515",
+    "jarFileModificationDate": "2013-06-15T13:35:22.494+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.easytesting\\fest-assert\\1.4\\jars\\fest-assert.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.io",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7ffdb02f95af1c1a208544e076cea5b8e66e731a",
+    "jarFileModificationDate": "2013-06-15T13:35:11.089+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\commons-io\\commons-io\\2.0.1\\jars\\commons-io.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "99205532ad01ab8e5e50a8773b1c8761d5870786",
+    "jarFileModificationDate": "2012-03-18T17:52:52.408+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "templates_2.9.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "61a9a0024a54b8c4d51d9ba799a1d2a28433b54d",
+    "jarFileModificationDate": "2013-06-15T13:35:54.429+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\play\\templates_2.9.1\\2.0.4\\jars\\templates_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "tyrex",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b0f49419e7e6d7bb1de409019e14a1acc4e55669",
+    "jarFileModificationDate": "2013-06-15T13:35:57.982+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\tyrex\\tyrex\\1.0.1\\jars\\tyrex.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "test-interface",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "621ea57f37a1fed152bf7cb454e78a2c30e5ca6e",
+    "jarFileModificationDate": "2013-06-15T13:35:39.168+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.scala-tools.testing\\test-interface\\0.5\\jars\\test-interface.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.codahale.jerkson_2.9.1",
+    "version": {
+      "major": 0,
+      "minor": 5,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a445c64a87fd30a7d5c8d8fdcbb11f76d3c1a4c6",
+    "jarFileModificationDate": "2013-06-15T13:35:04.372+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.codahale\\jerkson_2.9.1\\0.5.0\\jars\\jerkson_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-api",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "77a047131fabc98563909a6648f181b3c3136c7c",
+    "jarFileModificationDate": "2013-06-15T13:35:39.816+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-api\\2.16.1\\jars\\selenium-api.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "specs2_2.9.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3deec684652be905df4ba99b48b25e1248cc8982",
+    "jarFileModificationDate": "2013-06-15T13:35:49.056+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.specs2\\specs2_2.9.1\\1.9\\jars\\specs2_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ac870f9fcdf0068bda8d94ee04274f7b631b0528",
+    "jarFileModificationDate": "2012-03-18T17:52:55.308+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "net.sourceforge.cssparser.cssparser",
+    "version": {
+      "major": 0,
+      "minor": 9,
+      "micro": 5,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7222f4a7e50fc57a88a546a228088524bdbbdaea",
+    "jarFileModificationDate": "2013-06-15T13:35:16.544+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.sourceforge.cssparser\\cssparser\\0.9.5\\jars\\cssparser.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.fluentlenium.fluentlenium-core",
+    "version": {
+      "major": 0,
+      "minor": 5,
+      "micro": 6,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d5fe1b6250ca79c4abf43b949d28b5e658e2663c",
+    "jarFileModificationDate": "2013-06-15T13:35:25.372+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.fluentlenium\\fluentlenium-core\\0.5.6\\jars\\fluentlenium-core.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-java",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1e15b233af9171f4f5bca787bf87e190409d5afb",
+    "jarFileModificationDate": "2013-06-15T13:35:40.526+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-java\\2.16.1\\jars\\selenium-java.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "cglib-nodep",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "58d3be5953547c0019e5704d6ed4ffda3b0c7c66",
+    "jarFileModificationDate": "2013-06-15T13:34:58.512+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\cglib\\cglib-nodep\\2.1_3\\jars\\cglib-nodep.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-chrome-driver",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0497225301b22a0df7070d3f792f4a9336df21d0",
+    "jarFileModificationDate": "2013-06-15T13:35:39.916+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-chrome-driver\\2.16.1\\jars\\selenium-chrome-driver.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.reflections.reflections",
+    "version": {
+      "major": 0,
+      "minor": 9,
+      "micro": 6,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a14d0478b1fe003183f3c87ac9439c81a57a68a0",
+    "jarFileModificationDate": "2013-06-15T13:35:27.787+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.reflections\\reflections\\0.9.6\\jars\\reflections.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "scala-io-core_2.9.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c609b7f284db597f0c9710dd37d915e8a4cf40b0",
+    "jarFileModificationDate": "2013-06-15T13:35:05.511+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.github.scala-incubator.io\\scala-io-core_2.9.1\\0.4.0\\jars\\scala-io-core_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.httpcomponents.httpclient",
+    "version": {
+      "major": 4,
+      "minor": 1,
+      "micro": 2,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9003011c1b6d28a7331f04251a25e7ccf63c98f8",
+    "jarFileModificationDate": "2013-06-15T13:35:18.544+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.apache.httpcomponents\\httpclient\\4.1.2\\jars\\httpclient.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jackson-mapper-asl",
+    "version": {
+      "major": 1,
+      "minor": 9,
+      "micro": 10,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "deb47197f1adc0cebe9bfc5548e900100c771396",
+    "jarFileModificationDate": "2013-06-15T13:35:22.224+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.codehaus.jackson\\jackson-mapper-asl\\1.9.10\\jars\\jackson-mapper-asl.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.h2",
+    "version": {
+      "major": 1,
+      "minor": 3,
+      "micro": 158,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4bac13427caeb32ef6e93b70101e61f370c7b5e2",
+    "jarFileModificationDate": "2013-06-15T13:35:07.294+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.h2database\\h2\\1.3.158\\jars\\h2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-android-driver",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9d08e16f53d8463a337074009d40914468d7f312",
+    "jarFileModificationDate": "2013-06-15T13:35:39.697+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-android-driver\\2.16.1\\jars\\selenium-android-driver.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.hibernate.javax.persistence.hibernate-jpa-2.0-api",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 1,
+      "qualifier": "Final"
+    },
+    "jarFileFingerprint": "3306a165afa81938fc3d8a0948e891de9f6b192b",
+    "jarFileModificationDate": "2013-06-15T13:35:26.391+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.hibernate.javax.persistence\\hibernate-jpa-2.0-api\\1.0.1.Final\\jars\\hibernate-jpa-2.0-api.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jackson-core-asl",
+    "version": {
+      "major": 1,
+      "minor": 9,
+      "micro": 10,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "45ff5b12fba27586a2885d420a712c2ffa41c548",
+    "jarFileModificationDate": "2013-06-15T13:35:22.023+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.codehaus.jackson\\jackson-core-asl\\1.9.10\\jars\\jackson-core-asl.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-htmlunit-driver",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "95d0575181b86bfa00da67452720b93a6733e59a",
+    "jarFileModificationDate": "2013-06-15T13:35:40.227+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-htmlunit-driver\\2.16.1\\jars\\selenium-htmlunit-driver.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "play_2.9.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "ca188c568770317ecbd7e94f0b89964083e634f5",
+    "jarFileModificationDate": "2013-06-15T13:35:53.955+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\play\\play_2.9.1\\2.0.4\\jars\\play_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "ch.qos.logback.classic",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2577f6b69bbab34bb55634a4500b1b877aeffb7c",
+    "jarFileModificationDate": "2013-06-15T13:34:58.847+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\ch.qos.logback\\logback-classic\\1.0.0\\jars\\logback-classic.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "json_simple-1.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5e303a03d04e6788dddfa3655272580ae0fc13bb",
+    "jarFileModificationDate": "2013-01-09T14:55:18+01:00",
+    "location": "C:\\Users\\Harryson\\Desktop\\HTWG\\5. Semester\\Web-Tech\\play_seapal\\Seapal\\lib\\json_simple-1.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.collections",
+    "version": {
+      "major": 3,
+      "minor": 2,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "761ea405b9b37ced573d2df0d1e3a4e0f9edc668",
+    "jarFileModificationDate": "2013-06-15T13:35:10.840+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\commons-collections\\commons-collections\\3.2.1\\jars\\commons-collections.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "json_simple-1.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5e303a03d04e6788dddfa3655272580ae0fc13bb",
+    "jarFileModificationDate": "2013-06-16T15:26:59.953+02:00",
+    "location": "C:\\Users\\Harryson\\Desktop\\Web-Tech\\play_seapal\\Seapal\\lib\\json_simple-1.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jaxen",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "eebcb4a8d7579c85494737e10d1a87495210a5a3",
+    "jarFileModificationDate": "2013-06-15T13:35:12.167+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\jaxen\\jaxen\\1.1.3\\jars\\jaxen.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "junit-interface",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "15ceda98556956040c8b8fcfbc41173875cb144c",
+    "jarFileModificationDate": "2013-06-15T13:35:08.491+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.novocode\\junit-interface\\0.8\\jars\\junit-interface.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.hibernate.validator",
+    "version": {
+      "major": 4,
+      "minor": 2,
+      "micro": 0,
+      "qualifier": "Final"
+    },
+    "jarFileFingerprint": "eac2db0a9d86a9749724fe93d43afffa8106f25e",
+    "jarFileModificationDate": "2013-06-15T13:35:26.114+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.hibernate\\hibernate-validator\\4.2.0.Final\\jars\\hibernate-validator.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "433222199dfb1cbbc39b322eb4906dd953d385bd",
+    "jarFileModificationDate": "2012-03-18T17:52:52.418+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\zipfs.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "net.sf.ehcache.ehcache-core",
+    "version": {
+      "major": 2,
+      "minor": 5,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "dceec96d3098e31ad8c8bc919115cfcc750d7752",
+    "jarFileModificationDate": "2013-06-15T13:35:16.266+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.sf.ehcache\\ehcache-core\\2.5.0\\jars\\ehcache-core.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-support",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "1b2be98355d0b614abd403a2c5a5b71254bdb8e1",
+    "jarFileModificationDate": "2013-06-15T13:35:41.856+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-support\\2.16.1\\jars\\selenium-support.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.javassist.javassist",
+    "version": {
+      "major": 3,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": "GA"
+    },
+    "jarFileFingerprint": "315891b371395271977af518d4db5cee1a0bc9bf",
+    "jarFileModificationDate": "2013-06-15T13:35:26.590+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.javassist\\javassist\\3.16.1-GA\\jars\\javassist.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.mysql.jdbc",
+    "version": {
+      "major": 5,
+      "minor": 1,
+      "micro": 18,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a40a4c21ff6a31036a05070ee8eb3654a0153666",
+    "jarFileModificationDate": "2013-01-09T14:55:18+01:00",
+    "location": "C:\\Users\\Harryson\\Desktop\\HTWG\\5. Semester\\Web-Tech\\play_seapal\\Seapal\\lib\\mysql-connector-java-5.1.18-bin.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jsr305",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf",
+    "jarFileModificationDate": "2013-06-15T13:35:05.983+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.google.code.findbugs\\jsr305\\1.3.9\\jars\\jsr305.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jcl.over.slf4j",
+    "version": {
+      "major": 1,
+      "minor": 6,
+      "micro": 4,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "aad8e9df65ebb68e3ba6f269e3312707f7f1065f",
+    "jarFileModificationDate": "2013-06-15T13:35:42.087+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.slf4j\\jcl-over-slf4j\\1.6.4\\jars\\jcl-over-slf4j.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "akka-actor",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6d9a4a7953185bb1fb5d9e63ed91f576abbeb439",
+    "jarFileModificationDate": "2013-06-15T13:35:09.633+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.typesafe.akka\\akka-actor\\2.0.2\\jars\\akka-actor.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.mysql.jdbc",
+    "version": {
+      "major": 5,
+      "minor": 1,
+      "micro": 18,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "85dfedad243dc0303ad7ae3a323c39421d220690",
+    "jarFileModificationDate": "2011-10-03T10:44:06+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\cache\\mysql\\mysql-connector-java\\jars\\mysql-connector-java-5.1.18.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-ie-driver",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b751108b09528ec4348f0fc20a4c5856fba18abe",
+    "jarFileModificationDate": "2013-06-15T13:35:40.346+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-ie-driver\\2.16.1\\jars\\selenium-ie-driver.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.springframework.context",
+    "version": {
+      "major": 3,
+      "minor": 0,
+      "micro": 7,
+      "qualifier": "RELEASE"
+    },
+    "jarFileFingerprint": "e0072743c5c485e0b36a8fce109dcd5c08c5323f",
+    "jarFileModificationDate": "2013-06-15T13:35:51.433+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.springframework\\spring-context\\3.0.7.RELEASE\\jars\\spring-context.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.springframework.beans",
+    "version": {
+      "major": 3,
+      "minor": 0,
+      "micro": 7,
+      "qualifier": "RELEASE"
+    },
+    "jarFileFingerprint": "5915c3eee8dc193b19b648719d653439c57fc0d8",
+    "jarFileModificationDate": "2013-06-15T13:35:49.393+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.springframework\\spring-beans\\3.0.7.RELEASE\\jars\\spring-beans.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.jolbox.bonecp",
+    "version": {
+      "major": 0,
+      "minor": 7,
+      "micro": 1,
+      "qualifier": "RELEASE"
+    },
+    "jarFileFingerprint": "83a491a03db1222b33d4e55b54e8f5702e280a0e",
+    "jarFileModificationDate": "2013-06-15T13:35:07.809+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.jolbox\\bonecp\\0.7.1.RELEASE\\bundles\\bonecp.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "scala-stm_2.9.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e5eadb26a725b40eca43545f6ed27ab6d7c1ef60",
+    "jarFileModificationDate": "2013-06-15T13:35:38.914+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.scala-tools\\scala-stm_2.9.1\\0.5\\jars\\scala-stm_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.google.guava.guava",
+    "version": {
+      "major": 10,
+      "minor": 0,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "292c96f9cb18231528cac4b0bf17d28149d14809",
+    "jarFileModificationDate": "2013-06-15T13:35:06.220+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.google.guava\\guava\\10.0.1\\jars\\guava.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "javax.validation.validation-api",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": "GA"
+    },
+    "jarFileFingerprint": "b6bd7f9d78f6fdaa3c37dae18a4bd298915f328e",
+    "jarFileModificationDate": "2013-06-15T13:35:12.065+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\javax.validation\\validation-api\\1.0.0.GA\\jars\\validation-api.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "specs2-scalaz-core_2.9.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "48b692d7c9d06b0bdd1cb48f0e10e071cfcaf7b5",
+    "jarFileModificationDate": "2013-06-15T13:35:43.422+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.specs2\\specs2-scalaz-core_2.9.1\\6.0.1\\jars\\specs2-scalaz-core_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a717cf29020f95db12fd1d37005353f92180c674",
+    "jarFileModificationDate": "2012-03-18T17:52:52.408+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "serializer",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4b4b18df434451249bb65a63f2fb69e215a6a020",
+    "jarFileModificationDate": "2013-06-15T13:35:58.236+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\xalan\\serializer\\2.7.1\\jars\\serializer.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.exec",
+    "version": {
+      "major": 1,
+      "minor": 1,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "07dfdf16fade726000564386825ed6d911a44ba1",
+    "jarFileModificationDate": "2013-06-15T13:35:17.883+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.apache.commons\\commons-exec\\1.1\\jars\\commons-exec.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.seleniumhq.selenium.selenium-remote-driver",
+    "version": {
+      "major": 2,
+      "minor": 16,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4c8e7237f5d396c7512b73b845414764c5b6d00c",
+    "jarFileModificationDate": "2013-06-15T13:35:41.614+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.seleniumhq.selenium\\selenium-remote-driver\\2.16.1\\jars\\selenium-remote-driver.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "akka-slf4j",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "bc6196e86806a79f7396e4b16403e1467fa9615a",
+    "jarFileModificationDate": "2013-06-15T13:35:09.777+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.typesafe.akka\\akka-slf4j\\2.0.2\\jars\\akka-slf4j.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a31853a3c486908d5d1b68c3be8cf31c23f86bdf",
+    "jarFileModificationDate": "2012-03-18T17:52:52.438+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\jce.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.apache.commons.lang3",
+    "version": {
+      "major": 3,
+      "minor": 1,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "905075e6c80f206bbe6cf1e809d2caa69f420c76",
+    "jarFileModificationDate": "2013-06-15T13:35:18.031+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.apache.commons\\commons-lang3\\3.1\\jars\\commons-lang3.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "joda-convert",
+    "version": {
+      "major": 1,
+      "minor": 1,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f9f4396a26ada3d81586e73e0d9cdf00c9494c6e",
+    "jarFileModificationDate": "2013-06-15T13:35:26.748+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.joda\\joda-convert\\1.1\\jars\\joda-convert.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "javax.servlet-api",
+    "version": {
+      "major": 3,
+      "minor": 0,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6bf0ebb7efd993e222fc1112377b5e92a13b38dd",
+    "jarFileModificationDate": "2013-06-15T13:35:11.836+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\javax.servlet\\javax.servlet-api\\3.0.1\\jars\\javax.servlet-api.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3ed1ba37a0fae9d24d0755973e4fabb7bdbabff2",
+    "jarFileModificationDate": "2012-03-18T17:52:52.458+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "slf4j.api",
+    "version": {
+      "major": 1,
+      "minor": 6,
+      "micro": 4,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2396d74b12b905f780ed7966738bb78438e8371a",
+    "jarFileModificationDate": "2013-06-15T13:35:42.541+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.slf4j\\slf4j-api\\1.6.4\\jars\\slf4j-api.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "xercesImpl",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7bc7e49ddfe4fb5f193ed37ecc96c12292c8ceb6",
+    "jarFileModificationDate": "2013-06-15T13:35:58.920+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\xerces\\xercesImpl\\2.9.1\\jars\\xercesImpl.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.ning.async-http-client",
+    "version": {
+      "major": 1,
+      "minor": 7,
+      "micro": 6,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "2ff2d8386c96a916e9f75c8c3f043226ecdf9b22",
+    "jarFileModificationDate": "2013-06-15T13:35:08.274+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.ning\\async-http-client\\1.7.6\\jars\\async-http-client.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "net.sourceforge.htmlunit.htmlunit",
+    "version": {
+      "major": 2,
+      "minor": 9,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b38b877dd9a10ae410ab2372eff7ff6c265962c7",
+    "jarFileModificationDate": "2013-06-15T13:35:16.857+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.sourceforge.htmlunit\\htmlunit\\2.9\\jars\\htmlunit.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "scala-arm_2.9.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "54eb5ccc44d222794c6fe583a1c63cdc54865c7d",
+    "jarFileModificationDate": "2013-06-15T13:35:04.773+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.github.jsuereth.scala-arm\\scala-arm_2.9.1\\1.1\\jars\\scala-arm_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "923a6b1cc2fe4264d165ddc53803e981b4444050",
+    "jarFileModificationDate": "2012-03-18T17:52:52.388+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jul.to.slf4j",
+    "version": {
+      "major": 1,
+      "minor": 6,
+      "micro": 4,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7b926fd78d52d3e696c67777da4b0a92f137413b",
+    "jarFileModificationDate": "2013-06-15T13:35:42.290+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.slf4j\\jul-to-slf4j\\1.6.4\\jars\\jul-to-slf4j.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.httpcomponents.httpcore",
+    "version": {
+      "major": 4,
+      "minor": 1,
+      "micro": 3,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "da661877d4736e4c98c155b734ebeaa103bff5b2",
+    "jarFileModificationDate": "2013-06-15T13:35:20.792+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.apache.httpcomponents\\httpcore\\4.1.3\\jars\\httpcore.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "sac",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cdb2dcb4e22b83d6b32b93095f644c3462739e82",
+    "jarFileModificationDate": "2013-06-15T13:35:52.160+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.w3c.css\\sac\\1.3\\jars\\sac.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "nekohtml",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a45cd7b7401d9c2264d4908182380452c03ebf8f",
+    "jarFileModificationDate": "2013-06-15T13:35:17.242+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.sourceforge.nekohtml\\nekohtml\\1.9.15\\jars\\nekohtml.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4838808e80df811cfb2bf7faf361b3cbc16f9f81",
+    "jarFileModificationDate": "2011-08-31T00:05:02+02:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\dns_sd.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.springframework.core",
+    "version": {
+      "major": 3,
+      "minor": 0,
+      "micro": 7,
+      "qualifier": "RELEASE"
+    },
+    "jarFileFingerprint": "2c90825834a037aab6f6a71bbd05d81680832c49",
+    "jarFileModificationDate": "2013-06-15T13:35:51.824+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.springframework\\spring-core\\3.0.7.RELEASE\\jars\\spring-core.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "com.mysql.jdbc",
+    "version": {
+      "major": 5,
+      "minor": 1,
+      "micro": 18,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "a40a4c21ff6a31036a05070ee8eb3654a0153666",
+    "jarFileModificationDate": "2013-06-16T15:26:59.985+02:00",
+    "location": "C:\\Users\\Harryson\\Desktop\\Web-Tech\\play_seapal\\Seapal\\lib\\mysql-connector-java-5.1.18-bin.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-codec",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "fd32786786e2adb664d5ecc965da47629dca14ba",
+    "jarFileModificationDate": "2013-06-15T13:35:10.509+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\commons-codec\\commons-codec\\1.3\\jars\\commons-codec.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "oauth.signpost.signpost-core",
+    "version": {
+      "major": 1,
+      "minor": 2,
+      "micro": 1,
+      "qualifier": "1"
+    },
+    "jarFileFingerprint": "d1b39a438178bc885d724458de64cee33f1932a6",
+    "jarFileModificationDate": "2013-06-15T13:35:17.481+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\oauth.signpost\\signpost-core\\1.2.1.1\\jars\\signpost-core.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.jboss.netty",
+    "version": {
+      "major": 3,
+      "minor": 5,
+      "micro": 0,
+      "qualifier": "Final"
+    },
+    "jarFileFingerprint": "60ecb5ad31045dc93e1b0fe8d0f14410d2011282",
+    "jarFileModificationDate": "2013-06-15T13:35:11.557+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\io.netty\\netty\\3.5.0.Final\\bundles\\netty.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.easytesting.fest-util",
+    "version": {
+      "major": 1,
+      "minor": 1,
+      "micro": 6,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e785ee9c1f314bbf9e5a824b85143e440642557a",
+    "jarFileModificationDate": "2013-06-15T13:35:25.085+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.easytesting\\fest-util\\1.1.6\\jars\\fest-util.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.avaje.ebean",
+    "version": {
+      "major": 2,
+      "minor": 7,
+      "micro": 3,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9f3028e521ec43f07b95624f0a08a187f9a1512d",
+    "jarFileModificationDate": "2013-06-15T13:35:21.825+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.avaje\\ebean\\2.7.3\\jars\\ebean.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.commons.codec",
+    "version": {
+      "major": 1,
+      "minor": 4,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "4216af16d38465bbab0f3dff8efa14204f7a399a",
+    "jarFileModificationDate": "2013-06-15T13:35:10.670+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\commons-codec\\commons-codec\\1.4\\jars\\commons-codec.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "junit",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c94f54227b08100974c36170dcb53329435fe5ad",
+    "jarFileModificationDate": "2013-06-15T13:35:12.528+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\junit\\junit\\4.8.2\\jars\\junit.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.apache.httpcomponents.httpmime",
+    "version": {
+      "major": 4,
+      "minor": 1,
+      "micro": 2,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c78eaaea68d0f36f73b646f08cdb34f1a784239b",
+    "jarFileModificationDate": "2013-06-15T13:35:21.049+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\org.apache.httpcomponents\\httpmime\\4.1.2\\jars\\httpmime.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "anorm_2.9.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5564d1bdca913ec2b9d5ba781b813caf0511c609",
+    "jarFileModificationDate": "2013-06-15T13:35:52.685+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\play\\anorm_2.9.1\\2.0.4\\jars\\anorm_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "xml-apis",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "90b215f48fe42776c8c7f6e3509ec54e84fd65ef",
+    "jarFileModificationDate": "2013-06-15T13:35:59.089+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\xml-apis\\xml-apis\\1.3.04\\jars\\xml-apis.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "ch.qos.logback.core",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b2893bbe71342232031f97faa1cf7bb4d99faced",
+    "jarFileModificationDate": "2013-06-15T13:34:59.203+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\ch.qos.logback\\logback-core\\1.0.0\\jars\\logback-core.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "xalan",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "75f1d83ce27bab5f29fff034fc74aa9f7266f22a",
+    "jarFileModificationDate": "2013-06-15T13:35:58.679+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\xalan\\xalan\\2.7.1\\jars\\xalan.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f56383db77ae9502e6ca617e57d55ee73d631c46",
+    "jarFileModificationDate": "2012-03-18T17:52:52.398+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\ext\\sunec.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7729be0269bf0025fd00f7ebf1427dd59e5440e2",
+    "jarFileModificationDate": "2012-03-18T17:52:55.048+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jna",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "803ff252fedbd395baffd43b37341dc4a150a554",
+    "jarFileModificationDate": "2013-06-15T13:35:15.633+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.java.dev.jna\\jna\\3.4.0\\jars\\jna.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "platform",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "e3f70017be8100d3d6923f50b3d2ee17714e9c13",
+    "jarFileModificationDate": "2013-06-15T13:35:15.952+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.java.dev.jna\\platform\\3.4.0\\jars\\platform.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "play-test_2.9.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "dfec212a3e8bb1aeb78cd5bbbdac30d5d5026e79",
+    "jarFileModificationDate": "2013-06-15T13:35:53.435+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\play\\play-test_2.9.1\\2.0.4\\jars\\play-test_2.9.1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "commons-logging",
+    "version": {
+      "major": 1,
+      "minor": 1,
+      "micro": 1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "5043bfebc3db072ed80fbd362e7caf00e885d8ae",
+    "jarFileModificationDate": "2013-06-15T13:35:11.448+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\commons-logging\\commons-logging\\1.1.1\\jars\\commons-logging.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "7c88966400c457b10c96259d13a27e407da16b48",
+    "jarFileModificationDate": "2012-03-18T17:52:54.968+01:00",
+    "location": "C:\\Program Files\\Java\\jre7\\lib\\rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "joda-time",
+    "version": {
+      "major": 2,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "752c0fe8a5b2d6704c9d9d6f06d9abdcacf4045d",
+    "jarFileModificationDate": "2013-06-15T13:35:12.392+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\joda-time\\joda-time\\2.0\\jars\\joda-time.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "htmlunit-core-js",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c90d338dddd18dd92ef0f933244b66db568b9f79",
+    "jarFileModificationDate": "2013-06-15T13:35:17.107+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\net.sourceforge.htmlunit\\htmlunit-core-js\\2.9\\jars\\htmlunit-core-js.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "scala-io-file_2.9.1",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "724e00d7a49f8dc6bbb4ce2f63662ad2330ccf84",
+    "jarFileModificationDate": "2013-06-15T13:35:05.792+02:00",
+    "location": "C:\\Users\\Harryson\\Programme\\play-2.0.4\\repository\\local\\com.github.scala-incubator.io\\scala-io-file_2.9.1\\0.4.0\\jars\\scala-io-file_2.9.1.jar",
+    "javaRuntime": false
+  }
+]
