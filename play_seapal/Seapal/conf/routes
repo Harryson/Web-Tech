@@ -28,6 +28,7 @@ GET     /app_waypoint.html          controllers.Waypoint.index(wnr: Int)
 POST 	/app_waypoint_update.html	controllers.Waypoint.update(wnr: Int)
 
 GET     /app_sun.html          		controllers.Sun.index()
+POST    /app_sun_insert.html   		controllers.Sun.insert()
 
 GET     /app_chat.html          	controllers.Chat.index()
 GET     /room                       controllers.Chat.chatRoom(username: String ?= null)

@@ -3,7 +3,9 @@ package controllers;
 import play.*;
 import play.mvc.*;
 import play.db.*;
+
 import java.sql.*;
+
 import javax.sql.*;
 import play.libs.Json;
 import play.data.DynamicForm;
@@ -31,10 +33,24 @@ public class Sun extends Controller{
         this.tag = tag;
         init();
     }
+      
+    public static Result insert() {
+    	  
+        DynamicForm data = form().bindFromRequest();          
+        ObjectNode respJSON = Json.newObject();
+        
+        Sun sun = new Sun(Double.parseDouble(data.get("latitude")), Double.parseDouble(data.get("longitude")), Integer.parseInt(data.get("day")), Integer.parseInt(data.get("timediv")));
+
+        respJSON.put("latitude", data.get("latitude"));
+        respJSON.put("longitude", data.get("longitude"));
+        respJSON.put("day", data.get("day"));
+        respJSON.put("timediv", data.get("timediv"));      
+        respJSON.put("sunrise", sun.aufgangStr);
+        respJSON.put("sunset", sun.untergangStr);
+        return ok(respJSON);
+    }
     
-    public static Result index() {
-    	
-    	
+    public static Result index() {	
         return ok(sun.render(header.render(), navigation.render("app_map"), navigation_app.render("app_sun"), ""));
     }
  

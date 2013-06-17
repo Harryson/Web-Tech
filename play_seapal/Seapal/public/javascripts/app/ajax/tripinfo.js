@@ -71,8 +71,10 @@ $(function() {
 	
 		event.preventDefault();
 
+		// Aktuelle URL kopieren
 		var query = window.location.search;
 		
+		// Nummer des ausgewählten Trip aus der URL bekommen 
 		var tripnrQuery = query.match(/tnr=\d/);
 		var tripnr = tripnrQuery[0].replace(/tnr=/, "");
 	
