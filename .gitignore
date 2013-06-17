@@ -1,11 +1,3 @@
-logs
-project/project
-project/target
-target
-tmp
-
-
-
 play_seapal\Seapal\logs
 play_seapal\Seapal\project\project
 play_seapal\Seapal\project\target
