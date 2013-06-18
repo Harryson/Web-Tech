@@ -12,30 +12,44 @@ GET     /screenshots.html           controllers.Screenshots.index()
 GET     /legal.html                 controllers.Legal.index()
 GET     /impressum.html             controllers.Impressum.index()
 GET     /app_map.html               controllers.Map.index()
+
+# Bootinfo
 GET     /app_boatinfo.html          controllers.Boatinfo.index()
 GET     /app_boatinfo_load.html     controllers.Boatinfo.load(bnr: Int)
 POST    /app_boatinfo_insert.html   controllers.Boatinfo.insert()
 GET     /app_boatinfo_delete.html   controllers.Boatinfo.delete(bnr: Int)
+
+# Trip
 GET     /app_trip.html          	controllers.Trip.index()
 GET     /app_trip_load.html     	controllers.Trip.load(tnr: Int)
 POST    /app_trip_insert.html   	controllers.Trip.insert()
 GET     /app_trip_delete.html   	controllers.Trip.delete(tnr: Int)
+
+# Tripinfo
 GET     /app_tripinfo.html          controllers.Tripinfo.index(tnr: Int)
 GET     /app_tripinfo_load.html     controllers.Tripinfo.load(wnr: Int)
 POST    /app_tripinfo_insert.html   controllers.Tripinfo.insert()
 GET     /app_tripinfo_delete.html   controllers.Tripinfo.delete(wnr: Int)
+
+# Waypoint
 GET     /app_waypoint.html          controllers.Waypoint.index(wnr: Int)
 POST 	/app_waypoint_update.html	controllers.Waypoint.update(wnr: Int)
 
+# Sun
 GET     /app_sun.html          		controllers.Sun.index()
 POST    /app_sun_insert.html   		controllers.Sun.insert()
 
+# Wetter-Chat
 GET     /app_chat.html          	controllers.Chat.index()
 GET     /room                       controllers.Chat.chatRoom(username: String ?= null)
 GET     /room/chat                  controllers.Chat.chat(username)
 
+# Clock
 GET     /app_clock.html          	controllers.NaviClock.index()
 GET     /clock                      controllers.NaviClock.liveClock()
+
+# SOS
+GET     /app_sos.html          		controllers.Sos.index()
 
 
 # Map static resources from the /public folder to the /assets URL path

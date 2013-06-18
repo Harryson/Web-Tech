@@ -129,10 +129,7 @@ public class Boatinfo extends Controller {
 	    
 	  String data = loadEntries();
 		
-	  return ok(boatinfo.render(header.render(), 
-    						    navigation.render("app_map"), 
-    						    navigation_app.render("app_boatinfo"), 
-    						    data));
+	  return ok(boatinfo.render(header.render(), navigation.render("app_map"), navigation_app.render("app_boatinfo"), data, clock.render()));
   }
 
 	public static String loadEntries() {

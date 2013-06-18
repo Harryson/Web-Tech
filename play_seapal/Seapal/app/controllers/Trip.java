@@ -155,7 +155,7 @@ public class Trip extends Controller {
 	    	   e.printStackTrace();
 	       }
     }
-    return ok(trip.render(header.render(), navigation.render("app_map"), navigation_app.render("app_trip"), data));
+    return ok(trip.render(header.render(), navigation.render("app_map"), navigation_app.render("app_trip"), data, clock.render()));
   }
   
 }

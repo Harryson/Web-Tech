@@ -51,7 +51,7 @@ public class Sun extends Controller{
     }
     
     public static Result index() {	
-        return ok(sun.render(header.render(), navigation.render("app_map"), navigation_app.render("app_sun"), ""));
+        return ok(sun.render(header.render(), navigation.render("app_map"), navigation_app.render("app_sun"), "", clock.render()));
     }
  
     private void init() {

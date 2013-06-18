@@ -61,6 +61,9 @@ $(function() {
 	        "waveHight": $('#waveHight').val(),
 	        "waveDirection": $('#waveDirection').val()
 	    };
+	    $('#dialogTitle').text('Test1');
+		$('#dialogMessage').text('Test'));
+		$('#messageBox').modal('show');
 
 	    var wnr = $.url().param('wnr');
 	

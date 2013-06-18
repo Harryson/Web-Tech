@@ -161,7 +161,7 @@ public class Tripinfo extends Controller {
 	    	   e.printStackTrace();
 	       }
     }
-    return ok(tripinfo.render(header.render(), navigation.render("app_map"), navigation_app.render("app_tripinfo"), data));
+    return ok(tripinfo.render(header.render(), navigation.render("app_map"), navigation_app.render("app_tripinfo"), data, clock.render()));
   }
   
 }

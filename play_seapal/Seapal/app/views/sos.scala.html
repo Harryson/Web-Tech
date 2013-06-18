@@ -1,0 +1,87 @@
+@(header: Html)(navigation: Html)(navigation_app: Html)(clock: Html)
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    
+    	<!-- Header -->
+        @header 
+    </head>
+    <body>
+    	<!-- Clock -->
+    	@clock
+
+    	<!-- Navigation -->
+    	@navigation
+    	
+    	<!-- Container -->
+    	<div class="container-fluid">
+    	
+	    	<!-- Navigation -->
+	    	@navigation_app
+	
+			<!-- Content -->
+			<div id="appWrapper" align="center">
+		        <br />
+		        <h1>SOS</h1>
+		        <br />
+		        <div class="container-fluid">
+		        	<form class="form-horizontal"> 
+		            	<div class="row well" style="margin-left: 0px;">
+		            		<div class="span4" align="center">
+		            			<div class="control-group">
+			            			<label class="control-label">Boot</label>
+			            			<input class="input-medium" type="text" name="time" id="time" />
+			                    </div> 	            		
+			            		<div class="control-group">
+			            			<label class="control-label">Längengrad</label>
+			            			<input class="input-medium" type="text" name="longitude" id="longitude" />
+			            		</div>
+			            		<div class="control-group">
+			            			<label class="control-label">Breitegrad</label>
+			            			<input class="input-medium" type="text" name="latitude" id="latitude" />
+			                    </div>
+			                    <div class="control-group">
+			            			<label class="control-label">Datum</label>
+			            			<input class="input-medium" type="text" name="day" id="day" />
+			                    </div>
+			                    <div class="control-group">
+			            			<label class="control-label">Uhrzeit</label>
+			            			<input class="input-medium" type="text" name="time" id="time" />
+			                    </div>       
+		            		</div>
+		            		<div class="span4">
+			                    <div class="span4" id="appNotes">
+				        			<h4>Situation</h4>
+				            		<textarea style="width:96%; height:360px;"></textarea>
+				        		</div>			        
+		            		</div>
+		            	</div>    	 
+		            	<div class="control-group">
+		            		<input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
+			                <input type="submit" class="btn" id="calculate" name="submit" value="Senden" class="button"/>
+			            </div>  
+		        	</form>
+		        </div>   
+			</div><!-- Content -->   
+		</div><!-- Container -->
+	
+		<!-- Menu Modal -->
+		<div class="modal hide fade" id="messageBox">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h3 id="dialogTitle"></h3>
+			</div>
+			<div class="modal-body">
+				<p id="dialogMessage"></p>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal"><i class="icon-ok"></i> ok</a>
+			</div>
+		</div>
+		
+		<!-- Additional Scripts -->
+		<script src="@routes.Assets.at("javascripts/app/ajax/sos.js")" type="text/javascript"></script>
+	</body>
+</html>

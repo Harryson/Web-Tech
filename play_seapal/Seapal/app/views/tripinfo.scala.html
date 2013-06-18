@@ -1,4 +1,4 @@
-@(header: Html)(navigation: Html)(navigation_app: Html)(data: String)
+@(header: Html)(navigation: Html)(navigation_app: Html)(data: String)(clock: Html)
 
 <!DOCTYPE html>
 
@@ -10,7 +10,9 @@
         
     </head>
     <body>
-    
+    	<!-- Clock -->
+    	@clock
+
     	<!-- Navigation -->
     	@navigation
     	
@@ -37,7 +39,7 @@
 			            		</div>
 			            		<div class="control-group">
 			            			<label class="control-label">Time</label>
-			            			<input class="input-medium" type="date" id="wdate"/>
+			            			<input class="input-medium" type="date" id="date"/>
 			                    </div>
 			                    <div class="control-group">
 			            			<label class="control-label">Date</label>

@@ -1,4 +1,4 @@
-@(header: Html)(navigation: Html)(navigation_app: Html)(data: String)
+@(header: Html)(navigation: Html)(navigation_app: Html)(data: String)(clock: Html)
 
 <!DOCTYPE html>
 
@@ -6,11 +6,17 @@
     <head>
     
     	<!-- Header -->
-        @header
-        
+        @header 
+																														<!--	  <script>
+																															  $(function() {
+																															    $( "#datepicker" ).datepicker();
+																															  });
+																															  </script>    -->
     </head>
     <body>
-    
+    	<!-- Clock -->
+    	@clock
+    	
     	<!-- Navigation -->
     	@navigation
     	
@@ -53,7 +59,7 @@
 		            		</div>
 		            	</div>    	 
 		            	<div class="control-group">
-		            		<input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
+		            		<!-- <input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/> -->
 			                <input type="submit" class="btn" id="calculate" name="submit" value="Berechnen" class="button"/>
 			            </div>  
 		        	</form>
@@ -93,6 +99,6 @@
 		
 		<!-- Additional Scripts -->
 		<script src="@routes.Assets.at("javascripts/app/ajax/sun.js")" type="text/javascript"></script>
-		
+													<!--	<script src="@routes.Assets.at("jqueryMaskedinput.js")" type="text/javascript"></script> -->
 	</body>
 </html>

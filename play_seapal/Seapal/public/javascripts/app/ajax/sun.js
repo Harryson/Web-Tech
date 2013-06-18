@@ -1,9 +1,12 @@
 $(function() {
-	
+
 	$('#calculate').click(function(event) {
 		
 		/* Defaultfunktionalität ausschalten */
 		event.preventDefault();
+
+		/* wrong input */
+
 
 		var json = {
             "longitude": $('#longitude').val(),
