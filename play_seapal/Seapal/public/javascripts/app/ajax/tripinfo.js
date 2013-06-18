@@ -68,7 +68,7 @@ $(function() {
 	});
 	
 	$('#save').click(function(event) {
-	
+
 		event.preventDefault();
 
 		// Aktuelle URL kopieren
@@ -110,7 +110,7 @@ $(function() {
 	    	}
 	    
 	    	$('#messageBox').modal('show');
-	    	
+	    	    	
 	    }, "json");
 	});
 

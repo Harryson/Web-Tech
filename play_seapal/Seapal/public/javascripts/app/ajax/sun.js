@@ -1,40 +1,36 @@
 $(function() {
 	
-	$('#save').click(function(event) {
+	$('#calculate').click(function(event) {
 		
 		/* Defaultfunktionalität ausschalten */
 		event.preventDefault();
-	
+
 		var json = {
-			"tnr": tripnr,
-            "name": $('#longitude').val(),
-            "lat": $('#latitude').val(),
-            "lng": $('#day').val(),
-	        "btm": $('#timediv').val(),     
+            "longitude": $('#longitude').val(),
+            "latitude": $('#latitude').val(),
+            "day": $('#day').val(),
+	        "timediv": $('#timediv').val()     
 	    };
 
-	    alert("1");
-	
-		// Durch "function(date)" wird die Funktion in {} erst ausfeführt, wenn die "jQuery.post" Funktion schon abgeschlossen ist
+		//Durch "function(date)" wird die Funktion in {} erst ausfeführt, wenn die "jQuery.post" Funktion schon abgeschlossen ist
 	    jQuery.post("app_sun_insert.html", json, function(data) { 
-
-			loadEntry(data['sunrise'], data['sunset'], json); 
-		    
-	    	$('#dialogTitle').text('Success');
+	    	
+			loadEntry(data['sunrise'], data['sunset'], json.longitude, json.latitude, json.day, json.timediv); 
+	
+	    	$('#dialogTitle').text('Berechnung');
 	    	$('#dialogMessage').text("Uhrzeiten wurden erfolgreich berechnet.");
-
-			$('#messageBox').modal('show');   	
+			$('#messageBox').modal('show'); 	
 	    }, "json");
 	});
 
-	function loadEntry(sunrise, sunset, json) {
+	function loadEntry(sunrise, sunset, longitude, latitude, day, timediv) {
 		
-		$('#longitude').val(json.longitude);
-        $('#latitude').val(json.latitude);
-        $('#day').val(json.day);
-        $('#timediv').val(json.timediv);
-        $('#sunrise').val(json.sunrise);
-        $('#sunset').val(json.sunset);
+		$('#longitude').val(longitude);
+        $('#latitude').val(latitude);
+        $('#day').val(day);
+        $('#timediv').val(timediv);
+        $('#sunrise').val(sunrise);
+        $('#sunset').val(sunset);
 	}
 
 });
