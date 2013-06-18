@@ -28,7 +28,7 @@ label {
     font-weight: bold;
 }
 
-#routeMenuContainer, #distanceToolContainer, #followCurrentPositionContainer, #navigationContainer, #WeatherContainer {
+#routeMenuContainer, #distanceToolContainer, #followCurrentPositionContainer, #navigationContainer, #WeatherContainer, #WindDescriptionContainer {
     position: relative;
     margin-right: auto;
     margin-left: auto;
@@ -102,6 +102,7 @@ label {
 #WindDescription{
     padding: 5px 5px 5px 5px;
     position: absolute;
+    width: 500px;
     margin-top: 100px;
     z-index: 2;
 }

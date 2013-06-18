@@ -230,7 +230,10 @@ function initialize() {
         if ($(this).attr('checked')){
             var overlayMap = new google.maps.ImageMapType(overlayMaps[layerID]);
             map.overlayMapTypes.setAt(layerID, overlayMap);
-            map.setZoom(7);
+            var tmpZoom = map.getZoom();
+            if(tmpZoom > 7){
+                map.setZoom(7);
+            }
         } else {
             if (map.overlayMapTypes.getLength() > 0){
                 map.overlayMapTypes.setAt(layerID, null);
