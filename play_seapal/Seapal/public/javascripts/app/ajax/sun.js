@@ -1,5 +1,14 @@
 $(function() {
 
+	function masked(){
+		$('#longitude').mask("99.99.9999");
+		$('#latitude').mask("99:99");
+	}
+
+	$(document).ready(function(event) {
+		masked();
+	});
+
 	$('#calculate').click(function(event) {
 		
 		/* Defaultfunktionalität ausschalten */
