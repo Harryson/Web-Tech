@@ -38,7 +38,18 @@ public class Sun extends Controller{
     	  
         DynamicForm data = form().bindFromRequest();          
         ObjectNode respJSON = Json.newObject();
+        int dateInt;
+        int day;
+        int month;
         
+//        String dateStr =data.get("day");
+//        String [] dateStrArr = dateStr.split("/");
+//        
+//        day = Integer.parseInt(dateStrArr[0]);
+//        month = Integer.parseInt(dateStrArr[1]);
+//        
+//        dateInt = day + ( 153 * month - 162) / 5;
+         
         Sun sun = new Sun(Double.parseDouble(data.get("latitude")), Double.parseDouble(data.get("longitude")), Integer.parseInt(data.get("day")), Integer.parseInt(data.get("timediv")));
 
         respJSON.put("latitude", data.get("latitude"));
@@ -110,7 +121,7 @@ public class Sun extends Controller{
     }
  
     public static void main(String... args) {
-        Sun sun = new Sun(5, 40, 216, 2);
+        Sun sun = new Sun(5, 40, 216, -2);
  
         System.out.println("Sonnenaufgang : " + sun.getAufgangStr());
         System.out.println("Sonnenuntergang : " + sun.getUntergangStr());

@@ -1,26 +1,34 @@
 $(function() {
 
 	function masked(){
-		$('#longitude').mask("99.99.9999");
-		$('#latitude').mask("99:99");
+		$.mask.definitions['~']='[+-]';
+		$.mask.definitions['1']='[0123]';
+		$.mask.definitions['2']='[01]';
+		$('#longitude').mask("~199.99");
+		$('#latitude').mask("~299.99");
 	}
 
 	$(document).ready(function(event) {
 		masked();
 	});
 
+    $('#datepicker').datepicker();
+
 	$('#calculate').click(function(event) {
 		
 		/* Defaultfunktionalität ausschalten */
 		event.preventDefault();
 
-		/* wrong input */
+		var date = document.getElementById('datepicker').value
 
+		var dateSplit = date.split("/");
+		alert(dateSplit[0] + dateSplit[1] + dateSplit[2]);
+		var day = (parseInt(dateSplit[1]) + ( 153 * parseInt(dateSplit[0]) - 162) / 5);
 
 		var json = {
             "longitude": $('#longitude').val(),
             "latitude": $('#latitude').val(),
-            "day": $('#day').val(),
+            "day": parseInt(day),
 	        "timediv": $('#timediv').val()     
 	    };
 
