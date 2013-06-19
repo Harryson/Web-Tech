@@ -68,7 +68,18 @@
 			                    
 			                    <div class="control-group">
 			                    	<label class="control-label">Manoever</label>
-			            			<select name="manoever" id="manoever" style="width: 165px;"></select>
+			            			<select name="manoever" id="manoever" style="width: 165px;">
+			            				<option>-</option>
+			            				<option>Tack</option>
+			            				<option>Jibe</option>
+			            				<option>Lay to</option>
+			            				<option>Set Sails</option>
+			            				<option>Change Sails</option>
+			            				<option>Sails Down</option>
+			            				<option>Reff</option>
+			            				<option>Anker up</option>
+			            				<option>Anker down</option>
+			            			</select>
 			                    </div>                   
 		            		</div>
 		            		<div class="span4">
@@ -82,11 +93,24 @@
 			                    </div>
 			                    <div class="control-group">
 			            			<label class="control-label">Vorsegel</label>
-			            			<select name="vorsegel" id="vorsegel" style="width: 165px;"></select>
+			            			<select name="vorsegel" id="vorsegel" style="width: 165px;">
+										<option>-</option>
+										<option>Genua1</option>
+										<option>Genua2</option>
+										<option>Genua3</option>
+										<option>Fock</option>
+										<option>Storm Fock</option>
+										<option>Blister</option>
+										<option>Spinaker</option>
+			            			</select>
 			            		</div>
 		            		</div>
 		            	</div>      	 
-	            	</div> 
+	            	</div>
+	            	<div class="control-group">				
+						<input type="submit" name="getWeatherAlarms" class="btn" id="getWeatherAlarms" 
+						value="Unwetterwarnung" class="button"/>
+					</div> 
 			    	<br />
 					<h2>Weather</h2>
 					<br />

@@ -26,6 +26,8 @@ POST    /app_tripinfo_insert.html   controllers.Tripinfo.insert()
 GET     /app_tripinfo_delete.html   controllers.Tripinfo.delete(wnr: Int)
 GET     /app_waypoint.html          controllers.Waypoint.index(wnr: Int)
 POST 	/app_waypoint_update.html	controllers.Waypoint.update(wnr: Int)
+POST	/app_waypoint_wetterAlarm.html	controllers.Waypoint.wetterAlarm(wnr: Int)
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
