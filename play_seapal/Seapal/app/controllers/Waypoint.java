@@ -58,6 +58,14 @@ public class Waypoint extends Controller {
         try {
             query = conn.createStatement();
 
+          String latitude = data.get("lat");
+          String longitude = data.get("lng");
+
+          latitude.replace("\'", "Q");
+          longitude.replace("\'", "Q");
+
+          //System.out.println("lat " + latitude + " lng = " + longitude);
+
             query.execute("UPDATE seapal.wegpunkte SET "
                     + "name = '" + data.get("name") + "', "
                     + "btm = '" + data.get("btm") + "', "
@@ -77,7 +85,7 @@ public class Waypoint extends Controller {
                     + "temperature = '" + data.get("temperature") + "', "
                     + "clouds = '" + data.get("clouds") + "', "
                     + "rain = '" + data.get("rain") + "', "
-                    + "waveHight = '" + data.get("waveHight") + "', "
+                    + "waveHeight = '" + data.get("waveHeight") + "', "
                     + "waveDirection = '" + data.get("waveDirection") + "'"
                     + "WHERE wnr = '" + wnr + "';");
 
@@ -96,5 +104,45 @@ public class Waypoint extends Controller {
         load(wnr);
         return ok(waypoint.render(header.render(), navigation.render("app_map"), navigation_app.render("app_waypoint")));
     }
+
+    public static Result wetterAlarm(int wnr) {
+
+        DynamicForm data = form().bindFromRequest();
+        ObjectNode respJSON = Json.newObject();
+
+        String latitude = data.get("lat");
+        String longitude = data.get("lng");
+
+        double latDouble = Double.parseDouble(latitude.substring(0, 2));
+        double lngDouble = Double.parseDouble(longitude.substring(0, 3));
+
+        //converting coord in deegres in decimal
+        double header1 = Double.parseDouble(latitude.substring(3,latitude.length()-1)) / 60 ;
+        double header2 = Double.parseDouble(longitude.substring(4,longitude.length()-1)) / 60;
+
+        header1 = Math.round(header1*10000)/10000.0;
+        header2 = Math.round(header2*10000)/10000.0;
+
+        latDouble += header1;
+        lngDouble += header2;
+
+
+        if (latitude.substring(latitude.length() - 1).equals("s") || latitude.substring(latitude.length() - 1).equals("S")) {
+            latDouble *= -1;
+
+        }
+        if (longitude.substring(longitude.length() - 1).equals("w") || longitude.substring(longitude.length() - 1).equals("W")) {
+            lngDouble *= -1;
+        }
+
+        System.out.println("Testing wetter alarm: lat = " + latitude + " lng = " + longitude);
+        System.out.println("After convert: latDouble: " + latDouble + " lngDouble: " + lngDouble);
+        
+        respJSON.put("latConv", latDouble);
+        respJSON.put("lngConv", lngDouble);
+
+
+        return ok(respJSON);
+    }    
 
 }

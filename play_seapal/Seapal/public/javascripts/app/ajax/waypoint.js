@@ -56,7 +56,7 @@ $(function() {
 
 			myUrl = "http://api.wunderground.com/api/9fccb4b03cdb647e/geolookup/q/"
 			+ data['latConv']+ "," + data['lngConv'] + ".json";
-
+		
 
 			$.ajax({
   				url: myUrl,
@@ -102,7 +102,7 @@ $(function() {
 		}, "json");
 
 	});
-	
+
 	$('#save').click(function(event) {
 	
 		event.preventDefault();
@@ -158,7 +158,7 @@ $(function() {
 		$.mask.definitions['j']="[0-5]";
 		$.mask.definitions['k']="[0-1]";
 		$.mask.definitions['l']="[0-2]";
-
+		
 		$('#lat').mask("h9°j9.99+");
 		$('#lng').mask("k99°j9.99~");
 		$('#wdate').mask("99.99.2099");
