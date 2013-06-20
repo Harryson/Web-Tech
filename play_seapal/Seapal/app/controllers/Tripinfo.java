@@ -164,4 +164,8 @@ public class Tripinfo extends Controller {
     return ok(tripinfo.render(header.render(), navigation.render("app_map"), navigation_app.render("app_tripinfo"), data, clock.render()));
   }
   
+  public static void main(final String args[]) {
+	  load(2);
+  }
+  
 }

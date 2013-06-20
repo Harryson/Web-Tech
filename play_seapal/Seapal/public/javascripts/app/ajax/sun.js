@@ -2,10 +2,10 @@ $(function() {
 
 	function masked(){
 		$.mask.definitions['~']='[+-]';
-		$.mask.definitions['1']='[0123]';
-		$.mask.definitions['2']='[01]';
-		$('#longitude').mask("~199.99");
-		$('#latitude').mask("~299.99");
+		$.mask.definitions['1']='[01]';
+		$('#longitude').mask("~199?.99");
+		$('#latitude').mask("~99?.99");
+		$('#timediv').mask("~99");
 	}
 
 	$(document).ready(function(event) {
@@ -19,10 +19,29 @@ $(function() {
 		/* Defaultfunktionalität ausschalten */
 		event.preventDefault();
 
-		var date = document.getElementById('datepicker').value
+		// Da es ein String sein soll und kein JQuery-Objekt
+		var date = document.getElementById('datepicker').value;
+		var lon = parseInt($('#longitude').val());
+		var lat = parseInt($('#latitude').val());
+		var utc = parseInt($('#timediv').val());
+		var flagLon = false;
+		var flagLat = false;
+		var flagUtc = false;
+
+		//if(Math.abs(lon) > 180 || Math.abs(lat) > 90) {
+		if(lon > 180 || lon < -180) { 
+			flagLon = true;
+		}
+
+		if (lat > 90 || lat < -90) {
+			flagLat = true;
+		}
+
+		if (utc > 14 || utc < -11) {
+			flagUtc =true;
+		}
 
 		var dateSplit = date.split("/");
-		alert(dateSplit[0] + dateSplit[1] + dateSplit[2]);
 		var day = (parseInt(dateSplit[1]) + ( 153 * parseInt(dateSplit[0]) - 162) / 5);
 
 		var json = {
@@ -37,9 +56,32 @@ $(function() {
 	    	
 			loadEntry(data['sunrise'], data['sunset'], json.longitude, json.latitude, json.day, json.timediv); 
 	
-	    	$('#dialogTitle').text('Berechnung');
-	    	$('#dialogMessage').text("Uhrzeiten wurden erfolgreich berechnet.");
-			$('#messageBox').modal('show'); 	
+			if(flagLon) {
+				$('#dialogTitle').text('Falsche Eingabe');
+				$('#dialogMessage').text("-180 <= Längengrad <= +180");
+				$('#messageBox').modal('show');
+			}
+
+			if(flagLat) {
+				$('#dialogTitle').text('Falsche Eingabe');
+				$('#dialogMessage').text("-90 <= Breitengrad >= +90");
+				$('#messageBox').modal('show');
+			}
+
+			if(flagUtc) {
+				$('#dialogTitle').text('Falsche Eingabe');
+				$('#dialogMessage').text("-11 <= UTC <= +14");
+				$('#messageBox').modal('show');
+			}
+
+			if(!flagLon && !flagLat && !flagUtc) {
+		    	$('#dialogTitle').text('Berechnung');
+		    	$('#dialogMessage').text("Uhrzeiten wurden erfolgreich berechnet.");
+		    	$('#messageBox').modal('show');	
+			} else {
+				$('#sunrise').val("Fehler");
+        		$('#sunset').val("Fehler");
+			}
 	    }, "json");
 	});
 

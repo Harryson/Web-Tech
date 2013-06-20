@@ -43,6 +43,7 @@ POST    /app_sun_insert.html   		controllers.Sun.insert()
 GET     /app_chat.html          	controllers.Chat.index()
 GET     /room                       controllers.Chat.chatRoom(username: String ?= null)
 GET     /room/chat                  controllers.Chat.chat(username)
+GET     /app_chat_load.html     	controllers.Chat.load()
 
 # Clock
 GET     /app_clock.html          	controllers.NaviClock.index()

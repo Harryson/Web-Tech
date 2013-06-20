@@ -5,6 +5,7 @@
     <div class="page-header">
         <h1>Willkommen im Wetter-Chat</h1>
         <small>Sie sind als @username angemeldet</small>
+        <button class="btn" type="button" id="weather">Wetterdaten</button >
     </div>
     
     <div id="onError" class="alert-message error">
@@ -77,6 +78,48 @@
             $("#talk").keypress(handleReturnKey)  
             
             chatSocket.onmessage = receiveEvent
+
+
+                                $('#weather').click(function(event) {
+                                event.preventDefault();
+                                loadEntry();
+
+                                });
+
+                               function loadEntry() { 
+                                
+                                jQuery.get("app_chat_load.html", function(data) {
+                                 
+                                      /*$('#name').val(data['name']);
+                                      $('#lat').val(data['lat']);
+                                      $('#lng').val(data['lng']);
+                                      $('#btm').val(data['btm']);
+                                      $('#dtm').val(data['dtm']);
+                                      $('#sog').val(data['sog']);
+                                      $('#cog').val(data['cog']);
+                                      $('#manoever').append('<option>' + data['manoever'] + '</option>');
+                                      $('#vorsegel').append('<option>' + data['vorsegel'] + '</option>');
+                                      $('#marker').append('<option>' + data['marker'] + '</option>');
+                                      $('#wdate').val(data['wdate']);
+                                      $('#wtime').val(data['wtime']);
+                                      $('#windStrength').val(data['windStrength']);
+                                      $('#windDirection').val(data['windDirection']);
+                                      $('#airPressure').val(data['airPressure']);
+                                      $('#temperature').val(data['temperature']);
+                                      $('#clouds').val(data['clouds']);
+                                      $('#rain').val(data['rain']);
+                                      $('#waveHight').val(data['waveHight']);
+                                      $('#waveDirection').val(data['waveDirection']);*/
+
+                                      var text = data['anzahl'];
+
+                                        alert(data['anzahl']);
+                                      //sendChat(text);
+                                      
+
+                                  }, "json");
+      
+  };
             
         })
     

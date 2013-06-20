@@ -185,5 +185,8 @@ public class Boatinfo extends Controller {
         return data;
 	}
 
+	public static void main(String args[]) {
+		loadEntries();
+	}
   
 }
