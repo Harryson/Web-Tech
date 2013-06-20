@@ -52,6 +52,9 @@ GET     /clock                      controllers.NaviClock.liveClock()
 # SOS
 GET     /app_sos.html          		controllers.Sos.index()
 
+# Weather Alarm
+POST	/app_waypoint_wetterAlarm.html	controllers.Waypoint.wetterAlarm(wnr: Int)
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
