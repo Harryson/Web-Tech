@@ -79,10 +79,10 @@ public class Chat extends Controller {
 
             query = conn.createStatement();
 
-            String max ="SELECT * FROM seapal.wegpunkte COUNT(*)";
+            String max ="SELECT * FROM seapal.wegpunkte COUNT (*)";
             result = query.executeQuery(max);
             int count = result.getInt(1);
-            System.out.println(count);
+            //System.out.println(count);
             respJSON.put("anzahl", result.getString(1));
             
             
