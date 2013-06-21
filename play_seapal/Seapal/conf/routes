@@ -30,6 +30,7 @@ GET     /app_tripinfo.html          controllers.Tripinfo.index(tnr: Int)
 GET     /app_tripinfo_load.html     controllers.Tripinfo.load(wnr: Int)
 POST    /app_tripinfo_insert.html   controllers.Tripinfo.insert()
 GET     /app_tripinfo_delete.html   controllers.Tripinfo.delete(wnr: Int)
+POST	/app_tripinfo_wetterAlarm.html	controllers.Tripinfo.wetterAlarm()
 
 # Waypoint
 GET     /app_waypoint.html          controllers.Waypoint.index(wnr: Int)

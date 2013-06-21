@@ -17,7 +17,7 @@ public class Tripinfo extends Controller {
   
     DynamicForm data = form().bindFromRequest();
     Connection conn = DB.getConnection();
-	Statement query;            
+	  Statement query;            
     ResultSet result;
     ObjectNode respJSON = Json.newObject();
     int nextId = 0;
@@ -25,7 +25,10 @@ public class Tripinfo extends Controller {
     try {
 	    query = conn.createStatement();
 
-        query.execute("INSERT INTO seapal.wegpunkte(tnr, name, btm, dtm, lat, lng, sog, cog, manoever, vorsegel, wdate, wtime, marker) VALUES ("
+        query.execute("INSERT INTO seapal.wegpunkte(tnr, name, btm, dtm, lat,"
+                + " lng, sog, cog, manoever, vorsegel, wdate, wtime, marker,"
+                + " windStrength, windDirection, airPressure, temperature," 
+                + " clouds, rain, waveHeight, waveDirection) VALUES ("
                 + "'" + data.get("tnr") + "',"
                 + "'" + data.get("name") + "',"
                 + "'" + data.get("btm") + "',"
@@ -38,7 +41,15 @@ public class Tripinfo extends Controller {
                 + "'" + data.get("vorsegel") + "',"
                 + "'" + data.get("wdate") + "',"
                 + "'" + data.get("wtime") + "',"
-                + "'" + data.get("marker") + "');");
+                + "'" + data.get("marker") + "',"
+                + "'" + data.get("windStrength") + "',"
+                + "'" + data.get("windDirection") + "',"
+                + "'" + data.get("airPressure") + "',"
+                + "'" + data.get("temperature") + "',"
+                + "'" + data.get("clouds") + "',"
+                + "'" + data.get("rain") + "',"
+                + "'" + data.get("waveHeight") + "',"
+                + "'" + data.get("waveDirection") + "');");
 
          result = query.executeQuery("SHOW TABLE STATUS FROM seapal LIKE 'wegpunkte'");
          if (result.next()) {
@@ -145,9 +156,9 @@ public class Tripinfo extends Controller {
                   + "'><span><i class='icon-eye-open'></i></span></a>");
                 row.append("<a class='btn btn-small remove' id='" + result.getString("wnr")
                   + "'><span><i class='icon-remove'></i></span></a>");
-                row.append("<a class='btn btn-small redirect' id='" + result.getString("wnr")
-                  + "' href='app_waypoint.html?wnr=" + result.getString("wnr")
-                  + "'><span><i class='icon-chevron-right'></i></span></a>");
+                //row.append("<a class='btn btn-small redirect' id='" + result.getString("wnr")
+                //  + "' href='app_waypoint.html?wnr=" + result.getString("wnr")
+                //  + "'><span><i class='icon-chevron-right'></i></span></a>");
                     
                
                 row.append("</div></td>");
@@ -164,6 +175,46 @@ public class Tripinfo extends Controller {
     return ok(tripinfo.render(header.render(), navigation.render("app_map"), navigation_app.render("app_tripinfo"), data, clock.render()));
   }
   
+  public static Result wetterAlarm() {
+
+        DynamicForm data = form().bindFromRequest();
+        ObjectNode respJSON = Json.newObject();
+
+        String latitude = data.get("lat");
+        String longitude = data.get("lng");
+
+        double latDouble = Double.parseDouble(latitude.substring(0, 2));
+        double lngDouble = Double.parseDouble(longitude.substring(0, 3));
+
+        //converting coord in deegres in decimal
+        double header1 = Double.parseDouble(latitude.substring(3,latitude.length()-1)) / 60 ;
+        double header2 = Double.parseDouble(longitude.substring(4,longitude.length()-1)) / 60;
+
+        header1 = Math.round(header1*10000)/10000.0;
+        header2 = Math.round(header2*10000)/10000.0;
+
+        latDouble += header1;
+        lngDouble += header2;
+
+
+        if (latitude.substring(latitude.length() - 1).equals("s") || latitude.substring(latitude.length() - 1).equals("S")) {
+            latDouble *= -1;
+
+        }
+        if (longitude.substring(longitude.length() - 1).equals("w") || longitude.substring(longitude.length() - 1).equals("W")) {
+            lngDouble *= -1;
+        }
+
+        System.out.println("Testing wetter alarm: lat = " + latitude + " lng = " + longitude);
+        System.out.println("After convert: latDouble: " + latDouble + " lngDouble: " + lngDouble);
+        
+        respJSON.put("latConv", latDouble);
+        respJSON.put("lngConv", lngDouble);
+
+
+        return ok(respJSON);
+  }    
+
   public static void main(final String args[]) {
 	  load(2);
   }
