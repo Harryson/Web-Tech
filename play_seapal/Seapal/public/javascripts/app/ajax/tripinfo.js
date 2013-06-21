@@ -49,6 +49,14 @@ $(function() {
 		$('#entries').append(entry);
 	}	
 	
+	$('input[type=text][id=wdate]').tooltip();
+	$('input[type=text][id=wtime]').tooltip();
+	$('input[type=text][id=lat]').tooltip();
+	$('input[type=text][id=lng]').tooltip();
+	$('input[type=text][id=temperature]').tooltip();
+	$('input[type=text][id=airPressure]').tooltip();
+	$('input[type=text][id=waveHeight]').tooltip();
+
 	$('a.view').live("click", function(event) {
 		loadEntry($(this).attr('id'));
 	});
@@ -204,6 +212,8 @@ $(function() {
 		}, "json");
 
 	});
+	
+	
 
 	function masked(){
 		$.mask.definitions['~']='[EeWw]';

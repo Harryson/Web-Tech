@@ -39,21 +39,21 @@
 							</div>
 							<div class="control-group">
 								<label class="control-label">Date</label>
-								<input class="input-medium" type="text" id="wdate"/>
+								<input class="input-medium" type="text" id="wdate" data-toggle="tooltip" title="Example: 30.04.2013" placeholder="DD.MM.YYYY"/>
 							</div>
 							<div class="control-group">
 								<label class="control-label">Time</label>
-								<input class="input-medium" type="text" id="wtime"/>
+								<input class="input-medium" type="text" id="wtime" data-toggle="tooltip" title="Example: 18:36" placeholder="hh:mm"/>
 							</div>
 						</div>
 						<div class="span4">
 							<div class="control-group">
 								<label class="control-label">Latitude</label>
-								<input class="input-medium" type="text" id="lat"/>
+								<input class="input-medium" type="text" id="lat" data-toggle="tooltip" title="Example: 05°35.23N"/>
 							</div>
 							<div class="control-group">
 								<label class="control-label">Longitude</label>
-								<input class="input-medium" type="text" id="lng"/>
+								<input class="input-medium" type="text" id="lng" data-toggle="tooltip" title="Example: 017°35.23e"/>
 							</div>
 							<div class="control-group">
 								<label class="control-label">Fahrt nach</label>
@@ -157,11 +157,11 @@
 											<div class="span4" align="center">
 												<div class="control-group">
 													<label class="control-label">Air Pressure</label>
-													<input class="input-medium" type="text" id="airPressure"/>
+													<input class="input-medium" type="text" id="airPressure" data-toggle="tooltip" title="Example: 760 mmHg"/>
 												</div>
 												<div class="control-group">
 													<label class="control-label">Temperature</label>
-													<input class="input-medium" type="text" id="temperature"/>
+													<input class="input-medium" type="text" id="temperature" data-toggle="tooltip" title="Example: +23°C"/>
 												</div>
 											</div>
 											
@@ -189,7 +189,7 @@
 											<div class="span4" align="center">
 												<div class="control-group">
 													<label class="control-label">Wave Height</label>
-													<input class="input-medium" type="text" id="waveHeight"/>
+													<input class="input-medium" type="text" id="waveHeight" data-toggle="tooltip" title="Example: 120 cm"/>
 												</div>
 												<div class="control-group">
 													<label class="control-label">Wave Dir.</label>
@@ -293,5 +293,7 @@
 <script src="@routes.Assets.at("javascripts/app/ajax/tripinfo.js")" type="text/javascript"></script>
 <script src="@routes.Assets.at("javascripts/app/ajax/purl.js")" type="text/javascript"></script>
 <script src="@routes.Assets.at("javascripts/app/map/maskedinput.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap/bootstrap-tooltip.js")" type="text/javascript"></script>
+
 </body>
 </html>
