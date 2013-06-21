@@ -396,7 +396,44 @@ function deleteRoute() {
 }
 
 function saveRoute() {
-    alert('Save Route!')
+    var name = $('#routeName').val();
+    if(name == ""){
+        $("#noRouteName").modal('show');
+    }
+    // alert();
+    // // event.preventDefault();
+    
+    //     var json = {
+    //         "titel": name,
+    //         "von": "",
+    //         "nach": "",
+    //         "tstart": "",
+    //         "tende": "",
+    //         "tdauer": "",
+    //         "skipper": "",
+    //         "crew": "",
+    //         "motor": "",
+    //         "tank": ""        
+    //     };
+    //     alert('post1');
+    //     jQuery.post("app_trip_insert.html", json, function(data) { 
+        
+    //         if (data['tnr'].match(/Error/)) {
+    //             alert(data['tnr']);
+    //             $('#dialogTitle').text('Error');
+    //             $('#dialogMessage').text(data['tnr'].replace(/Error: /, ""));
+                
+    //         } else {
+                
+    //             addEntry( data['tnr'], json );
+    //             alert('richtig');
+    //             $('#dialogTitle').text('Success');
+    //             $('#dialogMessage').text("Eintrag wurde erfolgreich gespeichert.");
+    //         }
+            
+    //         $('#messageBox').modal('show');
+        
+    //     }, "json");
 }
 
 function toggleDraggable(route) {

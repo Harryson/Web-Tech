@@ -31,6 +31,7 @@
 		                <input type="button" class="btn" value="l&ouml;schen" id="deleteRouteButton" class="routeButton" onclick="javascript: deleteRoute()" />
 		                <input type="button" class="btn" value="speichern" id="saveRouteButton" class="routeButton" onclick="javascript: saveRoute()" />
 		                <input type="button" class="btn" value="beenden" id="stopRouteButton" class="routeButton" onclick="javascript: stopRouteMode()" />
+		                <input type="text" class="input-small" id="routeName" placeholder="Routen Name..">
 		            </div>
 		        	<br><br>
 		            <div id="route_distance">Routen-L&auml;nge: <span id="route_distance_number"></span> m</div>
@@ -60,10 +61,148 @@
 		    <!-- Current Position -->
 		    <div id="followCurrentPositionContainer">
 		        <div id="followCurrentPosition_button" class="well">
-		            <input type="button" class="btn" value="Eigener Position folgen" id="followCurrentPositionbutton" onclick="javascript: toggleFollowCurrentPosition()" />
+		            <input type="button" class="btn" value="Wetter laden" id="followCurrentPositionbutton" onclick="javascript: loadStatistics ()" />
 		        </div>
 		    </div>
-		    
+		    <div id="weatherOptionsContainer">
+		    	<div id="weatherOptions">
+				    <div class="accordion" id="accordion2">
+					  	<div class="accordion-group">
+					    	<div class="accordion-heading">
+							    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+							        Wetter Optionen
+							    </a>
+					    	</div>
+					    	<div id="collapseOne" class="accordion-body collapse in">
+					      		<div class="accordion-inner">
+				    			<!-- Toggle Options  -->
+						    		<div id="WeatherContainer">
+						    			<div id="WeatherButtons" class="well">
+						    				<table>
+						    					<tr>
+						    						<td class="tableSpace">
+									    				<table>
+									    					<tr>
+										    					<td>
+										    						See Marken: 
+										    					</td>
+											    				<td>
+											    					<input type="checkbox" class="toggleWeather" value="0" id="seaMark_button"/>
+											    				</td>
+										    				</tr>
+										    				<tr>
+										    					<td>
+										    						Wind: 
+										    					</td>
+											    				<td>
+											    					<input type="checkbox" class="toggleWeather" value="1" id="wind_button"/>
+											    				</td>
+										    				</tr>
+												    		<tr>
+												    			<td>
+												    				Temperatur: 
+												    			</td>
+												    			<td>
+												    				<input type="checkbox" class="toggleWeather" value="2" id="temp_button"/>
+												    			</td>
+												    		</tr>
+												    	</table>
+											    	</td>
+											    	<td class="tableSpace">
+												    	<table>
+												    		<tr>
+												    			<td>
+												    				Stadt Wetter: 
+												    			</td>
+												    			<td>
+												    				<input type="checkbox" class="toggleWeather" value="6" id="googleWeather_button"/>
+												    			</td>
+												    		</tr>
+												    		<tr>
+												    			<td>
+												    				Wellenhoehe: 
+												    			</td>
+												    			<td>
+												    				<input type="checkbox" class="toggleWeather" value="3" id="wave_button"/>
+												    			</td>
+												    		</tr>
+												    		<tr>
+												    			<td>
+												    				Niederschlag: 
+												    			</td>
+												    			<td>
+												    				<input type="checkbox" class="toggleWeather" value="4" id="precipitation_button"/>
+												    			</td>
+												    		</tr>
+									    				</table>
+									    			</td>
+									    		</tr>
+								    		</table>
+								    	</div>
+						    		</div>
+					      		</div>
+					    	</div>
+					 	</div>
+					 	<div class="accordion-group">
+						    <div class="accordion-heading">
+						      	<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+						        	Wetter Vorschau
+						    	</a>
+						    </div>
+						    <div id="collapseTwo" class="accordion-body collapse">
+							    <div class="accordion-inner">
+							        <!-- weather statistics -->
+							        <div class="accordion" id="accordion3">
+									  	<div class="accordion-group">
+									    	<div class="accordion-heading">
+											    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseThree">
+											        Temperatur Vorschau
+											    </a>
+									    	</div>
+									    	<div id="collapseThree" class="accordion-body collapse in">
+									      		<div class="accordion-inner">
+									      			<div id="temperaturStatistics"></div>
+									      		</div>
+									      	</div>
+									    </div>
+									    <div class="accordion-group">
+									    	<div class="accordion-heading">
+											    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapseFour">
+											        Wetter Vorschau
+											    </a>
+									    	</div>
+									    	<div id="collapseFour" class="accordion-body collapse in">
+									      		<div class="accordion-inner">
+									      			<div id="weatherStatistics"></div>
+									      		</div>
+									      	</div>
+									    </div>
+									</div>
+							    </div>
+					    	</div>
+					  	</div>
+					</div>
+				</div>
+		    </div>
+
+		    <!-- No Route name dialog -->
+	        <div class="modal hide fade" id="noRouteName">
+			    <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				    <h3>Kein Routen Name</h3>
+			    </div>
+			    <div class="modal-body">
+			    	<p>Bitte geben sie einen Routen Namen ein.</p>
+			    </div>
+			    <div class="modal-footer">
+				    <button class="btn" data-dismiss="modal" aria-hidden="true">Ok</button>
+			    </div>
+			</div>
+
+		    <!-- Weather Legende -->
+		    <div id="WindDescriptionContainer">
+		    </div>
+
 		    <!-- Map -->
 		    <div id="appWrapper">
 		        <div id="map_canvas"></div>

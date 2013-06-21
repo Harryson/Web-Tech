@@ -28,15 +28,10 @@ label {
     font-weight: bold;
 }
 
-#routeMenuContainer, #distanceToolContainer, #followCurrentPositionContainer, #navigationContainer {
+#routeMenuContainer, #distanceToolContainer, #followCurrentPositionContainer, #navigationContainer, #weatherOptionsContainer {
     position: relative;
     margin-right: auto;
     margin-left: auto;
-}
-
-#followCurrentPosition_button {
-    position: absolute;
-    z-index: 2;
 }
 
 #routeMenu, #distanceToolMenu, #navigationMenu {
@@ -90,7 +85,45 @@ label {
  
 #followCurrentPosition_button {
     padding: 5px 5px 5px 5px;
+    position: absolute;
+    margin-left: 440px;
     margin-top: 7px;
-    margin-left: 7px;
+    z-index: 2;
+}
+
+#weatherOptions {
+    padding: 5px 5px 5px 5px;
+    position: absolute;
+    margin-top: 3px;
+    margin-left: 3px;
+    z-index: 2;
+}
+
+#wind_button, #temp_button, #wave_button{
+    margin: 0px;
+}
+
+.accordion-heading {
+    background-color: rgb(245, 245, 245);
+}
+
+.accordion-inner {
+    background-color: white;
+}
+
+#weatherOptions .accordion {
+    width: 400px;
+}
+
+#collapseTwo .accordion-inner {
+    padding: 2px 0px;
+}
+
+#accordion3 {
+    margin: 0px;
+}
+
+.tableSpace {
+    padding-left: 40px;
 }
 
