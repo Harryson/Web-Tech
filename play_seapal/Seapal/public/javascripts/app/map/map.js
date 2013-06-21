@@ -99,14 +99,6 @@ var overlayMaps = [
         tileSize: new google.maps.Size(256, 256),
         name: "precipitation_height",
         maxZoom: 7
-    },{
-        getTileUrl: function (coord, zoom) {
-            return "http://tile.openweathermap.org/map/rain/" + zoom + "/" + coord.x + "/" + coord.y + ".png";
-        },
-        tileSize: new google.maps.Size(256, 256),
-        isPng: true,
-        name: "RainMap",
-        maxZoom: 19
     }
 ];
 
@@ -179,18 +171,6 @@ function initialize() {
             updateNavigation(currentPositionMarker.position, destinationMarker.position);
         }
     });
-    // ---------------------------------------------------------------------------------------------------
-    google.maps.event.addListener(map, 'idle', function(){
-        var bounds = map.getBounds();
-        var ln = bounds.getNorthEast();
-        var ln2 = bounds.getSouthWest();
-        var z = map.getZoom();
-        var myhre = 'http://openweathermap.org/data/getrect?type=city&cnt=200&lat1='+ 
-            ln2.lat() + '&lat2='+ ln.lat() + '&lng1=' + ln2.lng() + '&lng2='+ ln.lng()+
-            "&cluster=yes&zoom="+z+"&callback=?";
-        $.getJSON(myhre,getData);
-    } );
-    // ---------------------------------------------------------------------------------------------------
 
     overlay.draw = function () { };
     overlay.setMap(map);
@@ -213,90 +193,130 @@ function initialize() {
             noToggleOfFollowCurrentPositionButton = false;
         }
     });
+    // load google weather layer
+    var weatherLayer = new google.maps.weather.WeatherLayer({
+        temperatureUnits: google.maps.weather.TemperatureUnit.CELSIUS
+    });
 
     for (i = 0; i < overlayMaps.length; i++){
         map.overlayMapTypes.push(null);
     }
 
-    var stations = new OpenLayers.Layer.Vector.OWMStations("Stations");
-    var city = new OpenLayers.Layer.Vector.OWMWeather("Weather");
-    map.overlayMapTypes.setAt(10, stations);
-    map.overlayMapTypes.setAt(11, stations);
-
-
-    // Toggels Weather Layer
+    // Toggel Weather Layers
     $('.toggleWeather').click(function(){
         var layerID = parseInt($(this).attr('value'));
+        var tmpZoom = map.getZoom();
         if ($(this).attr('checked')){
+            // add layers
+            if(layerID == 6){ // google weather
+                weatherLayer.setMap(map);
+                if(tmpZoom > 12){
+                    map.setZoom(12);
+                }
+                return;
+            }
             var overlayMap = new google.maps.ImageMapType(overlayMaps[layerID]);
             map.overlayMapTypes.setAt(layerID, overlayMap);
-            var tmpZoom = map.getZoom();
-            if(tmpZoom > 7){
+            if(tmpZoom > 7 && layerID != 0){
                 map.setZoom(7);
             }
         } else {
             if (map.overlayMapTypes.getLength() > 0){
                 map.overlayMapTypes.setAt(layerID, null);
             }
+            if(layerID == 6){ // google weather
+                weatherLayer.setMap(null);
+            }
         }
     });
-
+    loadStatistics ();
 }
 
-// ---------------------------------------------------------------------------------------------------
-function getData(s)
-{
-    station_list = s;
+// Add weather statistics -------------------------------------------------------------------------------------------
+function loadStatistics () {
+    var curd = new Date();
+    var d = new Date(curd.getFullYear(), curd.getMonth(), curd.getDate());
+    var s = Math.round(( d.getTime() ) /1000) - 3600*24*1;
+    var lat = map.getCenter().lat();
+    var lng = map.getCenter().lng();
 
-    if(station_list.cod != '200') {
-        alert('Ошибка '+ JSONobject.message);
+    var url = "http://openweathermap.org/data/2.5/forecast?lat=" + lat
+            + "&lon=" + lng + "&cnt=10&start=" + s;
+
+    getWeather(url, function(JSONobject) {
+
+        console.log(JSONobject);
+        data = JSONobject.list;
+
+        // showSimpleChart('windStatistic', data);
+        showIconsChart('temperaturStatistics', data);
+        // showBarsDouble('chart4', data);
+        // showTempMinMax('chart2', data);
+        // showIconsChart('chart3', data);
+
+        // showTemp('chart5', data);
+        showWind('windStatistics', data);
+
+        // chartSpeed('chart3', data);
+        // showPolarSpeed('chart-wind', data);
+        // showPolar('chart-wind', data);
+        // chartDoublePress('chart-wind', data);
+    });
+}
+
+function getWeather(weather, callback) {
+    $.ajax({
+        dataType : "jsonp",
+        url : weather,
+        success : callback
+    });
+}
+
+var time_zone = 1000 * (new Date().getTimezoneOffset()) * (-60);
+
+function getData(JSONtext)
+{
+    JSONobject = ParseJson(JSONtext);
+    data = JSONobject.list;
+
+    showSimpleChart('windStatistic', data);
+
+    // showBarsDouble('chart4', data);
+    // showTempMinMax('chart2', data);
+    // showIconsChart('chart3', data); 
+
+    // showTemp('chart5', data);
+    // showWind('chart6', data);       
+
+//  chartSpeed('chart3', data);
+//  showPolarSpeed('chart-wind', data);
+//  showPolar('chart-wind', data);
+//  chartDoublePress('chart-wind', data);
+}
+
+function ParseJson(JSONtext)
+{
+    try{
+        JSONobject = JSON.parse(JSONtext); 
+    }catch(e){
+        alert('JSONText')
+        // ShowAlertMess('Error JSON');
         return;
     }
 
-    deleteOverlays();
-
-    infowindow = new google.maps.InfoWindow({
-        content: "place holder",
-        disableAutoPan: false
-    })
-
-
-for(var i = 0; i <  station_list.list.length; i ++){
-    var p = new google.maps.LatLng(station_list.list[i].lat, station_list.list[i].lng);
-
-    var temp = station_list.list[i].temp -273;
-    temp = Math.round(temp*100)/100;
-
-    img = GetWeatherIcon(station_list.list[i]);
-    var html_b = temp+'C';
-
-    var m = new StationMarker(p, map, html_b);
-    m.station_id=i; 
-    markersArray.push(m);
-
-  }
-
-
-
+    if(JSONobject.cod != '200') {
+        ShowAlertMess('Error '+ JSONobject.cod + ' ('+ JSONobject.message +')');
+        return;
+    }
+    var mes = JSONobject.cod;
+    if(JSONobject.calctime)
+        mes = mes + ' ' + JSONobject.calctime;
+    if(JSONobject.message)
+        mes = mes + ' ' + JSONobject.message;
+    console.log( mes );
+    return JSONobject;
 }
 
-var obj;
-
-function deleteOverlays() {
-  var temp_marker;
-  if (markersArray) {
-    for (i in markersArray) {
-    if(obj!=markersArray[i]) {
-          markersArray[i].setMap(null);
-    }
-    }
-    markersArray.length = 0;
-    if( temp_marker != undefined ) {
-    markersArray.push(temp_marker);
-    iActiveMarker = -1;
-    }
-  }
-}
 // ---------------------------------------------------------------------------------------------------
 // temporary marker context menu ----------------------------------------- //
 $(function () {
@@ -317,6 +337,8 @@ $(function () {
                 startNewRoute(temporaryMarker.position, true);
             } else if (key == "destination") {
             	startNewNavigation(currentPositionMarker.position, temporaryMarker.position);
+            } else if (key == "weather") {
+                loadPositionWeather(currentPositionMarker.position);
             } else if (key == "delete") {
                 temporaryMarker.setMap(null);
                 temporaryMarkerInfobox.setMap(null);
@@ -327,6 +349,7 @@ $(function () {
             "startroute": { name: "Neue Route setzen", icon: "startroute" },
             "distance": { name: "Distanz messen", icon: "distance" },
             "destination": { name: "Zum Ziel machen", icon: "destination" },
+            "weather": { name: "Wetter laden", icon: "destination"},
             "sep1": "---------",
             "delete": { name: "L&ouml;schen", icon: "delete" }
         }
