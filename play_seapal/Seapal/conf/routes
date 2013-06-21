@@ -52,6 +52,10 @@ GET     /clock                      controllers.NaviClock.liveClock()
 
 # SOS
 GET     /app_sos.html          		controllers.Sos.index()
+GET 	/app_sos_load.html			controllers.Sos.load()
+POST	/app_sos_send.html			controllers.Sos.send()
+GET     /sososo                     controllers.Sos.liveSos()
+
 
 # Weather Alarm
 POST	/app_waypoint_wetterAlarm.html	controllers.Waypoint.wetterAlarm(wnr: Int)
