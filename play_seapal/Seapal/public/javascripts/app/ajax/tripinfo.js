@@ -57,6 +57,37 @@ $(function() {
 	$('input[type=text][id=airPressure]').tooltip();
 	$('input[type=text][id=waveHeight]').tooltip();
 
+	/* Validation for fields */
+//	var latField = this.getElementById("lat");
+	var lngField = this.getElementById("lng");
+	var dateField = this.getElementById("wdate");
+	var timeField = this.getElementById("wtime");
+
+	lngField.onblur = function() {
+		lngValue = parseInt(lngField.value.substring(0,3), 10);
+		if (lngValue > 179) {
+			console.log("Wrong longitude value: " + lngValue);
+			this.form.elements["lng"].value = "";
+		}
+	};
+
+	timeField.onblur = function() {
+		hourValue = parseInt(timeField.value.substring(0,3), 10);
+		if (hourValue > 23) {
+			console.log("Wrong hour value: " + hourValue);
+			this.form.elements["wtime"].value = "";
+		}
+	}
+
+	dateField.onblur = function() {
+		dayValue = parseInt(dateField.value.substring(0,3), 10);
+		monthValue = parseInt(dateField.value.substring(3,5), 10);
+		if (dayValue > 31 || monthValue > 12) {
+			console.log("Wrong date value: " + dayValue + "." + monthValue);
+			this.form.elements["wdate"].value = "";
+		}
+	}
+
 	$('a.view').live("click", function(event) {
 		loadEntry($(this).attr('id'));
 	});
@@ -223,10 +254,12 @@ $(function() {
 		$.mask.definitions['j']="[0-5]";
 		$.mask.definitions['k']="[0-1]";
 		$.mask.definitions['l']="[0-2]";
+		$.mask.definitions['d']="[0-3]";
+
 		
 		$('#lat').mask("h9°j9.99+");
 		$('#lng').mask("k99°j9.99~");
-		$('#wdate').mask("99.99.2099");
+		$('#wdate').mask("d9.k9.2099");
 		$('#wtime').mask("l9:j9");
 		$('#temperature').mask("-99 °C");
 		$('#waveHeight').mask("999 cm");
