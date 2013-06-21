@@ -256,7 +256,7 @@ function loadStatistics () {
 
         // showTemp('chart5', data);
         showWind('windStatistics', data);
-
+        showHourlyForecastChart();
         // chartSpeed('chart3', data);
         // showPolarSpeed('chart-wind', data);
         // showPolar('chart-wind', data);
@@ -533,3 +533,105 @@ function toggleFollowCurrentPosition() {
     }
     document.getElementById('followCurrentPositionContainer').style.width = document.body.offsetWidth + "px";
 }
+
+function showHourlyForecastChart()
+{
+
+    var curdate = new Date( (new Date()).getTime()- 180 * 60 * 1000 );
+
+    var cnt=0;
+
+    var time = new Array();
+    var tmp = new Array();
+    var wind = new Array();
+    var prcp = new Array();
+
+    for(var i = 0; i <  forecast.length; i ++){
+
+        var dt = new Date(forecast[i].dt * 1000);
+    
+        if( curdate  > dt ) continue;
+        if(cnt > 10)        break;
+        cnt++;
+
+        tmp.push( Math.round(10*(forecast[i].main.temp))/10  );
+        time.push( new Date( forecast[i].dt * 1000 + time_zone) );
+        wind.push(forecast[i].speed);
+
+        var p=0;
+        if(forecast[i]['rain'] && forecast[i]['rain']['3h'])    p += forecast[i]['rain']['3h'];
+        if(forecast[i]['snow'] && forecast[i]['snow']['3h'])    p += forecast[i]['snow']['3h'];
+        prcp.push( Math.round( p * 10 ) / 10 );
+    }
+
+    $('#weatherStatistics').highcharts({
+            chart: {
+                zoomType: 'xy'
+            },
+            title: NaN,
+
+            xAxis: {
+                categories: time,
+                type: 'datetime',
+                labels: {
+                    formatter: function() {
+                        return Highcharts.dateFormat('%H:%M', this.value);
+                    }                   
+                }
+            },
+            yAxis: [
+            {
+                labels: {
+                    format: '{value}°C',
+                    style: {
+                        color: 'blue'
+                    }
+                },
+                opposite: true, 
+                title:NaN
+            },{
+                labels: {
+                    format: '{value}mm',
+                    style: {
+                        color: '#4572A7'
+                    }
+                },
+                opposite: true,             
+                title: NaN
+            }],
+            tooltip: {
+                useHTML: true,
+                shared: true,                
+                formatter: function() {
+                    var s = '<small>'+ Highcharts.dateFormat('%d %b. %H:%M', this.x) +'</small><table>';
+                    $.each(this.points, function(i, point) {
+                            s += '<tr><td style="color:'+point.series.color+'">'+ point.series.name +': </td>'+
+                            '<td style="text-align: right"><b>'+point.y +'</b></td></tr>';
+                    });
+                    return s+'</table>';
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'left',
+                x: 410,
+                verticalAlign: 'top',
+                y: 0,
+                floating: true,
+                backgroundColor: '#FFFFFF'
+            }, 
+            series: [
+            {
+                name: 'Precipitation',
+                type: 'column',   
+                color: '#A0A0A0',      
+                yAxis: 1,
+                data: prcp
+            },{
+                name: 'Temperature',
+                type: 'spline',
+                color: 'blue',
+                data: tmp
+            }]
+        });
+};
