@@ -87,3 +87,15 @@ CREATE TABLE seapal.wegpunkte (
 	PRIMARY KEY (wnr),
 	FOREIGN KEY (tnr) REFERENCES tripinfo (tnr) ON DELETE CASCADE
 );
+
+/* table for sos */
+CREATE TABLE seapal.sos(
+	snr INT NOT NULL AUTO_INCREMENT,
+	sboat VARCHAR(20) NOT NULL,
+	slat VARCHAR(20) NOT NULL,
+	slng VARCHAR(10) NOT NULL,
+	sday VARCHAR(20) NOT NULL,
+	stime VARCHAR(20) NOT NULL,
+	scom VARCHAR(200) NOT NULL,
+	PRIMARY KEY (snr)
+);

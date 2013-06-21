@@ -1,4 +1,4 @@
-@(header: Html)(navigation: Html)(navigation_app: Html)(clock: Html)
+@(header: Html)(navigation: Html)(navigation_app: Html)(clock: Html)(sos: Html)
 
 <!DOCTYPE html>
 
@@ -9,6 +9,8 @@
         @header 
     </head>
     <body>
+    	<!-- SOS -->
+    	@sos
     	<!-- Clock -->
     	@clock
 
@@ -32,7 +34,7 @@
 		            		<div class="span4" align="center">
 		            			<div class="control-group">
 			            			<label class="control-label">Boot</label>
-			            			<input class="input-medium" type="text" name="time" id="time" />
+			            			<input class="input-medium" type="text" name="boat" id="boat" />
 			                    </div> 	            		
 			            		<div class="control-group">
 			            			<label class="control-label">Längengrad</label>
@@ -54,13 +56,13 @@
 		            		<div class="span4">
 			                    <div class="span4" id="appNotes">
 				        			<h4>Situation</h4>
-				            		<textarea style="width:96%; height:360px;"></textarea>
+				            		<textarea id="com" name="com" style="width:96%; height:360px;"></textarea>
 				        		</div>			        
 		            		</div>
 		            	</div>    	 
 		            	<div class="control-group">
 		            		<input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
-			                <input type="submit" class="btn" id="calculate" name="submit" value="Senden" class="button"/>
+			                <input type="submit" class="btn" id="send" name="submit" value="Senden" class="button"/>
 			            </div>  
 		        	</form>
 		        </div>   

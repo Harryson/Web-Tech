@@ -5,7 +5,7 @@
     <script type="text/javascript" charset="utf-8">
         // Called for each Comet message
         var clockChanged = function(time) {
-            $('#clock').html(time.replace(/(\d)/g, '<span>$1</span>'))
+            $('#clock').html(time.replace(/(\S)/g, '<span>$1</span>'))
         }
     </script>
     

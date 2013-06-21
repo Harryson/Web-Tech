@@ -50,7 +50,7 @@ public class NaviClock extends Controller {
         //
         
         List<Comet> sockets = new ArrayList<Comet>();
-        SimpleDateFormat dateFormat = new SimpleDateFormat("HH mm ss");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("HH : mm : ss");
         
         public void onReceive(Object message) {
 
