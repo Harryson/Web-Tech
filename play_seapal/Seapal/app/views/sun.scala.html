@@ -1,19 +1,16 @@
-@(header: Html)(navigation: Html)(navigation_app: Html)(data: String)(clock: Html)
+@(header: Html)(navigation: Html)(navigation_app: Html)(data: String)(clock: Html)(sos: Html)
 
 <!DOCTYPE html>
 
 <html>
     <head>
-    
+    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     	<!-- Header -->
         @header 
-																														<!--	  <script>
-																															  $(function() {
-																															    $( "#datepicker" ).datepicker();
-																															  });
-																															  </script>    -->
     </head>
     <body>
+    	<!-- SOS -->
+    	@sos
     	<!-- Clock -->
     	@clock
     	
@@ -32,31 +29,33 @@
 		        <h2>Sonnenaufgang und Sonnenuntergang</h2>
 		        <br />
 		        <div class="container-fluid">
-		        	<form class="form-horizontal"> 
+		        	<form class="form-horizontal" method="POST"> 
 		            	<div class="row well" style="margin-left: 0px;">
 		            		<div class="span4" align="center">	            		
 			            		<div class="control-group">
-			            			<label class="control-label">Längengrad</label>
+			            			<label class="control-label">Längengrad <br> z.B. -089.73</label>
 			            			<input class="input-medium" type="text" name="longitude" id="longitude" />
 			            		</div>
 			            		<div class="control-group">
-			            			<label class="control-label">Breitegrad</label>
+			            			<label class="control-label">Breitegrad <br> z.B. +169.91</label>
 			            			<input class="input-medium" type="text" name="latitude" id="latitude" />
 			                    </div>       
 		            		</div>
 		            		<div class="span4">
 		            			<div class="control-group">
-			            			<label class="control-label">Tag im Jahr</label>
-			            			<input class="input-medium" type="text" name="day" id="day" />
-			                    </div>
-			                    <div class="control-group">
-			            			<label class="control-label">Zeitdifferenz zu Weltzeit (UTC-Zeit)</label>
+			            			<label class="control-label">Zeitdifferenz<br>(UTC-Zeit)<br> z.B -10</label>
 			            			<input class="input-medium" type="text" name="timediv" id="timediv" />
 									<p>
-										Winterzeit: 1, Sommerzeit: 2
+										Für Deutschland:<br>Winterzeit = 1, Sommerzeit = 2
 			            			</p>
-			                    </div> 
+			                    </div>	
 		            		</div>
+		            		<div class="span4">
+		            			<div class="control-group">
+			            			<label class="control-label">Tag im Jahr</label>
+			            			<input class="input-medium" type="text" name="day" id="datepicker" />
+			                    </div> 
+			                </div>
 		            	</div>    	 
 		            	<div class="control-group">
 		            		<!-- <input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/> -->
@@ -72,6 +71,8 @@
 			            			<label class="control-label">Sonnenaufgang</label>
 			            			<input class="input-medium" type="text" readonly="readonly" name="sunrise" id="sunrise" />
 			            		</div>
+			            	</div>
+			            	<div class="span4" align="center">	
 			            		<div class="control-group">
 			            			<label class="control-label">Sonnenuntergang</label>
 			            			<input class="input-medium" type="text" readonly="readonly" name="sunset" id="sunset" />
@@ -99,6 +100,6 @@
 		
 		<!-- Additional Scripts -->
 		<script src="@routes.Assets.at("javascripts/app/ajax/sun.js")" type="text/javascript"></script>
-													<!--	<script src="@routes.Assets.at("jqueryMaskedinput.js")" type="text/javascript"></script> -->
+		<script src="@routes.Assets.at("javascripts/app/map/maskedinput.js")" type="text/javascript"></script>	
 	</body>
 </html>

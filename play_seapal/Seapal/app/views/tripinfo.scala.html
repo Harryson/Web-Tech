@@ -1,4 +1,4 @@
-@(header: Html)(navigation: Html)(navigation_app: Html)(data: String)(clock: Html)
+@(header: Html)(navigation: Html)(navigation_app: Html)(data: String)(clock: Html)(sos: Html)
 
 <!DOCTYPE html>
 
@@ -10,130 +10,292 @@
         
     </head>
     <body>
+    	<!-- SOS -->
+    	@sos
     	<!-- Clock -->
     	@clock
 
-    	<!-- Navigation -->
-    	@navigation
-    	
-    	<!-- Container -->
-    	<div class="container-fluid">
-    	
-	    	<!-- Navigation -->
-	    	@navigation_app
-
-			<!-- Content -->
-			<div id="appWrapper" align="center">
-	            <br />
-	            <h2>Routen Informationen</h2>
-	            <br />
-	            <br />
-	            <br />
-	            <div class="container-fluid" align="center">
-	            	<form class="form-horizontal"> 
-		            	<div class="row well" style="margin-left: 0px;" align="center">
-		            		<div class="span4" align="center">	            		
-			            		<div class="control-group">
-			            			<label class="control-label">Name</label>
-			            			<input class="input-medium" type="text" id="name"/>
-			            		</div>
-			            		<div class="control-group">
-			            			<label class="control-label">Time</label>
-			            			<input class="input-medium" type="date" id="date"/>
-			                    </div>
-			                    <div class="control-group">
-			            			<label class="control-label">Date</label>
-			            			<input class="input-medium" type="date" id="wtime"/>
-			                    </div>
-		            		</div>
-		            		<div class="span4">
-		            			<div class="control-group">
-			            			<label class="control-label">Latitude</label>
-			            			<input class="input-medium" type="text" id="lat"/>
-			            		</div>
-			            		<div class="control-group">
-			            			<label class="control-label">Longitude</label>
-			            			<input class="input-medium" type="text" id="lng"/>
-			                    </div>
-			                    <div class="control-group">
-			            			<label class="control-label">Fahrt nach</label>
-			            			<select name="fahrtziel" id="marker" style="width: 165px;"></select>
-			                    </div>
-		            		</div>
-		            		<div class="span4">
-		            			<div class="control-group">
-			            			<label class="control-label">COG</label>
-			            			<input class="input-medium" type="text" id="cog"/>
-			                    </div>
-			                    <div class="control-group">
-			            			<label class="control-label">SOG</label>
-			            			<input class="input-medium" type="text" id="sog"/>
-			                    </div>  
-			                    <div class="control-group">
-			                    	<label class="control-label">Manoever</label>
-			            			<select name="manoever" id="manoever" style="width: 165px;"></select>
-			                    </div>                 
-		            		</div>
-		            		<div class="span4">
-		            			<div class="control-group">
-			            			<label class="control-label">BTM</label>
-			            			<input class="input-medium" type="text" id="btm"/>
-			                    </div>
-			                    <div class="control-group">
-			            			<label class="control-label">DTM</label>
-			            			<input class="input-medium" type="text" id="dtm"/>
-			                    </div>
-			                    <div class="control-group">
-			            			<label class="control-label">Vorsegel</label>
-			            			<select name="vorsegel" id="vorsegel" style="width: 165px;"></select>
-			            		</div>
-		            		</div>
-		            	</div>      	 
-		            	<div class="control-group">
-			            	<input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
-			                <input type="submit" class="btn" id="save" name="submit" value="Speichern" class="button"/>
-			            </div> 
-			            </form> 
-	            	</div>
-	            </div>
-	            <div class="appTableDiv" id="tripinfo" align="center">
-	                <table class="appTable table table-hover" cellspacing="0px" cellpadding="5px">
-	                    <thead>
-	                        <tr>
-	                            <th>Name</th>
-	                            <th>Breite</th>
-	                            <th>Laenge</th>
-	                            <th>Peilung</th>
-	                            <th>Abstand</th>
-	                            <th>Manoever</th>     
-	                            <th></th>
-	                        </tr>
-	                    </thead>
-	                    <tbody id="entries">
-	                        @Html(data)
-	                    </tbody>
-	                </table>
-	            </div>
-	        </div><!-- Content -->	
-	    </div><!-- Container -->
+	<!-- Navigation -->
+	@navigation
+	
+	<!-- Container -->
+	<div class="container-fluid">
 		
-		<!-- Anzeige nach dem Eintragen -->
-		<!-- Menu Modal -->
-		<div class="modal hide fade" id="messageBox">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3 id="dialogTitle"></h3>
-			</div>
-			<div class="modal-body">
-				<p id="dialogMessage"></p>
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn" data-dismiss="modal"><i class="icon-ok"></i> ok</a>
+		<!-- Navigation -->
+		@navigation_app
+
+		<!-- Content -->
+		<div id="appWrapper" align="center">
+			<br />
+			<h2>Routen Informationen</h2>
+			<br />
+			<br />
+			<br />
+			<div class="container-fluid" align="center">
+				<form class="form-horizontal" method="POST" action="/app_waypoint_update.html"> 
+					<div class="row well" style="margin-left: 0px;" align="center">
+						<div class="span4" align="center">	            		
+							<div class="control-group">
+								<label class="control-label">Name</label>
+								<input class="input-medium" type="text" id="name"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Date</label>
+								<input class="input-medium" type="text" id="wdate" data-toggle="tooltip" title="Example: 30.04.2013" placeholder="DD.MM.YYYY"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Time</label>
+								<input class="input-medium" type="text" id="wtime" data-toggle="tooltip" title="Example: 18:36" placeholder="hh:mm"/>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="control-group">
+								<label class="control-label">Latitude</label>
+								<input class="input-medium" type="text" id="lat" data-toggle="tooltip" title="Example: 05°35.23N"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Longitude</label>
+								<input class="input-medium" type="text" id="lng" data-toggle="tooltip" title="Example: 017°35.23e"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Fahrt nach</label>
+								<select name="fahrtziel" id="marker" style="width: 165px;"></select>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="control-group">
+								<label class="control-label">COG</label>
+								<input class="input-medium" type="text" id="cog"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">SOG</label>
+								<input class="input-medium" type="text" id="sog"/>
+							</div>  
+							<div class="control-group">
+								<label class="control-label">Manoever</label>
+								<select name="manoever" id="manoever" style="width: 165px;">
+									<option>-</option>
+									<option>Tack</option>
+									<option>Jibe</option>
+									<option>Lay to</option>
+									<option>Set Sails</option>
+									<option>Change Sails</option>
+									<option>Sails Down</option>
+									<option>Reff</option>
+									<option>Anker up</option>
+									<option>Anker down</option>
+								</select>
+							</div>                 
+						</div>
+						<div class="span4">
+							<div class="control-group">
+								<label class="control-label">BTM</label>
+								<input class="input-medium" type="text" id="btm"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">DTM</label>
+								<input class="input-medium" type="text" id="dtm"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Vorsegel</label>
+								<select name="vorsegel" id="vorsegel" style="width: 165px;">
+									<option>-</option>
+									<option>Genua1</option>
+									<option>Genua2</option>
+									<option>Genua3</option>
+									<option>Fock</option>
+									<option>Storm Fock</option>
+									<option>Blister</option>
+									<option>Spinaker</option>
+								</select>
+							</div>
+						</div>
+					</div>
+
+					<div class="accordion" id="accordion2">
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#weather">
+									<h3>Weather</h3>
+								</a>
+							</div>
+							<div id="weather" class="accordion-body collapse">
+								<div class="accordion-inner">
+									<div class="container-fluid" align="center">
+										<div class="row well" style="margin-left: 0px;" align="center">
+											<div class="span4" align="center">
+												<div class="control-group">
+													<label class="control-label">Wind Str.</label>
+													<select name="windStrength" id="windStrength" style="width: 165px;">
+														<option>0 - Calm</option>
+														<option>1 - Light air</option>
+														<option>2 - Light breeze</option>
+														<option>3 - Gentle breeze</option>
+														<option>4 - Moderate breeze</option>
+														<option>5 - Fresh breeze</option>
+														<option>6 - Strong breeze</option>
+														<option>7 - Near gale</option>
+														<option>8 - Gale</option>
+														<option>9 - Severe gale</option>
+														<option>10 - Storm</option>
+														<option>11 - Severe storm</option>
+														<option>12 - Hurricane</option>
+													</select>
+												</div>
+												<div class="control-group">
+													<label class="control-label">Wind Dir.</label>
+													<select name="windDirection" id="windDirection" style="width: 165px;">
+														<option>N</option>
+														<option>S</option>
+														<option>W</option>
+														<option>E</option>
+														<option>NW</option>
+														<option>NE</option>
+														<option>SW</option>
+														<option>SE</option>
+													</select>
+												</div>
+											</div>
+											<div class="span4" align="center">
+												<div class="control-group">
+													<label class="control-label">Air Pressure</label>
+													<input class="input-medium" type="text" id="airPressure" data-toggle="tooltip" title="Example: 760 mmHg"/>
+												</div>
+												<div class="control-group">
+													<label class="control-label">Temperature</label>
+													<input class="input-medium" type="text" id="temperature" data-toggle="tooltip" title="Example: +23°C"/>
+												</div>
+											</div>
+											
+											<div class="span4" align="center">
+												<div class="control-group">
+													<label class="control-label">Clouds</label>
+													<select name="clouds" id="clouds" style="width: 165px;">
+														<option>Puffy</option>
+														<option>Thin</option>
+														<option>Rain</option>
+														<option>Wispy</option>
+													</select>
+												</div>
+												<div class="control-group">
+													<label class="control-label">Rain</label>
+													<select name="rain" id="rain" style="width: 165px;">
+														<option>No Rain (0 mm/h)</option>
+														<option>Light rain (&lt; 2.5 mm/h)</option>
+														<option>Moderate rain (&lt; 10 mm/h)</option>
+														<option>Heavy rain (&lt; 50 mm/h)</option>
+														<option>Violent rain (&gt; 50 mm/h)</option>
+													</select>
+												</div>
+											</div>
+											<div class="span4" align="center">
+												<div class="control-group">
+													<label class="control-label">Wave Height</label>
+													<input class="input-medium" type="text" id="waveHeight" data-toggle="tooltip" title="Example: 120 cm"/>
+												</div>
+												<div class="control-group">
+													<label class="control-label">Wave Dir.</label>
+													<select name="waveDirection" id="waveDirection" style="width: 165px;">
+														<option>N</option>
+														<option>S</option>
+														<option>W</option>
+														<option>E</option>
+														<option>NW</option>
+														<option>NE</option>
+														<option>SW</option>
+														<option>SE</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+									<h3>Notes, Map & Photos</h3>
+								</a>
+							</div>
+							<div id="collapseTwo" class="accordion-body collapse">
+								<div class="accordion-inner">
+									<br />
+									<div class="container" align="center">
+										<div class="row" style="margin-left:5%;">
+											<div class="span4" id="appNotes">
+												<h4>Notes</h4>
+												<textarea style="width:96%; height:360px;"></textarea>
+											</div>
+											<div class="span4" id="markerMap">
+												<h4>Map</h4>
+												<img src="@routes.Assets.at("images/icons/marker_map.png")" id="appInfoPhoto" style="width:100%; heigt: 100%;"/>
+											</div>
+											<div class="span4" id="appPhotos">
+												<h4>Photos</h4>
+												<img src="@routes.Assets.at("images/icons/no_image.jpg")" id="appInfoPhoto" style="width:100%; heigt: 100%;"/>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<br />
+						<div class="control-group">
+							<input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
+							<input type="submit" class="btn" id="save" name="submit" value="Speichern" class="button"/>
+							<input type="submit" name="getWeatherAlarms" class="btn" id="getWeatherAlarms" 
+							value="Unwetterwarnung" class="button"/>
+						</div> 
+
+					</div> 
+				</form> 
 			</div>
 		</div>
-		
-		<!-- Additional Scripts -->
-		<script src="@routes.Assets.at("javascripts/app/ajax/tripinfo.js")" type="text/javascript"></script>
-		
-	</body>
+		<br />
+		<div class="appTableDiv" id="tripinfo" align="center">
+			<table class="appTable table table-hover" cellspacing="0px" cellpadding="5px">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Breite</th>
+						<th>Laenge</th>
+						<th>Peilung</th>
+						<th>Abstand</th>
+						<th>Manoever</th>     
+						<th></th>
+					</tr>
+				</thead>
+				<tbody id="entries">
+					@Html(data)
+				</tbody>
+			</table>
+		</div>
+	</div><!-- Content -->	
+</div><!-- Container -->
+
+<!-- Anzeige nach dem Eintragen -->
+<!-- Menu Modal -->
+<div class="modal hide fade" id="messageBox">
+	<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		<h3 id="dialogTitle"></h3>
+	</div>
+	<div class="modal-body">
+		<p id="dialogMessage"></p>
+	</div>
+	<div class="modal-footer">
+		<a href="#" class="btn" data-dismiss="modal"><i class="icon-ok"></i> ok</a>
+	</div>
+</div>
+
+<!-- Additional Scripts -->
+<script src="@routes.Assets.at("javascripts/app/ajax/tripinfo.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/app/ajax/purl.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/app/map/maskedinput.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/bootstrap/bootstrap-tooltip.js")" type="text/javascript"></script>
+
+</body>
 </html>

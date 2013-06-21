@@ -34,12 +34,12 @@
 			            			<input class="input-medium" type="text" id="name"/>
 			            		</div>
 			            		<div class="control-group">
-			            			<label class="control-label">Time</label>
-			            			<input class="input-medium" type="time" id="wdate"/>
+			            			<label class="control-label">Date</label>
+			            			<input class="input-medium" type="text" id="wdate"/>
 			                    </div>
 			                    <div class="control-group">
-			            			<label class="control-label">Date</label>
-			            			<input class="input-medium" type="date" id="wtime"/>
+			            			<label class="control-label">Time</label>
+			            			<input class="input-medium" type="text" id="wtime"/>
 			                    </div>
 		            		</div>
 		            		<div class="span4">
@@ -68,7 +68,18 @@
 			                    
 			                    <div class="control-group">
 			                    	<label class="control-label">Manoever</label>
-			            			<select name="manoever" id="manoever" style="width: 165px;"></select>
+			            			<select name="manoever" id="manoever" style="width: 165px;">
+			            				<option>-</option>
+			            				<option>Tack</option>
+			            				<option>Jibe</option>
+			            				<option>Lay to</option>
+			            				<option>Set Sails</option>
+			            				<option>Change Sails</option>
+			            				<option>Sails Down</option>
+			            				<option>Reff</option>
+			            				<option>Anker up</option>
+			            				<option>Anker down</option>
+			            			</select>
 			                    </div>                   
 		            		</div>
 		            		<div class="span4">
@@ -82,11 +93,24 @@
 			                    </div>
 			                    <div class="control-group">
 			            			<label class="control-label">Vorsegel</label>
-			            			<select name="vorsegel" id="vorsegel" style="width: 165px;"></select>
+			            			<select name="vorsegel" id="vorsegel" style="width: 165px;">
+										<option>-</option>
+										<option>Genua1</option>
+										<option>Genua2</option>
+										<option>Genua3</option>
+										<option>Fock</option>
+										<option>Storm Fock</option>
+										<option>Blister</option>
+										<option>Spinaker</option>
+			            			</select>
 			            		</div>
 		            		</div>
 		            	</div>      	 
-	            	</div> 
+	            	</div>
+	            	<div class="control-group">				
+						<input type="submit" name="getWeatherAlarms" class="btn" id="getWeatherAlarms" 
+						value="Unwetterwarnung" class="button"/>
+					</div> 
 			    	<br />
 					<h2>Weather</h2>
 					<br />
@@ -95,11 +119,34 @@
 							<div class="span4" align="center">
 								<div class="control-group">
 									<label class="control-label">Wind Str.</label>
-									<input class="input-medium" type="text" id="windStrength"/>
+									<select name="windStrength" id="windStrength" style="width: 165px;">
+										<option>0 - Calm</option>
+										<option>1 - Light air</option>
+										<option>2 - Light breeze</option>
+										<option>3 - Gentle breeze</option>
+										<option>4 - Moderate breeze</option>
+										<option>5 - Fresh breeze</option>
+										<option>6 - Strong breeze</option>
+										<option>7 - Near gale</option>
+										<option>8 - Gale</option>
+										<option>9 - Severe gale</option>
+										<option>10 - Storm</option>
+										<option>11 - Severe storm</option>
+										<option>12 - Hurricane</option>
+									</select>
 								</div>
 								<div class="control-group">
 									<label class="control-label">Wind Dir.</label>
-									<input class="input-medium" type="text" id="windDirection"/>
+									<select name="windDirection" id="windDirection" style="width: 165px;">
+										<option>N</option>
+										<option>S</option>
+										<option>W</option>
+										<option>E</option>
+										<option>NW</option>
+										<option>NE</option>
+										<option>SW</option>
+										<option>SE</option>
+									</select>
 								</div>
 							</div>
 							<div class="span4" align="center">
@@ -125,17 +172,32 @@
 								</div>
 								<div class="control-group">
 									<label class="control-label">Rain</label>
-									<input class="input-medium" type="text" id="rain"/>
+									<select name="rain" id="rain" style="width: 165px;">
+										<option>No Rain (0 mm/h)</option>
+										<option>Light rain (&lt; 2.5 mm/h)</option>
+										<option>Moderate rain (&lt; 10 mm/h)</option>
+										<option>Heavy rain (&lt; 50 mm/h)</option>
+										<option>Violent rain (&gt; 50 mm/h)</option>
+									</select>
 								</div>
 							</div>
 							<div class="span4" align="center">
 								<div class="control-group">
-									<label class="control-label">Wave Hight</label>
-									<input class="input-medium" type="text" id="waveHight"/>
+									<label class="control-label">Wave Height</label>
+									<input class="input-medium" type="text" id="waveHeight"/>
 								</div>
 								<div class="control-group">
 									<label class="control-label">Wave Dir.</label>
-									<input class="input-medium" type="text" id="waveDirection"/>
+									<select name="waveDirection" id="waveDirection" style="width: 165px;">
+										<option>N</option>
+										<option>S</option>
+										<option>W</option>
+										<option>E</option>
+										<option>NW</option>
+										<option>NE</option>
+										<option>SW</option>
+										<option>SE</option>
+									</select>
 								</div>
 							</div>
 						</div>

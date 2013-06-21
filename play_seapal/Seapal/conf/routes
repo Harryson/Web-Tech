@@ -30,6 +30,7 @@ GET     /app_tripinfo.html          controllers.Tripinfo.index(tnr: Int)
 GET     /app_tripinfo_load.html     controllers.Tripinfo.load(wnr: Int)
 POST    /app_tripinfo_insert.html   controllers.Tripinfo.insert()
 GET     /app_tripinfo_delete.html   controllers.Tripinfo.delete(wnr: Int)
+POST	/app_tripinfo_wetterAlarm.html	controllers.Tripinfo.wetterAlarm()
 
 # Waypoint
 GET     /app_waypoint.html          controllers.Waypoint.index(wnr: Int)
@@ -43,6 +44,7 @@ POST    /app_sun_insert.html   		controllers.Sun.insert()
 GET     /app_chat.html          	controllers.Chat.index()
 GET     /room                       controllers.Chat.chatRoom(username: String ?= null)
 GET     /room/chat                  controllers.Chat.chat(username)
+GET     /app_chat_load.html     	controllers.Chat.load()
 
 # Clock
 GET     /app_clock.html          	controllers.NaviClock.index()
@@ -50,6 +52,13 @@ GET     /clock                      controllers.NaviClock.liveClock()
 
 # SOS
 GET     /app_sos.html          		controllers.Sos.index()
+GET 	/app_sos_load.html			controllers.Sos.load()
+POST	/app_sos_send.html			controllers.Sos.send()
+GET     /sososo                     controllers.Sos.liveSos()
+
+
+# Weather Alarm
+POST	/app_waypoint_wetterAlarm.html	controllers.Waypoint.wetterAlarm(wnr: Int)
 
 
 # Map static resources from the /public folder to the /assets URL path

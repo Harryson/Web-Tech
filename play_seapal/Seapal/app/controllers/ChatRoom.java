@@ -14,6 +14,7 @@ import org.codehaus.jackson.node.*;
 
 import controllers.NaviClock.Clock;
 
+import java.text.DecimalFormat;
 import java.util.*;
 
 import static java.util.concurrent.TimeUnit.*;
@@ -32,7 +33,13 @@ public class ChatRoom extends UntypedActor {
     public static void join(final String username, WebSocket.In<JsonNode> in, WebSocket.Out<JsonNode> out) throws Exception{
         
         // Send the Join message to the room
-        String result = (String)Await.result(ask(defaultRoom,new Join(username, out), 1000), Duration.create(1, SECONDS));
+    	Calendar cal = Calendar.getInstance();
+    	DecimalFormat df =   new DecimalFormat  ( "00" );
+    	StringBuilder dateStr = new StringBuilder();
+    	
+    	dateStr.append(df.format(cal.get(Calendar.HOUR)) + ":").append(df.format(cal.get(Calendar.MINUTE)) + ":").append(df.format(cal.get(Calendar.SECOND))).toString();
+    	
+        String result = (String)Await.result(ask(defaultRoom,new Join(username + "\n" + dateStr, out), 1000), Duration.create(1, SECONDS));
         
         if("OK".equals(result)) {
             
@@ -40,8 +47,14 @@ public class ChatRoom extends UntypedActor {
             in.onMessage(new Callback<JsonNode>() {
                public void invoke(JsonNode event) {
                    
+            	Calendar cal = Calendar.getInstance();
+               	DecimalFormat df =   new DecimalFormat  ( "00" );
+               	StringBuilder dateStr = new StringBuilder();
+               	
+               	dateStr.append(df.format(cal.get(Calendar.HOUR)) + ":").append(df.format(cal.get(Calendar.MINUTE)) + ":").append(df.format(cal.get(Calendar.SECOND))).toString();
+            	   
                    // Send a Talk message to the room.
-                   defaultRoom.tell(new Talk(username, event.get("text").asText()));
+                   defaultRoom.tell(new Talk(username + "\n" + dateStr, event.get("text").asText()));
                    
                } 
             });
