@@ -47,6 +47,7 @@ CREATE TABLE seapal.bootinfo (
 /* table for tripinformations */
 CREATE TABLE seapal.tripinfo (
 	tnr INT NOT NULL AUTO_INCREMENT,
+	bnr INT NOT NULL,
 	titel VARCHAR(30) NOT NULL,
 	von VARCHAR(30) NOT NULL,
 	nach VARCHAR(30) NOT NULL,
@@ -57,7 +58,8 @@ CREATE TABLE seapal.tripinfo (
 	tdauer FLOAT NOT NULL,
 	motor FLOAT DEFAULT NULL,
 	tank BOOLEAN DEFAULT FALSE,
-	PRIMARY KEY (tnr)
+	PRIMARY KEY (tnr),
+	FOREIGN KEY (bnr) REFERENCES bootinfo (bnr) ON DELETE CASCADE
 );
 
 /* table for waypoints */
@@ -91,6 +93,7 @@ CREATE TABLE seapal.wegpunkte (
 /* table for sos */
 CREATE TABLE seapal.sos(
 	snr INT NOT NULL AUTO_INCREMENT,
+	sname VARCHAR(20) NOT NULL,
 	sboat VARCHAR(20) NOT NULL,
 	slat VARCHAR(20) NOT NULL,
 	slng VARCHAR(10) NOT NULL,
