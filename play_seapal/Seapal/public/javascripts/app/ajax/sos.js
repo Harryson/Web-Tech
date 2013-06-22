@@ -27,6 +27,7 @@ $(function() {
 			$('#waveHight').val(data['waveHight']);
 			$('#waveDirection').val(data['waveDirection']);*/
 	      	//var text = data['name'];
+	      	
 
 
 			$('#latitude').val(data['lat']);
