@@ -1,4 +1,4 @@
 Web-Tech
 ========
 
-SeaPal
+Repository für SeaPal mit Play Framework
