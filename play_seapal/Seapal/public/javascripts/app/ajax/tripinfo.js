@@ -83,7 +83,6 @@ $(function() {
 
 	lngField.onblur = function() {
 		lngValue = parseInt(lngField.value.substring(0,3), 10);
-		console.log(" longitude value: " + lngValue);
 		if (lngValue > 179) {
 			console.log("Wrong longitude value: " + lngValue);
 			this.form.elements["lng"].value = "";
@@ -266,7 +265,7 @@ $(function() {
 
 		jQuery.post("app_tripinfo_wetterAlarm.html", json, function(data) {
 
-			console.log("data.latConv: " + data['latConv'] + " data.lngConv: " + data['lngConv']);
+			//console.log("data.latConv: " + data['latConv'] + " data.lngConv: " + data['lngConv']);
 
 			//example for constance: 47°39.62' N 9°10,53' E	
 
