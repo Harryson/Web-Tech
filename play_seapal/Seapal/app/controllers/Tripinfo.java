@@ -2,7 +2,11 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
+import play.mvc.Http.MultipartFormData;
+import play.mvc.Http.MultipartFormData.FilePart;
 import play.db.*;
+
+import java.io.File;
 import java.sql.*;
 import javax.sql.*;
 import play.libs.Json;
@@ -12,6 +16,22 @@ import views.html.*;
 import views.html._include.*;
 
 public class Tripinfo extends Controller {
+	
+	
+	public static Result uploadFile() {
+		int wnr = 1;
+		MultipartFormData body = request().body().asMultipartFormData();
+		  FilePart picture = body.getFile("picture");
+		  if (picture != null) {
+		    String fileName = picture.getFilename();
+		    String contentType = picture.getContentType(); 
+		    File file = picture.getFile();
+		    return ok("File uploaded");
+		  } else {
+		    flash("error", "Missing file");
+		    return redirect(routes.Tripinfo.load(wnr));    
+		  }
+	}
   
   public static Result insert() {
   

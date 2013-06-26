@@ -1,5 +1,10 @@
 $(function() {
 
+	$('#upload').click(function(event) {
+		event.preventDefault();
+		jQuery.
+	});
+
 	function loadEntry(waypnr) { 
 		
 		jQuery.get("app_tripinfo_load.html", {'wnr': waypnr}, function(data) {
