@@ -2,12 +2,6 @@ $(function() {
 
 	$('#upload').click(function(event) {
 		event.preventDefault();
-		jQuery.
-	});
-
-	$('#thisFile1').click(function(event) {
-		event.preventDefault();
-		alert($('#thisFile').val());
 	});
 
 	function loadEntry(waypnr) { 

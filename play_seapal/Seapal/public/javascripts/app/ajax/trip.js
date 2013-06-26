@@ -94,7 +94,9 @@ $(function() {
 	        "skipper": $('#skipper').val(),
 	        "crew": $('#crew').val(),
 	        "motor": $('#motor').val(),
-	        "tank": $('#tank').val()        
+	        "tank": $('#tank').val(),
+	        "motor": $('#motor').val(),
+	        "boot": $('#boot').val().replace("item", "")        
 	    };
 	
 	    jQuery.post("app_trip_insert.html", json, function(data) { 
