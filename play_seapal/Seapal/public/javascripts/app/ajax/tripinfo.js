@@ -47,7 +47,6 @@ $(function() {
 	    entry += "<td style='width:30px; text-align:right;'><div class='btn-group'>";
 	    entry += "<a class='btn btn-small view' id='" + wnr + "'><span><i class='icon-eye-open'></i></span></a>";
 		entry += "<a class='btn btn-small remove' id='" + wnr + "'><span><i class='icon-remove'></i></span></a>";
-		entry += "<a href='app_waypoint.html?wnr=" + wnr  + "' class='btn btn-small redirect' id='" + wnr + "'><span><i class='icon-chevron-right'></i></span></a>";
 		entry += "</div></td>";
 	    entry += "</tr>";
 	    
@@ -67,22 +66,25 @@ $(function() {
 	var lngField = this.getElementById("lng");
 	var dateField = this.getElementById("wdate");
 	var timeField = this.getElementById("wtime");
+	var lngError = false;
+	var dateError = false;
+	var timeError = false;
 
 	lngField.onblur = function() {
 		lngValue = parseInt(lngField.value.substring(0,3), 10);
 		if (lngValue > 179) {
 			console.log("Wrong longitude value: " + lngValue);
 			this.form.elements["lng"].value = "";
+			$(this).closest('div').addClass("error");
+			$('#errorMessageDiv').removeClass("hidden");
+			lngError = true;			
+		} else {
+			$(this).closest('div').removeClass("error");
+			lngError = false;
+			if (!lngError && !dateError && !timeError)
+				$('#errorMessageDiv').addClass("hidden");
 		}
 	};
-
-	timeField.onblur = function() {
-		hourValue = parseInt(timeField.value.substring(0,3), 10);
-		if (hourValue > 23) {
-			console.log("Wrong hour value: " + hourValue);
-			this.form.elements["wtime"].value = "";
-		}
-	}
 
 	dateField.onblur = function() {
 		dayValue = parseInt(dateField.value.substring(0,3), 10);
@@ -90,8 +92,34 @@ $(function() {
 		if (dayValue > 31 || monthValue > 12) {
 			console.log("Wrong date value: " + dayValue + "." + monthValue);
 			this.form.elements["wdate"].value = "";
+			$(this).closest('div').addClass("error");
+			$('#errorMessageDiv').removeClass("hidden");
+			dateError = true;		
+		} else {
+			$(this).closest('div').removeClass("error");
+			dateError = false;
+			if (!lngError && !dateError && !timeError)
+				$('#errorMessageDiv').addClass("hidden");
+		}	
+	};
+
+
+	timeField.onblur = function() {
+		hourValue = parseInt(timeField.value.substring(0,3), 10);
+		if (hourValue > 23) {
+			console.log("Wrong hour value: " + hourValue);
+			this.form.elements["wtime"].value = "";
+			$(this).closest('div').addClass("error");
+			$('#errorMessageDiv').removeClass("hidden");
+			timeError = true;	
+		} else {
+			$(this).closest('div').removeClass("error");
+			timeError = false;
+			if (!lngError && !dateError && !timeError)
+				$('#errorMessageDiv').addClass("hidden");
 		}
-	}
+	};
+
 
 	$('a.view').live("click", function(event) {
 		loadEntry($(this).attr('id'));
@@ -175,6 +203,7 @@ $(function() {
 	    }, "json");
 	});
 	
+	/* Fuer Unwetterwarnungen */
 	$('#getWeatherAlarms').click(function(event) {
 		event.preventDefault();
 		var zmw;
@@ -187,8 +216,11 @@ $(function() {
 		};
 
 		if(json.lat == "" || json.lng == "") {
-			alert("No longitude and latitude given!");
+			//"No longitude and latitude given!"
+			$('#unwetterNoCoordinates').removeClass('hidden');
 			return;
+		} else {
+			$('#unwetterNoCoordinates').addClass('hidden');
 		}
 
 		//var wnr = $.url().param('wnr');
@@ -220,8 +252,12 @@ $(function() {
 
   					if (i == 1) {
   						console.log(data.response.error.description);
-  						alert(data.response.error.description);
+  						//show an error
+  						$('#unwetterResponseError').empty();
+  						$('#unwetterResponseError').append(data.response.error.description);
+  						$('#unwetterResponseError').removeClass('hidden');
   					} else {
+  						$('#unwetterResponseError').addClass('hidden');
   						zmw = data.location.l;
     					area = data.location.city;
   						console.log("Data Loaded: " + data.location.city);
@@ -232,14 +268,20 @@ $(function() {
   						$.get(urlForAlerts, function(data) {
   							if (data.alerts.length == 0) {
   								console.log("No weather alerts in " + area);
-  								alert("No weather alerts in " + area);
+  								$('#unwetterNoAlerts').empty();
+  								$('#unwetterNoAlerts').append("No weather alerts in <b>" + area + "!</b>");
+  								$('#unwetterNoAlerts').removeClass('hidden');
   							} else {
+  								$('#unwetterNoAlerts').addClass('hidden');
   								console.log("Alert: " + data.alerts[0].wtype_meteoalarm_name);
 	  							console.log("Description: " + data.alerts[0].description);
-	  							alert("Area: " + area +  
-	  								"\nAlert: " + data.alerts[0].wtype_meteoalarm_name + 
-	  								"\nDescription: " + data.alerts[0].description + 
-	  								"\n\nLevel: " + data.alerts[0].level_meteoalarm_description);
+	  							$('#unwetterAlert').empty();
+	  							$('#unwetterAlert').append("<P align=left><b>Area:</b> " + area +  
+	  								"\n<br /><b>Alert:</b> " + data.alerts[0].wtype_meteoalarm_name + 
+	  								"\n<br /><b>Description:</b> " + data.alerts[0].description + 
+	  								"\n\n<br /><br /><b>Level:</b> " + 
+	  								data.alerts[0].level_meteoalarm_description + "</P>");
+	  							$('#unwetterAlert').removeClass('hidden');
   							}
 						}, "jsonp");
   					}
@@ -257,18 +299,22 @@ $(function() {
 		$.mask.definitions['-']='[-+]';
 		$.mask.definitions['h']="[0-8]";
 		$.mask.definitions['j']="[0-5]";
-		$.mask.definitions['k']="[0-1]";
+		$.mask.definitions['p']="[0-1]";
 		$.mask.definitions['l']="[0-2]";
 		$.mask.definitions['d']="[0-3]";
 
 		
 		$('#lat').mask("h9°j9.99+");
-		$('#lng').mask("k99°j9.99~");
-		$('#wdate').mask("d9.k9.2099");
+		$('#lng').mask("p99°j9.99~");
+		$('#wdate').mask("d9.p9.2099");
 		$('#wtime').mask("l9:j9");
 		$('#temperature').mask("-99 °C");
 		$('#waveHeight').mask("999 cm");
 		$('#airPressure').mask("999 mmHg");
+		$('#cog').mask("999°");
+		$('#btm').mask("999°");
+		$('#sog').mask("99 kn");
+		$('#dtm').mask("99 kn");
 	}
 
 	$(document).ready(function(event) {
