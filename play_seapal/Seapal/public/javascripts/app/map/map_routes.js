@@ -399,7 +399,15 @@ function saveRoute() {
     var name = $('#routeName').val();
     if(name == ""){
         $("#noRouteName").modal('show');
+        return;
     }
+
+    currentRoute.markerArray.name = name;
+    alert(currentRoute.markerArray.length);
+    alert(currentRoute.markerArray.name);
+    alert(currentRoute.markerArray[0].position);
+    alert(currentRoute.markerArray[1].position);
+    alert(currentRoute.markerArray[2].position);
     // alert();
     // // event.preventDefault();
     
