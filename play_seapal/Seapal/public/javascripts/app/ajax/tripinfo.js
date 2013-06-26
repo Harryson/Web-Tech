@@ -52,6 +52,8 @@ $(function() {
 		$('#entries').append(entry);
 	}	
 	
+	
+
 	$('input[type=text][id=wdate]').tooltip();
 	$('input[type=text][id=wtime]').tooltip();
 	$('input[type=text][id=lat]').tooltip();
@@ -59,6 +61,8 @@ $(function() {
 	$('input[type=text][id=temperature]').tooltip();
 	$('input[type=text][id=airPressure]').tooltip();
 	$('input[type=text][id=waveHeight]').tooltip();
+
+	$('#wdate').datepicker();
 
 	/* Validation for fields */
 //	var latField = this.getElementById("lat");
@@ -68,9 +72,11 @@ $(function() {
 	var lngError = false;
 	var dateError = false;
 	var timeError = false;
+	var nameError = true;
 
 	lngField.onblur = function() {
 		lngValue = parseInt(lngField.value.substring(0,3), 10);
+		console.log(" longitude value: " + lngValue);
 		if (lngValue > 179) {
 			console.log("Wrong longitude value: " + lngValue);
 			this.form.elements["lng"].value = "";
@@ -86,8 +92,8 @@ $(function() {
 	};
 
 	dateField.onblur = function() {
-		dayValue = parseInt(dateField.value.substring(0,3), 10);
-		monthValue = parseInt(dateField.value.substring(3,5), 10);
+		monthValue = parseInt(dateField.value.substring(0,3), 10);
+		dayValue = parseInt(dateField.value.substring(3,5), 10);
 		if (dayValue > 31 || monthValue > 12) {
 			console.log("Wrong date value: " + dayValue + "." + monthValue);
 			this.form.elements["wdate"].value = "";
@@ -149,6 +155,32 @@ $(function() {
 	$('#save').click(function(event) {
 
 		event.preventDefault();
+
+		var returnFlag = false;
+
+		//check if there are errors or name is not given
+		if ($('#name').val() == "") {
+			$('#errorMessageName').removeClass("hidden");
+			$('#name').closest('div').addClass("error");
+			returnFlag = true;
+		} else {
+			$('#errorMessageName').addClass("hidden");
+			$('#name').closest('div').removeClass("error");
+		}
+
+		if ($('#lat').val() == "" || $('#lng').val() == "") {
+			$('#errorMessageCoord').removeClass("hidden");
+			$('#lat').closest('div').addClass("error");
+			$('#lng').closest('div').addClass("error");
+			returnFlag = true;
+		} else {
+			$('#errorMessageCoord').addClass("hidden");
+			$('#lat').closest('div').removeClass("error");
+			$('#lng').closest('div').removeClass("error");
+		}
+
+		if (returnFlag)
+			return;
 
 		// Aktuelle URL kopieren
 		var query = window.location.search;
@@ -305,7 +337,7 @@ $(function() {
 		
 		$('#lat').mask("h9°j9.99+");
 		$('#lng').mask("p99°j9.99~");
-		$('#wdate').mask("d9.p9.2099");
+	//	$('#wdate').mask("d9.p9.2099");
 		$('#wtime').mask("l9:j9");
 		$('#temperature').mask("-99 °C");
 		$('#waveHeight').mask("999 cm");

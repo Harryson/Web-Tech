@@ -3,6 +3,12 @@ $(function() {
 		loadBoat();
 	});
 
+	$('#tstart').tooltip();
+	$('#tende').tooltip();
+
+	$('#tstart').datepicker();
+	$('#tende').datepicker();
+
 	function loadBoat() {
 		jQuery.get("app_trip_load_boat.html", function(data) {
 			var length= parseInt(data['length']);

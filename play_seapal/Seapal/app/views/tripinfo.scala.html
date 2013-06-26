@@ -4,7 +4,7 @@
 
 <html>
     <head>
-    
+    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     	<!-- Header -->
         @header
         
@@ -39,32 +39,38 @@
   						<b>Eingabefehler!</b> Ändern Sie bitte die rot markierten Felder!
 
 						</div>
+						<div class="alert alert-error hidden" id="errorMessageName">
+  						<b>Eingabefehler!</b> Name muss eingegeben werden!
+						</div>
+						<div class="alert alert-error hidden" id="errorMessageCoord">
+  						<b>Eingabefehler!</b> Längen- und Breitengrad müssen eingegeben werden!
+						</div>
 						<div class="span4" align="center">	            		
 							<div class="control-group">
 								<label class="control-label">Name</label>
 								<input class="input-medium" type="text" id="name"/>
 							</div>
 							<div class="control-group">
-								<label class="control-label">Date</label>
-								<input class="input-medium" type="text" id="wdate" data-toggle="tooltip" title="Example: 30.04.2013" placeholder="DD.MM.YYYY"/>
+								<label class="control-label">Datum</label>
+								<input class="input-medium" type="text" id="wdate" data-toggle="tooltip" title="Click auf Feld um Datum zu wählen" />
 							</div>
 							<div class="control-group">
-								<label class="control-label">Time</label>
-								<input class="input-medium" type="text" id="wtime" data-toggle="tooltip" title="Example: 18:36" placeholder="hh:mm"/>
+								<label class="control-label">Uhrzeit</label>
+								<input class="input-medium" type="text" id="wtime" data-toggle="tooltip" title="Beispiel: 18:36" placeholder="hh:mm"/>
 							</div>
 						</div>
 						<div class="span4">
 							<div class="control-group">
-								<label class="control-label">Latitude</label>
-								<input class="input-medium" type="text" id="lat" data-toggle="tooltip" title="Example: 05°35.23N"/>
+								<label class="control-label">Breitengrad</label>
+								<input class="input-medium" type="text" id="lat" data-toggle="tooltip" title="Beispiel: 05°35.23N"/>
 							</div>
 							<div class="control-group">
-								<label class="control-label">Longitude</label>
-								<input class="input-medium" type="text" id="lng" data-toggle="tooltip" title="Example: 017°35.23e"/>
+								<label class="control-label">Längengrad</label>
+								<input class="input-medium" type="text" id="lng" data-toggle="tooltip" title="Beispiel: 017°35.23E"/>
 							</div>
 							<div class="control-group">
 								<label class="control-label">Fahrt nach</label>
-								<select name="fahrtziel" id="marker" style="width: 165px;"></select>
+								<input class="input-medium" type="text" name="fahrtziel" id="marker"/>
 							</div>
 						</div>
 						<div class="span4">
@@ -121,7 +127,7 @@
 						<div class="accordion-group">
 							<div class="accordion-heading">
 								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#weather">
-									<h3>Weather</h3>
+									<h3>Wetter</h3>
 								</a>
 							</div>
 							<div id="weather" class="accordion-body collapse">
@@ -130,85 +136,85 @@
 										<div class="row well" style="margin-left: 0px;" align="center">
 											<div class="span4" align="center">
 												<div class="control-group">
-													<label class="control-label">Wind Str.</label>
+													<label class="control-label">Windstärke</label>
 													<select name="windStrength" id="windStrength" style="width: 165px;">
-														<option>0 - Calm</option>
-														<option>1 - Light air</option>
-														<option>2 - Light breeze</option>
-														<option>3 - Gentle breeze</option>
-														<option>4 - Moderate breeze</option>
-														<option>5 - Fresh breeze</option>
-														<option>6 - Strong breeze</option>
-														<option>7 - Near gale</option>
-														<option>8 - Gale</option>
-														<option>9 - Severe gale</option>
-														<option>10 - Storm</option>
-														<option>11 - Severe storm</option>
-														<option>12 - Hurricane</option>
+														<option>0 - Windstille</option>
+														<option>1 - leiser Zug</option>
+														<option>2 - leichte Brise</option>
+														<option>3 - schwache Brise</option>
+														<option>4 - mäßige Brise</option>
+														<option>5 - frische Brise</option>
+														<option>6 - starker Wind</option>
+														<option>7 - steifer Wind</option>
+														<option>8 - stürmischer Wind</option>
+														<option>9 - Sturm</option>
+														<option>10 - schwerer Sturm</option>
+														<option>11 - orkanartiger Sturm</option>
+														<option>12 - Orkan</option>
 													</select>
 												</div>
 												<div class="control-group">
-													<label class="control-label">Wind Dir.</label>
+													<label class="control-label">Windrichtung</label>
 													<select name="windDirection" id="windDirection" style="width: 165px;">
 														<option>N</option>
 														<option>S</option>
 														<option>W</option>
-														<option>E</option>
+														<option>O</option>
 														<option>NW</option>
-														<option>NE</option>
+														<option>NO</option>
 														<option>SW</option>
-														<option>SE</option>
+														<option>SO</option>
 													</select>
 												</div>
 											</div>
 											<div class="span4" align="center">
 												<div class="control-group">
-													<label class="control-label">Air Pressure</label>
-													<input class="input-medium" type="text" id="airPressure" data-toggle="tooltip" title="Example: 760 mmHg"/>
+													<label class="control-label">Luftdruck</label>
+													<input class="input-medium" type="text" id="airPressure" data-toggle="tooltip" title="Beispiel: 760 mmHg"/>
 												</div>
 												<div class="control-group">
-													<label class="control-label">Temperature</label>
-													<input class="input-medium" type="text" id="temperature" data-toggle="tooltip" title="Example: +23°C"/>
+													<label class="control-label">Temperatur</label>
+													<input class="input-medium" type="text" id="temperature" data-toggle="tooltip" title="Beispiel: +23°C"/>
 												</div>
 											</div>
 											
 											<div class="span4" align="center">
 												<div class="control-group">
-													<label class="control-label">Clouds</label>
+													<label class="control-label">Bewölkung</label>
 													<select name="clouds" id="clouds" style="width: 165px;">
-														<option>Puffy</option>
-														<option>Thin</option>
-														<option>Rain</option>
-														<option>Wispy</option>
+														<option>Haufenwolken</option>
+														<option>Schichtwolken</option>
+														<option>Regenwolken</option>
+														<option>Schleierwolken</option>
 													</select>
 												</div>
 												<div class="control-group">
-													<label class="control-label">Rain</label>
+													<label class="control-label">Regen</label>
 													<select name="rain" id="rain" style="width: 165px;">
-														<option>No Rain (0 mm/h)</option>
-														<option>Light rain (&lt; 2.5 mm/h)</option>
-														<option>Moderate rain (&lt; 10 mm/h)</option>
-														<option>Heavy rain (&lt; 50 mm/h)</option>
-														<option>Violent rain (&gt; 50 mm/h)</option>
+														<option>kein Regen (0 mm/h)</option>
+														<option>leichter Regen (&lt; 2.5 mm/h)</option>
+														<option>mäßiger Regen (&lt; 10 mm/h)</option>
+														<option>starker Regen (&lt; 50 mm/h)</option>
+														<option>heftiger Regen (&gt; 50 mm/h)</option>
 													</select>
 												</div>
 											</div>
 											<div class="span4" align="center">
 												<div class="control-group">
-													<label class="control-label">Wave Height</label>
-													<input class="input-medium" type="text" id="waveHeight" data-toggle="tooltip" title="Example: 120 cm"/>
+													<label class="control-label">Wellenhöhe</label>
+													<input class="input-medium" type="text" id="waveHeight" data-toggle="tooltip" title="Beispiel: 120 cm"/>
 												</div>
 												<div class="control-group">
-													<label class="control-label">Wave Dir.</label>
+													<label class="control-label">Wellenrichtung</label>
 													<select name="waveDirection" id="waveDirection" style="width: 165px;">
 														<option>N</option>
 														<option>S</option>
 														<option>W</option>
-														<option>E</option>
+														<option>O</option>
 														<option>NW</option>
-														<option>NE</option>
+														<option>NO</option>
 														<option>SW</option>
-														<option>SE</option>
+														<option>SO</option>
 													</select>
 												</div>
 											</div>
@@ -221,7 +227,7 @@
 						<div class="accordion-group">
 							<div class="accordion-heading">
 								<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-									<h3>Notes, Map & Photos</h3>
+									<h3>Notizen, Karte & Fotos</h3>
 								</a>
 							</div>
 							<div id="collapseTwo" class="accordion-body collapse">
@@ -230,15 +236,15 @@
 									<div class="container" align="center">
 										<div class="row" style="margin-left:5%;">
 											<div class="span4" id="appNotes">
-												<h4>Notes</h4>
+												<h4>Notizen</h4>
 												<textarea style="width:96%; height:360px;"></textarea>
 											</div>
 											<div class="span4" id="markerMap">
-												<h4>Map</h4>
+												<h4>Karte</h4>
 												<img src="@routes.Assets.at("images/icons/marker_map.png")" id="appInfoPhoto" style="width:100%; heigt: 100%;"/>
 											</div>
 											<div class="span4" id="appPhotos">
-												<h4>Photos</h4>
+												<h4>Fotos</h4>
 												<img src="@routes.Assets.at("images/icons/no_image.jpg")" id="appInfoPhoto" style="width:100%; heigt: 100%;"/>
 											</div>
 										</div>
