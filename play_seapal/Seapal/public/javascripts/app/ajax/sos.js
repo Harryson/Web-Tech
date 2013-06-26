@@ -56,10 +56,6 @@ $(function() {
 	        "time": $('#time').val(),
 	        "com": $('#com').val()          
 	    };
-
-	    $('#dialogTitle').text('Falsche Eingabe');
-				$('#dialogMessage').text("Sie müssen einen Namen eingeben");
-				$('#messageBox').modal('show');
 	
 	    jQuery.post("app_sos_send.html", json, function(data) { 
 
