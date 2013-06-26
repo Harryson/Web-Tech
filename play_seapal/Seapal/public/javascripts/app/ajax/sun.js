@@ -106,6 +106,7 @@ $(function() {
 		    	$('#sonneSuccess').removeClass('hidden');
 		    	//$('#sucessForm').removeClass('hidden');
 			} else {
+				$('#sonneSuccess').addClass('hidden');
 				$('#sunrise').val("Fehler");
         		$('#sunset').val("Fehler");
 			}
