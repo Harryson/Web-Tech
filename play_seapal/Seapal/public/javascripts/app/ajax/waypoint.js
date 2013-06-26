@@ -134,17 +134,17 @@ $(function() {
 	
 	    jQuery.post("app_waypoint_update.html?wnr=" + wnr , json, function(data) { 
 	    
-	    //	if (data['wnr'].match(/Error/)) {
-		//    	
-		//    	$('#dialogTitle').text('Error');
-		//    	$('#dialogMessage').text(data['wnr'].replace(/Error: /, ""));
-		//    	
-	    //	} else {
-		//    	$('#dialogTitle').text('Success');
-		//    	$('#dialogMessage').text("Eintrag wurde erfolgreich gespeichert.");
-	    //	}
-	    //	
-	    //	$('#messageBox').modal('show');
+	    	if (data['wnr'].match(/Error/)) {
+		   	
+		   	$('#dialogTitle').text('Error');
+		   	$('#dialogMessage').text(data['wnr'].replace(/Error: /, ""));
+		   	
+	    	} else {
+		   	$('#dialogTitle').text('Success');
+		   	$('#dialogMessage').text("Eintrag wurde erfolgreich gespeichert.");
+	    	}
+	    	
+	    	$('#messageBox').modal('show');
 	    
 	    }, "json");
 		

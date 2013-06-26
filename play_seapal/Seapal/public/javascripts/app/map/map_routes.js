@@ -6,6 +6,7 @@ var destinationRoute = null;
 var destinationMarker = null;
 var draggedMarkerIndex = null;
 var selectedRouteMarker = null;
+var trip_number_post = null;
 
 var activePathOptions = {
     strokeColor: "#427F94",
@@ -138,11 +139,11 @@ function addRouteMarker(position, index) {
         
         if (currentRoute.markerArray.indexOf(selectedRouteMarker) == 0) {
         
-        	if (currentMode == MODE.ROUTE) {
-	        	currentRoute.markerInfobox = drawRouteInfobox(marker.position, currentRoute.name);
-        	} else {
-	        	currentRoute.markerInfobox = drawDistanceInfobox(marker.position);
-        	}
+            if (currentMode == MODE.ROUTE) {
+                currentRoute.markerInfobox = drawRouteInfobox(marker.position, currentRoute.name);
+            } else {
+                currentRoute.markerInfobox = drawDistanceInfobox(marker.position);
+            }
         }
     });
 
@@ -192,21 +193,21 @@ function deleteRouteMarker() {
     
     if (index == 0) {
     
-    	 if (currentMode == MODE.ROUTE || currentMode == MODE.DISTANCE ) {
-    	 	
-    	 	if (currentRoute.markerArray.length == 0) {
-    	 	
-	    	 	currentRoute.markerInfobox.setMap(null);
-	    	 	stopRouteMode();
-	    	 	return;
-	    	 	
-    	 	} else {
-	    	 	currentRoute.markerInfobox = drawRouteInfobox(currentRoute.markerArray[index].position, currentRoute.name);
-    	 	}
-	    	 
-	     } else {
-		     currentRoute.markerInfobox = drawDistanceInfobox(currentRoute.markerArray[index].position);
-		 }
+         if (currentMode == MODE.ROUTE || currentMode == MODE.DISTANCE ) {
+            
+            if (currentRoute.markerArray.length == 0) {
+            
+                currentRoute.markerInfobox.setMap(null);
+                stopRouteMode();
+                return;
+                
+            } else {
+                currentRoute.markerInfobox = drawRouteInfobox(currentRoute.markerArray[index].position, currentRoute.name);
+            }
+             
+         } else {
+             currentRoute.markerInfobox = drawDistanceInfobox(currentRoute.markerArray[index].position);
+         }
     }
     
     updateRouteDistance();
@@ -276,11 +277,24 @@ function startNewRoute(position, isDistanceToolRoute) {
     if (!isDistanceToolRoute) {
         currentRoute.markerInfobox = drawRouteInfobox(position, currentRoute.name);
     } else {
-	    currentRoute.markerInfobox = drawDistanceInfobox(position);
+        currentRoute.markerInfobox = drawDistanceInfobox(position);
     }
     
     routeArray.push(currentRoute);
     addRouteMarker(position);
+    loadBoats();
+}
+
+function loadBoats() {
+    jQuery.get("app_trip_load_boat.html", function(data) {
+        var length= parseInt(data['length']);
+        
+        for(var i = 1; i < length + 1; i++) {
+            var name = "item" + i;
+            $('#bootSelect').append('<option id=' + name + ' value='+i+'>' + data[name] + '</option>');
+        }
+
+    }, "json");
 }
 
 function stopRouteMode() {
@@ -301,21 +315,21 @@ function stopRouteMode() {
 }
 
 function startNewNavigation(start, destination) {
-	
-	document.getElementById('navigationContainer').style.display = "block";
+    
+    document.getElementById('navigationContainer').style.display = "block";
     currentMode = MODE.NAVIGATION;
-	
-	// delete temp marker & infobox
+    
+    // delete temp marker & infobox
     if (temporaryMarker != null) { temporaryMarker.setMap(null); }
     if (temporaryMarkerInfobox != null) { temporaryMarkerInfobox.setMap(null); }
     
     var pathCoordinates = [start, destination];
     
     destinationRoute = new google.maps.Polyline({
-	    path: pathCoordinates,
-	    strokeColor: "#27F646",
-	    strokeOpacity: 0.7,
-	    strokeWeight: 3
+        path: pathCoordinates,
+        strokeColor: "#27F646",
+        strokeOpacity: 0.7,
+        strokeWeight: 3
     });
     
     destinationMarker = new google.maps.Marker({
@@ -352,7 +366,7 @@ function updateNavigation(start, destination) {
         strokeOpacity: 0.7,
         strokeWeight: 3
     });
-	    
+        
     destinationRoute.setMap(map);
 }
 
@@ -363,8 +377,8 @@ function updateDestinationMarker(newPosition) {
 }
 
 function updateNavigationDistance(start, destination) {
-	
-	var distance = 0;
+    
+    var distance = 0;
 
     distance = getDistance(start, destination);
    
@@ -372,8 +386,8 @@ function updateNavigationDistance(start, destination) {
 }
 
 function stopNavigationMode() {
-	currentMode = MODE.DEFAULT;
-	destinationMarker.setMap(null);
+    currentMode = MODE.DEFAULT;
+    destinationMarker.setMap(null);
     destinationRoute.setMap(null);
     navigationRoute = null;
     document.getElementById('navigationContainer').style.display = "none";
@@ -398,50 +412,112 @@ function deleteRoute() {
 function saveRoute() {
     var name = $('#routeName').val();
     if(name == ""){
+        $('#dialogTitle').text('Kein Routen Name');
+        $('#dialogMessage').text("Bitte geben sie einen Routen Namen ein.");
         $("#noRouteName").modal('show');
         return;
     }
-
     currentRoute.markerArray.name = name;
-    alert(currentRoute.markerArray.length);
-    alert(currentRoute.markerArray.name);
-    alert(currentRoute.markerArray[0].position);
-    alert(currentRoute.markerArray[1].position);
-    alert(currentRoute.markerArray[2].position);
-    // alert();
-    // // event.preventDefault();
     
-    //     var json = {
-    //         "titel": name,
-    //         "von": "",
-    //         "nach": "",
-    //         "tstart": "",
-    //         "tende": "",
-    //         "tdauer": "",
-    //         "skipper": "",
-    //         "crew": "",
-    //         "motor": "",
-    //         "tank": ""        
-    //     };
-    //     alert('post1');
-    //     jQuery.post("app_trip_insert.html", json, function(data) { 
-        
-    //         if (data['tnr'].match(/Error/)) {
-    //             alert(data['tnr']);
-    //             $('#dialogTitle').text('Error');
-    //             $('#dialogMessage').text(data['tnr'].replace(/Error: /, ""));
-                
-    //         } else {
-                
-    //             addEntry( data['tnr'], json );
-    //             alert('richtig');
-    //             $('#dialogTitle').text('Success');
-    //             $('#dialogMessage').text("Eintrag wurde erfolgreich gespeichert.");
-    //         }
+    saveRouteAndGetNumber();
+    for (var i = 0; i <= currentRoute.markerArray.length - 1; i++) {
+        saveWaypointWithWeatherByTrip(i);
+    };
+    // $('#dialogTitle').text('Routen Gespeichert');
+    // $('#dialogMessage').text("Die Route wurde erfolgreich gespeichert.");
+    // $("#noRouteName").modal('show');
+       
+}
+
+function saveWaypointWithWeatherByTrip(waypoint) {
+
+    // breite daten vor
+    var newDate = new Date();
+    var min = newDate.getMinutes();
+    var hour = newDate.getHours()
+    var day = newDate.getDate();
+    var month = newDate.getMonth();
+    if(day < 10){
+        day = '0' + day;
+    }
+    if(month < 10){
+        month = '0' + month;
+    }
+    if(min < 10){
+        min = '0' + min;
+    }
+    if(hour < 10){
+        hour = '0' + hour;
+    }
+
+    var lat = currentRoute.markerArray[waypoint].position.jb;
+    var lng = currentRoute.markerArray[waypoint].position.kb;
+
+    json = {
+        "tnr": trip_number_post,
+        "name": "Marker" + waypoint,
+        "btm": 0,
+        "dtm": 0,
+        "lat": Geo.toLat(lat, 'dms', 1),
+        "lng": Geo.toLon(lng, 'dms', 1),
+        "sog": 0,
+        "cog": 0,
+        "manoever": "",
+        "vorsegel": "",
+        "wdate": day + '.' + month + '.' + newDate.getFullYear(),
+        "wtime": hour + ':' + min,
+        "marker": "Marker" + (waypoint + 1),
+        "windStrength": "",
+        "windDirection": "",
+        "airPressure": "",
+        "temperature": "",
+        "clouds": "",
+        "rain": "",
+        "waveHeight": "",
+        "waveDirection": ""
+    };
+
+    jQuery.post("app_tripinfo_insert.html", json, function(data) { 
             
-    //         $('#messageBox').modal('show');
+            if (data['tnr'].match(/Error/)) {
+                $('#dialogTitle').text('Error');
+                $('#dialogMessage').text(data['tnr'].replace(/Error: /, ""));
+            } 
+            $('#messageBox').modal('show');
         
-    //     }, "json");
+        }, "json");
+}
+
+function saveRouteAndGetNumber() {
+    // var selectedBoat = $('#bootSelect').val().replace("item", "");
+    // alert(selectedBoat);
+    var json = {
+            "bnr": '2',
+            "titel": currentRoute.markerArray.name,
+            "von": "von",
+            "nach": "nach",
+            "tstart": "2000-01-01",
+            "tende": "2000-01-01",
+            "tdauer": "100",
+            "skipper": "skipper",
+            "crew": "crew",
+            "motor": "100",
+            "tank": "tank"        
+        };
+        $.post("app_trip_insert.html", json, function(data) { 
+
+            if (data['tnr'].match(/Error/)) {
+
+                $('#dialogTitle').text('Error');
+                $('#dialogMessage').text(data['tnr'].replace(/Error: /, ""));
+                
+            } else {
+                trip_number_post = data['tnr'];
+            }
+            
+            $('#messageBox').modal('show');
+        
+        }, "json");
 }
 
 function toggleDraggable(route) {

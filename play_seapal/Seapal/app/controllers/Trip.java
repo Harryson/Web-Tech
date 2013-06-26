@@ -62,7 +62,8 @@ public class Trip extends Controller {
     try {
 	      query = conn.createStatement();
 
-        query.execute("INSERT INTO seapal.tripinfo (titel, von, nach, skipper, crew, tstart, tende, tdauer, motor, tank) VALUES ("
+        query.execute("INSERT INTO seapal.tripinfo (bnr, titel, von, nach, skipper, crew, tstart, tende, tdauer, motor, tank) VALUES ("
+                + "'" + data.get("bnr") + "',"
                 + "'" + data.get("titel") + "',"
                 + "'" + data.get("von") + "',"
                 + "'" + data.get("nach") + "',"

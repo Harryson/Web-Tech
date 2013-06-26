@@ -1,6 +1,6 @@
 
 var map = null;
-
+var daily = {};
 var overlay = new google.maps.OverlayView();
 
 var MODE = { DEFAULT: { value: 0, name: "default" }, ROUTE: { value: 1, name: "route" }, DISTANCE: { value: 2, name: "distance" }, NAVIGATION: { value: 3, name: "navigation" } };
@@ -246,13 +246,13 @@ function loadStatistics () {
 
         console.log(JSONobject);
         data = JSONobject.list;
-
+        daily = jQuery.extend(daily, data);
         // showSimpleChart('windStatistic', data);
         showIconsChart('temperaturStatistics', data);
         // showBarsDouble('chart4', data);
         // showTempMinMax('chart2', data);
         // showIconsChart('chart3', data);
-
+        showDailyChart();
         // showTemp('chart5', data);
         showWind('windStatistics', data);
         // showHourlyForecastChart();
@@ -281,7 +281,8 @@ function getData(JSONtext)
     // showSimpleChart('windStatistic', data);
     // showBarsDouble('weatherStatistics', data);
     showTempMinMax('temperaturStatistics', data);
-    showIconsChart('weatherStatistics', data); 
+    showIconsChart('weatherStatistics', data);
+    
     // showTemp('chart5', data);
     // showWind('chart6', data);       
 
@@ -335,7 +336,7 @@ $(function () {
             } else if (key == "destination") {
             	startNewNavigation(currentPositionMarker.position, temporaryMarker.position);
             } else if (key == "weather") {
-                loadPositionWeather(currentPositionMarker.position);
+                loadStatistics();
             } else if (key == "delete") {
                 temporaryMarker.setMap(null);
                 temporaryMarkerInfobox.setMap(null);
@@ -530,105 +531,141 @@ function toggleFollowCurrentPosition() {
     }
     document.getElementById('followCurrentPositionContainer').style.width = document.body.offsetWidth + "px";
 }
+daily = [{"dt":1372244400,"temp":{"day":12.64,"min":5.46,"max":12.64,"night":5.46,"eve":12.64,"morn":12.64},"pressure":960.29,"humidity":80,"weather":[{"id":802,"main":"Clouds","description":"scattered clouds","icon":"03d"}],"speed":1.41,"deg":59,"clouds":36},{"dt":1372330800,"temp":{"day":12.79,"min":9.03,"max":12.89,"night":9.03,"eve":11.29,"morn":9.79},"pressure":956.78,"humidity":80,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":2.31,"deg":288,"clouds":80,"rain":1},{"dt":1372417200,"temp":{"day":13.3,"min":7.35,"max":13.3,"night":7.35,"eve":11.84,"morn":9.59},"pressure":954.83,"humidity":93,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":1.77,"deg":290,"clouds":56,"rain":0.5},{"dt":1372503600,"temp":{"day":11.51,"min":10.35,"max":11.63,"night":10.35,"eve":11.34,"morn":10.65},"pressure":953.9,"humidity":100,"weather":[{"id":501,"main":"Rain","description":"moderate rain","icon":"10d"}],"speed":2.76,"deg":220,"clouds":92,"rain":10.5},{"dt":1372590000,"temp":{"day":13.55,"min":10.96,"max":13.55,"night":10.96,"eve":12.48,"morn":11.05},"pressure":958.18,"humidity":93,"weather":[{"id":501,"main":"Rain","description":"moderate rain","icon":"10d"}],"speed":2.61,"deg":267,"clouds":92,"rain":6},{"dt":1372676400,"temp":{"day":19.07,"min":12.49,"max":20.06,"night":12.97,"eve":18.94,"morn":12.49},"pressure":955.39,"humidity":89,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":1.16,"deg":30,"clouds":0},{"dt":1372762800,"temp":{"day":17.57,"min":12.44,"max":17.57,"night":12.44,"eve":17.47,"morn":12.67},"pressure":959.76,"humidity":0,"weather":[{"id":501,"main":"Rain","description":"moderate rain","icon":"10d"}],"speed":2.64,"deg":258,"clouds":69,"rain":3.61},{"dt":1372849200,"temp":{"day":20.25,"min":12.74,"max":20.25,"night":12.74,"eve":20.1,"morn":14.03},"pressure":960.2,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":0.69,"deg":171,"clouds":25,"rain":1.7},{"dt":1372935600,"temp":{"day":21.4,"min":14.33,"max":21.4,"night":14.33,"eve":21.14,"morn":15.04},"pressure":959.34,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":0.66,"deg":97,"clouds":0,"rain":0.69},{"dt":1373022000,"temp":{"day":20.5,"min":11.63,"max":20.5,"night":11.63,"eve":16.8,"morn":16.81},"pressure":958.54,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":3.76,"deg":304,"clouds":10,"rain":1.79},{"dt":1373108400,"temp":{"day":16.1,"min":8.29,"max":16.1,"night":8.29,"eve":15.21,"morn":12.27},"pressure":959.32,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":2.02,"deg":297,"clouds":59},{"dt":1373194800,"temp":{"day":18.58,"min":11.38,"max":18.58,"night":11.38,"eve":18.13,"morn":11.88},"pressure":958.02,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":1.9,"deg":271,"clouds":1,"rain":0.73},{"dt":1373281200,"temp":{"day":20.83,"min":13.61,"max":20.83,"night":13.61,"eve":20.19,"morn":14.81},"pressure":955.98,"humidity":0,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":2.07,"deg":36,"clouds":0,"rain":0.65},{"dt":1373367600,"temp":{"day":22.82,"min":14.65,"max":22.82,"night":14.65,"eve":22.75,"morn":15.03},"pressure":952.02,"humidity":0,"weather":[{"id":800,"main":"Clear","description":"sky is clear","icon":"01d"}],"speed":2.53,"deg":72,"clouds":0},{"dt":1373454000,"temp":{"day":23.47,"min":17.18,"max":23.47,"night":17.18,"eve":21.02,"morn":17.42},"pressure":945.07,"humidity":0,"weather":[{"id":501,"main":"Rain","description":"moderate rain","icon":"10d"}],"speed":1.63,"deg":144,"clouds":91,"rain":11.63},{"dt":1373540400,"temp":{"day":17.18,"min":17.18,"max":17.18,"night":17.18,"eve":17.18,"morn":17.18},"pressure":944.89,"humidity":0,"weather":[{"id":501,"main":"Rain","description":"moderate rain","icon":"10d"}],"speed":1.92,"deg":237,"clouds":65,"rain":7.03}];
+function showDailyChart()
+{
 
-// function showHourlyForecastChart()
-// {
+    var time = new Array();
+    var tmp = new Array();
+    var tmpr = new Array();
+    var rain = new Array();
+    var snow = new Array();
+    var prcp = new Array();
+    var wind = new Array();
 
-//     var curdate = new Date( (new Date()).getTime()- 180 * 60 * 1000 );
 
-//     var cnt=0;
+    for(var i = 0; i <  daily.length-1; i ++){
 
-//     var time = new Array();
-//     var tmp = new Array();
-//     var wind = new Array();
-//     var prcp = new Array();
+        tmp.push( Math.round(10*(daily[i].temp.day))/10  );
+        var dt = new Date( daily[i].dt * 1000 + time_zone);
+        time.push( dt );
 
-//     for(var i = 0; i <  forecast.length; i ++){
+        var tmpi =  Math.round(10*(daily[i].temp.min))/10 ;
+        var tmpa =  Math.round(10*(daily[i].temp.max))/10 ;
+        tmpr.push( [tmpi, tmpa ]  );
 
-//         var dt = new Date(forecast[i].dt * 1000);
-    
-//         if( curdate  > dt ) continue;
-//         if(cnt > 10)        break;
-//         cnt++;
 
-//         tmp.push( Math.round(10*(forecast[i].main.temp))/10  );
-//         time.push( new Date( forecast[i].dt * 1000 + time_zone) );
-//         wind.push(forecast[i].speed);
+        if(daily[i]['rain'])    {
+            rain.push( Math.round(daily[i]['rain']*100) / 100 );
+        }else{
+            rain.push( 0 );         
+        }
+        if(daily[i]['snow'])    {
+            snow.push( Math.round(daily[i]['snow']*100) / 100 );
+        }else{
+            snow.push( 0 );
+        }
+    }
 
-//         var p=0;
-//         if(forecast[i]['rain'] && forecast[i]['rain']['3h'])    p += forecast[i]['rain']['3h'];
-//         if(forecast[i]['snow'] && forecast[i]['snow']['3h'])    p += forecast[i]['snow']['3h'];
-//         prcp.push( Math.round( p * 10 ) / 10 );
-//     }
 
-//     $('#weatherStatistics').highcharts({
-//             chart: {
-//                 zoomType: 'xy'
-//             },
-//             title: NaN,
+    $('#WeatherStatistics16days').highcharts({
+            chart: {
+            //    zoomType: 'xy'
+                type: 'column'
+            },
+            title: NaN,
+            xAxis: {
+                categories: time,
+                labels: {
+                    formatter: function() {
+                        return Highcharts.dateFormat('%d %b', this.value);
+                    }                   
+                }
+            },
 
-//             xAxis: {
-//                 categories: time,
-//                 type: 'datetime',
-//                 labels: {
-//                     formatter: function() {
-//                         return Highcharts.dateFormat('%H:%M', this.value);
-//                     }                   
-//                 }
-//             },
-//             yAxis: [
-//             {
-//                 labels: {
-//                     format: '{value}°C',
-//                     style: {
-//                         color: 'blue'
-//                     }
-//                 },
-//                 opposite: true, 
-//                 title:NaN
-//             },{
-//                 labels: {
-//                     format: '{value}mm',
-//                     style: {
-//                         color: '#4572A7'
-//                     }
-//                 },
-//                 opposite: true,             
-//                 title: NaN
-//             }],
-//             tooltip: {
-//                 useHTML: true,
-//                 shared: true,                
-//                 formatter: function() {
-//                     var s = '<small>'+ Highcharts.dateFormat('%d %b. %H:%M', this.x) +'</small><table>';
-//                     $.each(this.points, function(i, point) {
-//                             s += '<tr><td style="color:'+point.series.color+'">'+ point.series.name +': </td>'+
-//                             '<td style="text-align: right"><b>'+point.y +'</b></td></tr>';
-//                     });
-//                     return s+'</table>';
-//                 }
-//             },
-//             legend: {
-//                 layout: 'vertical',
-//                 align: 'left',
-//                 x: 410,
-//                 verticalAlign: 'top',
-//                 y: 0,
-//                 floating: true,
-//                 backgroundColor: '#FFFFFF'
-//             }, 
-//             series: [
-//             {
-//                 name: 'Precipitation',
-//                 type: 'column',   
-//                 color: '#A0A0A0',      
-//                 yAxis: 1,
-//                 data: prcp
-//             },{
-//                 name: 'Temperature',
-//                 type: 'spline',
-//                 color: 'blue',
-//                 data: tmp
-//             }]
-//         });
-// };
+            yAxis: [
+            {
+                labels: {
+                    format: '{value}°C',
+                    style: {
+                        color: 'blue'
+                    }
+                },              
+                title: {
+                    text: NaN,
+                    style: {
+                        color: 'blue'
+                    }
+                }
+            },{
+                labels: {
+                    format: '{value} mm',
+                    style: {
+                        color: '#909090'
+                    }
+                },
+                opposite: true,             
+                title: {
+                    text: NaN,
+                    style: {
+                        color: '#4572A7'
+                    }                    
+                }
+            }],
+            tooltip: {
+                useHTML: true,
+                shared: true,                
+                formatter: function() {
+                    var s = '<small>'+ Highcharts.dateFormat('%d %b', this.x) +'</small><table>';
+                    $.each(this.points, function(i, point) {
+                        console.log(point);
+                            if(point.y != 0)
+                                s += '<tr><td style="color:'+point.series.color+'">'+ point.series.name +': </td>'+
+                                '<td style="text-align: right"><b>'+point.y +'</b></td></tr>';
+                    }
+                    );
+                    return s+'</table>';
+                }
+            },
+            plotOptions: {
+                column: {
+                    stacking: 'normal'
+                }
+            },
+            legend: NaN,
+            series: [
+            {
+                name: 'Snow',
+                type: 'column', 
+                color: '#909090',      
+                yAxis: 1,         
+                data: snow,
+                stack: 'precipitation'
+            },
+            {
+                name: 'Rain',
+                type: 'column', 
+                color: '#B0B0B0',      
+                yAxis: 1,         
+                data: rain,
+                stack: 'precipitation'
+            },
+            {
+                name: 'Temperature',
+                type: 'spline',
+                color: 'blue',
+                data: tmp
+            },
+            {
+                name: 'Temperature min',
+                data: tmpr,
+                type: 'arearange',
+                lineWidth: 0,
+                linkedTo: ':previous',
+                color: Highcharts.getOptions().colors[0],
+                fillOpacity: 0.3,
+                zIndex: 0
+            } 
+            ]
+        });
+}

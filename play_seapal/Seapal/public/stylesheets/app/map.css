@@ -75,7 +75,7 @@ label {
 #routeMenu, #distanceToolMenu, #navigationMenu {
     width: 201px;
     padding: 5px 5px 5px 5px;
-    margin-left: 88.6%;
+    margin-left: 70%;
     margin-top: 40px;
 }
         
@@ -125,5 +125,9 @@ label {
 
 .tableSpace {
     padding-left: 40px;
+}
+
+#accordion3 .accordion-heading {
+    background-color: rgb(200, 200, 200);
 }
 

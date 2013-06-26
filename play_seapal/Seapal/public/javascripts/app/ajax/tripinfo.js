@@ -1,7 +1,6 @@
 $(function() {
 
 	function loadEntry(waypnr) { 
-		
 		jQuery.get("app_tripinfo_load.html", {'wnr': waypnr}, function(data) {
 	   
 	        $('#name').val(data['name']);
@@ -24,8 +23,16 @@ $(function() {
 	        $('#rain').val(data['rain']);
 	        $('#waveHeight').val(data['waveHeight']);
 	        $('#waveDirection').val(data['waveDirection']);
-	        
+
+	        var lat = Geo.parseDMS(data['lat']).toFixed(6);
+	        var lng = Geo.parseDMS(data['lng']).toFixed(6);
+	        $('#googleimage').remove();
+			$('#markerMap').append('<img id="googleimage" border="0" alt="Weg Punkt" src="http://maps.googleapis.com/maps/api/staticmap?center='+ 
+				lat+','+lng+'&zoom=12&size=360x360&maptype=roadmap&markers=color:red%7Clabel:W%7C'+lat+','+lng+'&sensor=false" />');
 	    }, "json");
+
+	    $('#wnrvalue').attr('value', waypnr);
+
 	}
 	
 	function addEntry(wnr, json) {
@@ -140,6 +147,60 @@ $(function() {
 		
 			$('#messageBox').modal('show');
 		}, "json");		
+	});
+
+	$('#update').click(function(event) {
+		event.preventDefault();
+
+		// Aktuelle URL kopieren
+		var query = window.location.search;
+		var wnr = $('#wnrvalue').attr('value');
+		alert(wnr);
+		// Nummer des ausgewählten Trip aus der URL bekommen 
+		var tripnrQuery = query.match(/tnr=\d/);
+		var tripnr = tripnrQuery[0].replace(/tnr=/, "");
+	
+		var json = {
+			"tnr": tripnr,
+            "name": $('#name').val(),
+            "lat": $('#lat').val(),
+            "lng": $('#lng').val(),
+	        "btm": $('#btm').val(),
+	        "dtm": $('#dtm').val(),
+	        "sog": $('#sog').val(),
+	        "cog": $('#cog').val(),
+	        "manoever": $("#manoever :selected").text(),
+	        "vorsegel": $("#vorsegel :selected").text(),
+	        "marker": $("#marker :selected").text(),
+	        "wdate": $('#wdate').val(),
+	        "wtime": $('#wtime').val(),
+	        "marker": $('#marker').val(),
+	        "windStrength": $('#windStrength').val(),
+	        "windDirection": $('#windDirection').val(),
+	        "airPressure": $('#airPressure').val(),
+	        "temperature": $('#temperature').val(),
+	        "clouds": $('#clouds').val(),
+	        "rain": $('#rain').val(),
+	        "waveHeight": $('#waveHeight').val(),
+	        "waveDirection": $('#waveDirection').val()         
+	    };
+	
+	    jQuery.post("app_waypoint_update.html?wnr=" + wnr, json, function(data) { 
+	    
+	    	if (data['wnr'].match(/Error/)) {
+		    	
+		    	$('#dialogTitle').text('Error');
+		    	$('#dialogMessage').text(data['wnr'].replace(/Error: /, ""));
+		    	
+	    	} else {
+		    	
+		    	$('#dialogTitle').text('Success');
+		    	$('#dialogMessage').text("Eintrag wurde erfolgreich aktualisiert.");
+	    	}
+	    
+	    	$('#messageBox').modal('show');
+	    	    	
+	    }, "json");
 	});
 	
 	$('#save').click(function(event) {

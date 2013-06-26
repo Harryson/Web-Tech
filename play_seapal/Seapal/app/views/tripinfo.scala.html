@@ -233,7 +233,6 @@
 											</div>
 											<div class="span4" id="markerMap">
 												<h4>Map</h4>
-												<img src="@routes.Assets.at("images/icons/marker_map.png")" id="appInfoPhoto" style="width:100%; heigt: 100%;"/>
 											</div>
 											<div class="span4" id="appPhotos">
 												<h4>Photos</h4>
@@ -248,7 +247,8 @@
 						<br />
 						<div class="control-group">
 							<input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
-							<input type="submit" class="btn" id="save" name="submit" value="Speichern" class="button"/>
+							<input type="submit" class="btn" id="update" value="Übernehmen" class="button"/>
+							<input type="submit" class="btn" id="save" name="submit" value="Als neuen Wegpunkt Speichern" class="button"/>
 							<input type="submit" name="getWeatherAlarms" class="btn" id="getWeatherAlarms" 
 							value="Unwetterwarnung" class="button"/>
 						</div> 
@@ -310,6 +310,6 @@
 <script src="@routes.Assets.at("javascripts/app/ajax/purl.js")" type="text/javascript"></script>
 <script src="@routes.Assets.at("javascripts/app/map/maskedinput.js")" type="text/javascript"></script>
 <script src="@routes.Assets.at("javascripts/bootstrap/bootstrap-tooltip.js")" type="text/javascript"></script>
-
+<p id="wnrvalue" value=""></p>
 </body>
 </html>
