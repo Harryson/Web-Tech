@@ -418,7 +418,7 @@ function saveRoute() {
         return;
     }
     currentRoute.markerArray.name = name;
-    
+
     saveRouteAndGetNumber();
     for (var i = 0; i <= currentRoute.markerArray.length - 1; i++) {
         saveWaypointWithWeatherByTrip(i);
@@ -549,4 +549,4 @@ function getRouteByMarker(marker) {
         }
     }
     return null;
-}
+} 
