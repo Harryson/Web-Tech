@@ -272,9 +272,9 @@ $(function() {
   						console.log(urlForAlerts);
   						$.get(urlForAlerts, function(data) {
   							if (data.alerts.length == 0) {
-  								console.log("No weather alerts in " + area);
+  								console.log("Keine Unwetterwarnungen vorhanden in " + area);
   								$('#unwetterNoAlerts').empty();
-  								$('#unwetterNoAlerts').append("No weather alerts in <b>" + area + "!</b>");
+  								$('#unwetterNoAlerts').append("Keine Unwetterwarnungen vorhanden in <b>" + area + "!</b>");
   								$('#unwetterNoAlerts').removeClass('hidden');
   							} else {
   								$('#unwetterNoAlerts').addClass('hidden');
