@@ -32,7 +32,7 @@
 			<br />
 			<br />
 			<div class="container-fluid" align="center">
-				<form class="form-horizontal" method="POST" action="/app_waypoint_update.html"> 
+				<form class="form-horizontal" method="POST" action="/app_waypoint_update.html" enctype="multipart/form-data"> 
 					<div class="row well" style="margin-left: 0px;" align="center">
 						<div class="alert alert-error hidden" id="errorMessageDiv">
   						<b>Validation error!</b> Try change some things.
@@ -239,10 +239,6 @@
 												<h4>Photos</h4>
 												<img src="@routes.Assets.at("images/icons/no_image.jpg")" id="appInfoPhoto" style="width:100%; heigt: 100%;"/>
 											</div>
-										
-
-
-										
 										</div>
 									</div>
 								</div>
@@ -253,6 +249,7 @@
 						
 						<br />
 						<div class="control-group">
+
 							<input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
 							<input type="submit" class="btn" id="save" name="submit" value="Speichern" class="button"/>
 							<input type="submit" name="getWeatherAlarms" class="btn" id="getWeatherAlarms" 

@@ -32,6 +32,7 @@ public class Tripinfo extends Controller {
 		    return redirect(routes.Tripinfo.load(wnr));    
 		  }
 	}
+	
   
   public static Result insert() {
   
@@ -233,10 +234,5 @@ public class Tripinfo extends Controller {
 
 
         return ok(respJSON);
-  }    
-
-  public static void main(final String args[]) {
-	  load(2);
-  }
-  
+  }     
 }

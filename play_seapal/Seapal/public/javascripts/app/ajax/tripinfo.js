@@ -5,6 +5,11 @@ $(function() {
 		jQuery.
 	});
 
+	$('#thisFile1').click(function(event) {
+		event.preventDefault();
+		alert($('#thisFile').val());
+	});
+
 	function loadEntry(waypnr) { 
 		
 		jQuery.get("app_tripinfo_load.html", {'wnr': waypnr}, function(data) {
