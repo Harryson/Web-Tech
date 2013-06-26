@@ -15,9 +15,12 @@ $(function() {
 	        $('#dtm').val(data['dtm']);
 	        $('#sog').val(data['sog']);
 	        $('#cog').val(data['cog']);
-	        $('#manoever').append("<option>" + data['manoever'] + '</option>');
-	        $('#vorsegel').append('<option>' + data['vorsegel'] + '</option>');
-	        $('#marker').append('<option>' + data['marker'] + '</option>');
+	        //$('#manoever').append("<option>" + data['manoever'] + '</option>');
+	        //$('#vorsegel').append('<option>' + data['vorsegel'] + '</option>');
+	        //$('#marker').append('<option>' + data['marker'] + '</option>');
+	        $('#manoever').val(data['manoever']);
+			$('#vorsegel').val(data['vorsegel']);
+			$('#marker').val(data['marker']);
 	        $('#wdate').val(data['wdate']);
 	        $('#wtime').val(data['wtime']);
 	        $('#windStrength').val(data['windStrength']);
@@ -61,6 +64,10 @@ $(function() {
 	$('input[type=text][id=temperature]').tooltip();
 	$('input[type=text][id=airPressure]').tooltip();
 	$('input[type=text][id=waveHeight]').tooltip();
+	$('#btm').tooltip();
+	$('#dtm').tooltip();
+	$('#cog').tooltip();
+	$('#sog').tooltip();
 
 	$('#wdate').datepicker();
 
