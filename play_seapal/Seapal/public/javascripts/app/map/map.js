@@ -231,7 +231,6 @@ function initialize() {
     });
     loadStatistics ();
 }
-
 // Add weather statistics -------------------------------------------------------------------------------------------
 function loadStatistics () {
     var curd = new Date();
@@ -280,11 +279,9 @@ function getData(JSONtext)
     data = JSONobject.list;
 
     // showSimpleChart('windStatistic', data);
-
     // showBarsDouble('weatherStatistics', data);
     showTempMinMax('temperaturStatistics', data);
     showIconsChart('weatherStatistics', data); 
-
     // showTemp('chart5', data);
     // showWind('chart6', data);       
 

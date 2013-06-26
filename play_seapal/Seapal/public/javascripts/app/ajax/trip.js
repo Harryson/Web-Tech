@@ -1,4 +1,19 @@
 $(function() {
+	$(document).ready(function(event) {
+		loadBoat();
+	});
+
+	function loadBoat() {
+		jQuery.get("app_trip_load_boat.html", function(data) {
+			var length= parseInt(data['length']);
+			
+			for(var i = 1; i < length + 1; i++) {
+				var name = "item" + i;
+				$('#boot').append('<option value=' + name + '>' + data[name] + '</option>');
+			}
+
+		}, "json");
+	}
 
 	function loadEntry(routenr) { 
 			        	

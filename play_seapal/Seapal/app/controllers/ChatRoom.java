@@ -123,6 +123,8 @@ public class ChatRoom extends UntypedActor {
         
     }
     
+    private String last;
+    
     // Send a Json event to all members
     public void notifyAll(String kind, String user, String text) {
         for(WebSocket.Out<JsonNode> channel: members.values()) {

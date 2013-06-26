@@ -49,7 +49,7 @@ import views.html._include.navigation_app;
 
 public class Sos extends Controller {
 	
-	private final static ActorRef blabla = BlaBla.instance;
+	private final static ActorRef info = SosInfo.instance;
 	private static boolean sosFlag = false;
 	private static ObjectNode jsonObj = Json.newObject();
 	
@@ -60,16 +60,15 @@ public class Sos extends Controller {
 	public static Result liveSos() {
         return ok(new Comet("parent.sosCall") {  
             public void onConnected() {
-            	blabla.tell(this);
+            	info.tell(this);
             } 
         });
     }
 	
-	 public static class BlaBla extends UntypedActor {
+	 public static class SosInfo extends UntypedActor {
 	        
-	        static ActorRef instance = Akka.system().actorOf(new Props(BlaBla.class));
+	        static ActorRef instance = Akka.system().actorOf(new Props(SosInfo.class));
 	        
-	        // Send a TICK message every 100 millis
 	        static {
 	            Akka.system().scheduler().schedule(Duration.Zero(), Duration.create(3000, MILLISECONDS), instance, "TICK");
 	        }
@@ -115,12 +114,63 @@ public class Sos extends Controller {
 	            // Tick, send time to all connected browsers
 	            // Es gibt alle paar Millisekunden einen Tick, dann werden alle Informiert
 				if("TICK".equals(message) && sosFlag) {
+					
+					Connection conn = DB.getConnection();
+			        Statement query;
+			        ResultSet result;
+			        StringBuilder sb = new StringBuilder();
+			        String sosMessage = null;
+
+			    		if(conn != null)
+			    		{
+			            try {
+			                	
+			            	query = conn.createStatement();
+			        
+			    	        String sqlGetLast = "SELECT MAX(snr) AS newest FROM seapal.sos";
+			    	        result = query.executeQuery(sqlGetLast);
+			    	        result.next();
+			     
+			      	        String sqlLastSos = result.getString(1);
+			    	        String sqlLast = "SELECT * FROM seapal.sos WHERE snr = " + sqlLastSos;
+			    	        
+			    	        result = query.executeQuery(sqlLast);
+			                java.sql.ResultSetMetaData rsmd = result.getMetaData();
+			                int numColumns = rsmd.getColumnCount();
+		 
+//			                result.next();
+//			                sosMessage = result.getString(1);
+			                
+//			                jsonObj.removeAll();
+			                while (result.next()) {
+			                    for (int i = 1; i < numColumns + 1; i++) {
+			                        String columnName = rsmd.getColumnName(i);
+			                        jsonObj.put(columnName, result.getString(i));
+			                    }
+			                }
+			                
+//			                while (result.next()) {
+//			                	for (int i = 1; i < numColumns + 1; i++) {
+//			                        sb.append(rsmd.getColumnName(i) + " : ");
+//			                		sb.append(result.getString(i) + "\n");
+//			                    }
+//			                }
+			                       
+			                conn.close();
+
+			            } catch (Exception e) {
+			    	    	   e.printStackTrace();
+			            }
+			        }
+					
+			    	sosMessage = sb.toString();
 	                
 					sosFlag = false;
 	                // Send the current time to all comet sockets
 	                for(Comet cometSocket: sockets) {
 	                    // Fuer jeden Comet wird eine Nachricht versendet mit sendMessage
-						cometSocket.sendMessage("Hallo");
+						cometSocket.sendMessage(jsonObj);
+						//cometSocket.sendMessage(sosMessage);
 	                }
 	                
 	            }
@@ -129,6 +179,7 @@ public class Sos extends Controller {
 	        
 	    }
 	 
+	 // Load data, last SOS call
 	 public static void loadSos() {
 	  	  
 	        Connection conn = DB.getConnection();
@@ -141,14 +192,14 @@ public class Sos extends Controller {
 	                	
 	            	query = conn.createStatement();
 	        
-	    	        String sql = "SELECT MAX(wnr) AS newest FROM seapal.sos";
-	    	        result = query.executeQuery(sql);
+	    	        String sqlGetLast = "SELECT MAX(wnr) AS newest FROM seapal.sos";
+	    	        result = query.executeQuery(sqlGetLast);
 	    	        result.next();
 	     
-	      	        String sql11 = result.getString(1);
-	    	        String sql2 = "SELECT * FROM seapal.sos WHERE snr = " + sql11;
+	      	        String sqlLastSos = result.getString(1);
+	    	        String sqlLast = "SELECT * FROM seapal.sos WHERE snr = " + sqlLastSos;
 	    	        
-	    	        result = query.executeQuery(sql2);
+	    	        result = query.executeQuery(sqlLast);
 	                java.sql.ResultSetMetaData rsmd = result.getMetaData();
 	                int numColumns = rsmd.getColumnCount();
  
@@ -166,7 +217,8 @@ public class Sos extends Controller {
 	            }
 	        }
 	    }
-        
+    
+	 // Load data, last waypoint
 	public static Result load() {
   	  
         Connection conn = DB.getConnection();
@@ -180,16 +232,20 @@ public class Sos extends Controller {
                 	
             	query = conn.createStatement();
         
-    	        String sql = "SELECT MAX(wnr) AS newest FROM seapal.wegpunkte";
-    	        result = query.executeQuery(sql);
+    	        String sqlGetLast = "SELECT MAX(wnr) AS newest FROM seapal.wegpunkte";
+    	        result = query.executeQuery(sqlGetLast);
     	        result.next();
      
-      	        String sql11 = result.getString(1);
-    	        String sql2 = "SELECT * FROM seapal.wegpunkte WHERE wnr = " + sql11;
+      	        String sqlLastWaypoint = result.getString(1);
+    	        String sqlLast = "SELECT * FROM seapal.wegpunkte w, seapal.tripinfo t, seapal.bootinfo b" +
+    	        		" WHERE w.wnr = " + sqlLastWaypoint + " AND w.tnr = t.tnr AND t.bnr = b.bnr";
     	        
-    	        result = query.executeQuery(sql2);
+    	        result = query.executeQuery(sqlLast);
                 java.sql.ResultSetMetaData rsmd = result.getMetaData();
                 int numColumns = rsmd.getColumnCount();
+                
+//                respJSON.put("anfrage", sqlLast);
+//                respJSON.put("Anfrage", result.getString(i));
 
                 while (result.next()) {
                     for (int i = 1; i < numColumns + 1; i++) {
@@ -224,8 +280,9 @@ public class Sos extends Controller {
  
   	        String sql11 = result.getString(1);
 
-	        query.execute("INSERT INTO seapal.sos(sboat, slat, slng, sday, stime, scom) VALUES ("
-	                + "'" + data.get("boat") + "',"
+	        query.execute("INSERT INTO seapal.sos(sname, sboat, slat, slng, sday, stime, scom) VALUES ("
+	        		+ "'" + data.get("name") + "',"
+	        		+ "'" + data.get("boatname") + "',"
 	                + "'" + data.get("lat") + "',"
 	                + "'" + data.get("lng") + "',"
 	                + "'" + data.get("date") + "',"

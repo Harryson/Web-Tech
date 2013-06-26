@@ -13,6 +13,43 @@ import views.html._include.*;
 
 public class Trip extends Controller {
   
+	public static Result boat() {
+	Connection conn = DB.getConnection();
+	Statement query;
+    ResultSet result;
+    ObjectNode respJSON = Json.newObject();
+
+		if(conn != null) {
+	        try {
+	            	
+			  query = conn.createStatement();
+			
+			  String sql = "SELECT bootname FROM seapal.bootinfo";
+			
+			  result = query.executeQuery(sql);
+			  int count = 0;
+	
+				while (result.next()) {
+					count++;   
+			        String item = "item" + count;
+			        respJSON.put(item, result.getString("bootname"));
+				}
+			  
+			  result.next();
+			  
+				
+			  respJSON.put("length", count);
+			  conn.close();
+	
+	        } catch (Exception e) {
+		    	   e.printStackTrace();
+	        }
+		}
+		
+    return ok(respJSON);
+    
+	}
+
   public static Result insert() {
   
     DynamicForm data = form().bindFromRequest();
@@ -55,8 +92,7 @@ public class Trip extends Controller {
   public static Result delete(int tnr) {
 
     Connection conn = DB.getConnection();
-		Statement query;            
-    ResultSet result;
+    Statement query;            
     ObjectNode respJSON = Json.newObject();
   
     try {

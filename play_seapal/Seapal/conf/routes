@@ -24,6 +24,7 @@ GET     /app_trip.html          	controllers.Trip.index()
 GET     /app_trip_load.html     	controllers.Trip.load(tnr: Int)
 POST    /app_trip_insert.html   	controllers.Trip.insert()
 GET     /app_trip_delete.html   	controllers.Trip.delete(tnr: Int)
+GET 	/app_trip_load_boat.html	controllers.Trip.boat()
 
 # Tripinfo
 GET     /app_tripinfo.html          controllers.Tripinfo.index(tnr: Int)
@@ -44,7 +45,8 @@ POST    /app_sun_insert.html   		controllers.Sun.insert()
 GET     /app_chat.html          	controllers.Chat.index()
 GET     /room                       controllers.Chat.chatRoom(username: String ?= null)
 GET     /room/chat                  controllers.Chat.chat(username)
-GET     /app_chat_load.html     	controllers.Chat.load()
+GET     /app_chat_load.html     	controllers.Chat.load(name: String ?= "")
+GET 	/app_chat_load_waypoint.html	controllers.Chat.waypoint()
 
 # Clock
 GET     /app_clock.html          	controllers.NaviClock.index()

@@ -2,8 +2,13 @@
 <div>
 	<script type="text/javascript" charset="utf-8">
         // Called for each Comet message
-        var sosCall = function(message) {
-			alert(message);
+        var sosCall = function(data) {
+			
+			var message = "<br/>Name: " + data['sname'] + "<br/>Bootsname: " + data['sboat'] + "<br/>Längengrad: " + data['slng'] + "<br/>Breitengrad: " + data['slat'] + "<br/>Tag: " + data['sday'] + "<br/>Uhrzeit: " + data['stime'] + "<br/>Kommentar: " + data['scom'];
+
+			$('#dialogTitle').text('SOS Hilferuf');
+		    $('#dialogMessage').append(message);
+			$('#messageBox').modal('show');
         }
 	</script>
 

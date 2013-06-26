@@ -68,47 +68,45 @@ public class Chat extends Controller {
         };
     }
     
-//    public static Result load() {
-//    	Connection conn = DB.getConnection();
-//        Statement query;
-//        ResultSet result;
-//        ObjectNode respJSON = Json.newObject();
-//
-//        if(conn != null)
-//        {
-//            try {
-//
-//            query = conn.createStatement();
-//
-//            String max ="SELECT * FROM seapal.wegpunkte COUNT (*)";
-//            result = query.executeQuery(max);
-//            int count = result.getInt(1);
-//            //System.out.println(count);
-//            respJSON.put("anzahl", result.getString(1));
-//            
-//            
-////            String sql = "SELECT * FROM seapal.wegpunkte WHERE wnr = ";
-////
-////            result = query.executeQuery(sql);
-////            java.sql.ResultSetMetaData rsmd = result.getMetaData();
-////            int numColumns = rsmd.getColumnCount();
-////
-////            while (result.next()) {
-////                for (int i = 1; i < numColumns + 1; i++) {
-////                    String columnName = rsmd.getColumnName(i);
-////                    respJSON.put(columnName, result.getString(i));
-////                }
-////            }
-//            conn.close();
-//
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        return ok(respJSON);
-//    }
+    /* liefert alle Wegpunkte zur Auswahl */
+	public static Result waypoint() {
+	Connection conn = DB.getConnection();
+	Statement query;
+    ResultSet result;
+    ObjectNode respJSON = Json.newObject();
+
+		if(conn != null) {
+	        try {
+	            	
+			  query = conn.createStatement();
+			
+			  String sql = "SELECT name FROM seapal.wegpunkte";
+			
+			  result = query.executeQuery(sql);
+			  int count = 0;
+	
+				while (result.next()) {
+					count++;   
+			        String item = "item" + count;
+			        respJSON.put(item, result.getString("name"));
+				}
+			  
+			  result.next();
+			  
+				
+			  respJSON.put("length", count);
+			  conn.close();
+	
+	        } catch (Exception e) {
+		    	   e.printStackTrace();
+	        }
+		}
+			
+    return ok(respJSON);
     
-    public static Result load() {
+	}
+    
+    public static Result load(String name) {
     	  
         Connection conn = DB.getConnection();
     	Statement query;
@@ -119,11 +117,13 @@ public class Chat extends Controller {
     		{
             try {
                 	
-    	          query = conn.createStatement();
-        
-    	          String sql = "SELECT * FROM seapal.wegpunkte WHERE tnr = " + 1 + " AND wnr = " + 1;
+    	        query = conn.createStatement();
     	        
-    	          result = query.executeQuery(sql);
+    	        PreparedStatement sqlStatement = conn.prepareStatement(
+    	        		"SELECT * FROM seapal.wegpunkte WHERE name = ?" );
+    	        		sqlStatement.setString( 1, name );
+    	        
+    	        result = sqlStatement.executeQuery();
                 java.sql.ResultSetMetaData rsmd = result.getMetaData();
                 int numColumns = rsmd.getColumnCount();
 
@@ -143,7 +143,6 @@ public class Chat extends Controller {
       }
     
     public static void main(final String args[]) {
-    	load();
     }
   
 }
