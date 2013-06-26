@@ -72,6 +72,7 @@ $(function() {
 
 	lngField.onblur = function() {
 		lngValue = parseInt(lngField.value.substring(0,3), 10);
+		console.log(" longitude value: " + lngValue);
 		if (lngValue > 179) {
 			console.log("Wrong longitude value: " + lngValue);
 			this.form.elements["lng"].value = "";
@@ -151,15 +152,31 @@ $(function() {
 
 		event.preventDefault();
 
+		var returnFlag = false;
+
 		//check if there are errors or name is not given
 		if ($('#name').val() == "") {
 			$('#errorMessageName').removeClass("hidden");
 			$('#name').closest('div').addClass("error");
-			return;
+			returnFlag = true;
 		} else {
 			$('#errorMessageName').addClass("hidden");
 			$('#name').closest('div').removeClass("error");
 		}
+
+		if ($('#lat').val() == "" || $('#lng').val() == "") {
+			$('#errorMessageCoord').removeClass("hidden");
+			$('#lat').closest('div').addClass("error");
+			$('#lng').closest('div').addClass("error");
+			returnFlag = true;
+		} else {
+			$('#errorMessageCoord').addClass("hidden");
+			$('#lat').closest('div').removeClass("error");
+			$('#lng').closest('div').removeClass("error");
+		}
+
+		if (returnFlag)
+			return;
 
 		// Aktuelle URL kopieren
 		var query = window.location.search;
