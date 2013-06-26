@@ -31,29 +31,29 @@
 		        <div class="container-fluid">
 		        	<form class="form-horizontal" method="POST"> 
 		            	<div class="row well" style="margin-left: 0px;">
+		            		<div class="alert alert-error hidden" id="validationError">
+  								
+							</div>
 		            		<div class="span4" align="center">	            		
 			            		<div class="control-group">
-			            			<label class="control-label">Längengrad <br> z.B. -089.73</label>
-			            			<input class="input-medium" type="text" name="longitude" id="longitude" />
+			            			<label class="control-label">Längengrad</label>
+			            			<input class="input-medium" type="text" name="longitude" id="longitude" data-toggle="tooltip" title="Beispiel: -112.73"/>
 			            		</div>
 			            		<div class="control-group">
-			            			<label class="control-label">Breitegrad <br> z.B. +169.91</label>
-			            			<input class="input-medium" type="text" name="latitude" id="latitude" />
+			            			<label class="control-label">Breitegrad</label>
+			            			<input class="input-medium" type="text" name="latitude" id="latitude" data-toggle="tooltip" title="Beispiel: +83.73" />
 			                    </div>       
 		            		</div>
 		            		<div class="span4">
 		            			<div class="control-group">
-			            			<label class="control-label">Zeitdifferenz<br>(UTC-Zeit)<br> z.B -10</label>
-			            			<input class="input-medium" type="text" name="timediv" id="timediv" />
-									<p>
-										Für Deutschland:<br>Winterzeit = 1, Sommerzeit = 2
-			            			</p>
+			            			<label class="control-label">Zeitdifferenz<br>(UTC-Zeit)</label>
+			            			<input class="input-medium" type="text" name="timediv" id="timediv" data-toggle="tooltip" title="Beispiel: -10"/>
 			                    </div>	
 		            		</div>
 		            		<div class="span4">
 		            			<div class="control-group">
 			            			<label class="control-label">Tag im Jahr</label>
-			            			<input class="input-medium" type="text" name="day" id="datepicker" />
+			            			<input class="input-medium" type="text" name="day" id="datepicker" data-toggle="tooltip" title="Click auf Feld um Datum zu wählen"/>
 			                    </div> 
 			                </div>
 		            	</div>    	 
@@ -63,9 +63,12 @@
 			            </div>  
 		        	</form>
 		        </div>   
-		        <div class="container-fluid">
+		        <div class="container-fluid" id="successForm">
 		        	<form class="form-horizontal"> 
 		            	<div class="row well" style="margin-left: 0px;">
+		            		<div class="alert alert-success hidden" id="sonneSuccess">
+  								<b>Uhrzeiten wurden erfolgreich berechnet.</b>
+							</div>
 		            		<div class="span4" align="center">	            		
 			            		<div class="control-group">
 			            			<label class="control-label">Sonnenaufgang</label>
@@ -100,6 +103,7 @@
 		
 		<!-- Additional Scripts -->
 		<script src="@routes.Assets.at("javascripts/app/ajax/sun.js")" type="text/javascript"></script>
-		<script src="@routes.Assets.at("javascripts/app/map/maskedinput.js")" type="text/javascript"></script>	
+		<script src="@routes.Assets.at("javascripts/app/map/maskedinput.js")" type="text/javascript"></script>
+		<script src="@routes.Assets.at("javascripts/bootstrap/bootstrap-tooltip.js")" type="text/javascript"></script>	
 	</body>
 </html>

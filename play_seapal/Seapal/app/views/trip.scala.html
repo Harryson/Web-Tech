@@ -4,7 +4,7 @@
 
 <html>
     <head>
-    
+    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
     	<!-- Header -->
         @header
         
@@ -35,29 +35,29 @@
 		            		<div class="span4" align="center">	            		
 			            		<div class="control-group">
 			            			<label class="control-label">Titel</label>
-			            			<input type="text" name="titel" id="titel"/>
+			            			<input class="input-medium" type="text" name="titel" id="titel"/>
 			            		</div>
 			            		<div class="control-group">
 			            			<label class="control-label">Von</label>
-			            			<input type="text" name="von" id="von"/>
+			            			<input class="input-medium" type="text" name="von" id="von"/>
 			                    </div>
 			                    <div class="control-group">
 			            			<label class="control-label">Nach</label>
-			            			<input type="text" name="von" id="nach"/>
+			            			<input class="input-medium" type="text" name="von" id="nach"/>
 			                    </div>        
 		            		</div>
 		            		<div class="span4">
 		            			<div class="control-group">
 			            			<label class="control-label">Start</label>
-			            			<input type="text" name="titel" id="tstart"/>
+			            			<input class="input-medium" type="text" name="titel" id="tstart" data-toggle="tooltip" title="Click auf Feld um Datum zu wählen"/>
 			            		</div>
 			            		<div class="control-group">
 			            			<label class="control-label">Ende</label>
-			            			<input type="text" name="von" id="tende"/>
+			            			<input class="input-medium" type="text" name="von" id="tende" data-toggle="tooltip" title="Click auf Feld um Datum zu wählen"/>
 			                    </div>
 			                    <div class="control-group">
 			            			<label class="control-label">Dauer</label>
-			            			<input type="text" name="von" id="tdauer"/>
+			            			<input class="input-medium" type="text" name="von" id="tdauer"/>
 			                    </div>
 		            		</div>
 		            		<div class="span4">
@@ -127,6 +127,6 @@
 		
 		<!-- Additional Scripts -->
 		<script src="@routes.Assets.at("javascripts/app/ajax/trip.js")" type="text/javascript"></script>
-		
+		<script src="@routes.Assets.at("javascripts/bootstrap/bootstrap-tooltip.js")" type="text/javascript"></script>	
     </body>
 </html>

@@ -1,5 +1,12 @@
 $(function() {
 
+	$('#longitude').tooltip();
+	$('#latitude').tooltip();
+	$('#timediv').tooltip();
+	$('#datepicker').tooltip();
+	
+
+
 	function masked(){
 		$.mask.definitions['~']='[+-]';
 		$.mask.definitions['1']='[01]';
@@ -19,6 +26,11 @@ $(function() {
 		/* Defaultfunktionalität ausschalten */
 		event.preventDefault();
 
+		$('#validationError').addClass('hidden');
+		$('#validationError').empty();
+		$('#timediv').closest('div').removeClass("error");
+		$('#latitude').closest('div').removeClass("error");
+		$('#longitude').closest('div').removeClass("error");
 		// Da es ein String sein soll und kein JQuery-Objekt
 		var date = document.getElementById('datepicker').value;
 		var lon = parseInt($('#longitude').val());
@@ -55,29 +67,44 @@ $(function() {
 	    jQuery.post("app_sun_insert.html", json, function(data) { 
 	    	
 			loadEntry(data['sunrise'], data['sunset'], json.longitude, json.latitude, json.day, json.timediv); 
-	
+			
+			if(flagLon || flagLat || flagUtc)
+				$('#validationError').append("<b>Falsche Eingabe!</b><br />");
+
 			if(flagLon) {
-				$('#dialogTitle').text('Falsche Eingabe');
-				$('#dialogMessage').text("-180 <= Längengrad <= +180");
-				$('#messageBox').modal('show');
+				//$('#dialogTitle').text('Falsche Eingabe');
+				//$('#dialogMessage').text("-180 <= Längengrad <= +180");
+				//$('#messageBox').modal('show');
+				$('#longitude').closest('div').addClass("error");
+				$('#validationError').append("-180 <= Längengrad <= +180 <br />");
+				$('#validationError').removeClass('hidden');
+				
 			}
 
 			if(flagLat) {
-				$('#dialogTitle').text('Falsche Eingabe');
-				$('#dialogMessage').text("-90 <= Breitengrad >= +90");
-				$('#messageBox').modal('show');
+				//$('#dialogTitle').text('Falsche Eingabe');
+				//$('#dialogMessage').text("-90 <= Breitengrad >= +90");
+				//$('#messageBox').modal('show');
+				$('#latitude').closest('div').addClass("error");
+				$('#validationError').append("-90 <= Breitengrad >= +90  <br />");
+				$('#validationError').removeClass('hidden');
 			}
 
 			if(flagUtc) {
-				$('#dialogTitle').text('Falsche Eingabe');
-				$('#dialogMessage').text("-11 <= UTC <= +14");
-				$('#messageBox').modal('show');
+				//$('#dialogTitle').text('Falsche Eingabe');
+				//$('#dialogMessage').text("-11 <= UTC <= +14");
+				//$('#messageBox').modal('show');
+				$('#timediv').closest('div').addClass("error");
+				$('#validationError').append("-11 <= UTC <= +14");
+				$('#validationError').removeClass('hidden');
 			}
 
 			if(!flagLon && !flagLat && !flagUtc) {
-		    	$('#dialogTitle').text('Berechnung');
-		    	$('#dialogMessage').text("Uhrzeiten wurden erfolgreich berechnet.");
-		    	$('#messageBox').modal('show');	
+		    	//$('#dialogTitle').text('Berechnung');
+		    	//$('#dialogMessage').text("Uhrzeiten wurden erfolgreich berechnet.");
+		    	//$('#messageBox').modal('show');
+		    	$('#sonneSuccess').removeClass('hidden');
+		    	//$('#sucessForm').removeClass('hidden');
 			} else {
 				$('#sunrise').val("Fehler");
         		$('#sunset').val("Fehler");
