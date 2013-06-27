@@ -1,5 +1,9 @@
 $(function() {
 
+	$('#upload').click(function(event) {
+		event.preventDefault();
+	});
+
 	function loadEntry(waypnr) { 
 		jQuery.get("app_tripinfo_load.html", {'wnr': waypnr}, function(data) {
 	   
@@ -10,9 +14,12 @@ $(function() {
 	        $('#dtm').val(data['dtm']);
 	        $('#sog').val(data['sog']);
 	        $('#cog').val(data['cog']);
-	        $('#manoever').append("<option>" + data['manoever'] + '</option>');
-	        $('#vorsegel').append('<option>' + data['vorsegel'] + '</option>');
-	        $('#marker').append('<option>' + data['marker'] + '</option>');
+	        //$('#manoever').append("<option>" + data['manoever'] + '</option>');
+	        //$('#vorsegel').append('<option>' + data['vorsegel'] + '</option>');
+	        //$('#marker').append('<option>' + data['marker'] + '</option>');
+	        $('#manoever').val(data['manoever']);
+			$('#vorsegel').val(data['vorsegel']);
+			$('#marker').val(data['marker']);
 	        $('#wdate').val(data['wdate']);
 	        $('#wtime').val(data['wtime']);
 	        $('#windStrength').val(data['windStrength']);
@@ -55,6 +62,8 @@ $(function() {
 		$('#entries').append(entry);
 	}	
 	
+	
+
 	$('input[type=text][id=wdate]').tooltip();
 	$('input[type=text][id=wtime]').tooltip();
 	$('input[type=text][id=lat]').tooltip();
@@ -62,6 +71,12 @@ $(function() {
 	$('input[type=text][id=temperature]').tooltip();
 	$('input[type=text][id=airPressure]').tooltip();
 	$('input[type=text][id=waveHeight]').tooltip();
+	$('#btm').tooltip();
+	$('#dtm').tooltip();
+	$('#cog').tooltip();
+	$('#sog').tooltip();
+
+	$('#wdate').datepicker();
 
 	/* Validation for fields */
 //	var latField = this.getElementById("lat");
@@ -71,6 +86,7 @@ $(function() {
 	var lngError = false;
 	var dateError = false;
 	var timeError = false;
+	var nameError = true;
 
 	lngField.onblur = function() {
 		lngValue = parseInt(lngField.value.substring(0,3), 10);
@@ -89,8 +105,8 @@ $(function() {
 	};
 
 	dateField.onblur = function() {
-		dayValue = parseInt(dateField.value.substring(0,3), 10);
-		monthValue = parseInt(dateField.value.substring(3,5), 10);
+		monthValue = parseInt(dateField.value.substring(0,3), 10);
+		dayValue = parseInt(dateField.value.substring(3,5), 10);
 		if (dayValue > 31 || monthValue > 12) {
 			console.log("Wrong date value: " + dayValue + "." + monthValue);
 			this.form.elements["wdate"].value = "";
@@ -207,6 +223,32 @@ $(function() {
 
 		event.preventDefault();
 
+		var returnFlag = false;
+
+		//check if there are errors or name is not given
+		if ($('#name').val() == "") {
+			$('#errorMessageName').removeClass("hidden");
+			$('#name').closest('div').addClass("error");
+			returnFlag = true;
+		} else {
+			$('#errorMessageName').addClass("hidden");
+			$('#name').closest('div').removeClass("error");
+		}
+
+		if ($('#lat').val() == "" || $('#lng').val() == "") {
+			$('#errorMessageCoord').removeClass("hidden");
+			$('#lat').closest('div').addClass("error");
+			$('#lng').closest('div').addClass("error");
+			returnFlag = true;
+		} else {
+			$('#errorMessageCoord').addClass("hidden");
+			$('#lat').closest('div').removeClass("error");
+			$('#lng').closest('div').removeClass("error");
+		}
+
+		if (returnFlag)
+			return;
+
 		// Aktuelle URL kopieren
 		var query = window.location.search;
 		
@@ -284,7 +326,7 @@ $(function() {
 
 		jQuery.post("app_tripinfo_wetterAlarm.html", json, function(data) {
 
-			console.log("data.latConv: " + data['latConv'] + " data.lngConv: " + data['lngConv']);
+			//console.log("data.latConv: " + data['latConv'] + " data.lngConv: " + data['lngConv']);
 
 			//example for constance: 47°39.62' N 9°10,53' E	
 
@@ -323,9 +365,9 @@ $(function() {
   						console.log(urlForAlerts);
   						$.get(urlForAlerts, function(data) {
   							if (data.alerts.length == 0) {
-  								console.log("No weather alerts in " + area);
+  								console.log("Keine Unwetterwarnungen vorhanden in " + area);
   								$('#unwetterNoAlerts').empty();
-  								$('#unwetterNoAlerts').append("No weather alerts in <b>" + area + "!</b>");
+  								$('#unwetterNoAlerts').append("Keine Unwetterwarnungen vorhanden in <b>" + area + "!</b>");
   								$('#unwetterNoAlerts').removeClass('hidden');
   							} else {
   								$('#unwetterNoAlerts').addClass('hidden');
@@ -362,7 +404,7 @@ $(function() {
 		
 		$('#lat').mask("h9°j9.99+");
 		$('#lng').mask("p99°j9.99~");
-		$('#wdate').mask("d9.p9.2099");
+	//	$('#wdate').mask("d9.p9.2099");
 		$('#wtime').mask("l9:j9");
 		$('#temperature').mask("-99 °C");
 		$('#waveHeight').mask("999 cm");
