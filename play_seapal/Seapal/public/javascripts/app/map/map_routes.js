@@ -420,13 +420,17 @@ function saveRoute() {
     currentRoute.markerArray.name = name;
     
     saveRouteAndGetNumber();
+    window.setTimeout(setWaypoints, 1000);
+    $('#dialogTitle').text('Routen Gespeichert');
+    $('#dialogMessage').text("Die Route wurde erfolgreich gespeichert.");
+    $("#noRouteName").modal('show');
+       
+}
+
+function setWaypoints() {
     for (var i = 0; i <= currentRoute.markerArray.length - 1; i++) {
         saveWaypointWithWeatherByTrip(i);
     };
-    // $('#dialogTitle').text('Routen Gespeichert');
-    // $('#dialogMessage').text("Die Route wurde erfolgreich gespeichert.");
-    // $("#noRouteName").modal('show');
-       
 }
 
 function saveWaypointWithWeatherByTrip(waypoint) {
@@ -452,7 +456,7 @@ function saveWaypointWithWeatherByTrip(waypoint) {
 
     var lat = currentRoute.markerArray[waypoint].position.jb;
     var lng = currentRoute.markerArray[waypoint].position.kb;
-
+    // console.log(Geo.toLat(lat, 'dms', 1));
     json = {
         "tnr": trip_number_post,
         "name": "Marker" + waypoint,
@@ -478,21 +482,24 @@ function saveWaypointWithWeatherByTrip(waypoint) {
     };
 
     jQuery.post("app_tripinfo_insert.html", json, function(data) { 
-            
-            if (data['tnr'].match(/Error/)) {
+            // alert('test1');
+            if (data['wnr'].match(/Error/)) {
+                alert('test1,5');
                 $('#dialogTitle').text('Error');
-                $('#dialogMessage').text(data['tnr'].replace(/Error: /, ""));
+                $('#dialogMessage').text(data['wnr'].replace(/Error: /, ""));
+                $('#noRouteName').modal('show');
             } 
-            $('#messageBox').modal('show');
-        
+            // alert('test2');
+
         }, "json");
+            // alert('test3');
 }
 
 function saveRouteAndGetNumber() {
     // var selectedBoat = $('#bootSelect').val().replace("item", "");
-    // alert(selectedBoat);
+    // alert();
     var json = {
-            "bnr": '2',
+            "bnr": '1',
             "titel": currentRoute.markerArray.name,
             "von": "von",
             "nach": "nach",
@@ -510,13 +517,13 @@ function saveRouteAndGetNumber() {
 
                 $('#dialogTitle').text('Error');
                 $('#dialogMessage').text(data['tnr'].replace(/Error: /, ""));
+                $('#noRouteName').modal('show');
                 
             } else {
                 trip_number_post = data['tnr'];
+                // console.log(trip_number_post);
             }
             
-            $('#messageBox').modal('show');
-        
         }, "json");
 }
 

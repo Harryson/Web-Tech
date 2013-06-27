@@ -181,12 +181,27 @@
 									    <div class="accordion-group">
 									    	<div class="accordion-heading">
 											    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapsefive">
-											        Wetter Vorschau ( 16 Tage)
+											        Aktuelles Wetter
 											    </a>
 									    	</div>
 									    	<div id="collapsefive" class="accordion-body collapse in">
 									      		<div class="accordion-inner">
-									      			<div id="WeatherStatistics16days"></div>
+									      			<div id="WeatherStatisticsToday">
+									      				<table class="table">
+									      					<tr><td><h4 id="tableOrt1"></h4></td><td><td id="weatherImageToll"><img id="littleWeatherImage" src=""></td><td ><h4 id="tableTemp1"></h4></td></tr>
+									      				</table>
+									      				<table class="table table-striped">
+										      				<tr><td>Ort</td><td id="tableOrt2"></td></tr>
+										      				<tr><td>Land</td><td id="tableLand"></td></tr>
+										      				<tr><td>Länngengrad</td><td id="tableLat"></td></tr>
+										      				<tr><td>Breitengrad</td><td id="tableLng"></td></tr>
+										      				<tr><td>Temperatur</td><td id="tableTemp2"></td></tr>
+										      				<tr><td>Luftfeuchtigkeit</td><td id="tableLuft"></td></tr>
+										      				<tr><td>Bewölkung</td><td id="tableWolken"></td></tr>
+										      				<tr><td>Luftdruck</td><td id="tableLuftdruck"></td></tr>
+										      				<tr><td>Windgeschindigkeit</td><td id="tableWind"></td></tr>
+									      				</table>
+									      			</div>
 									      		</div>
 									      	</div>
 									    </div>
@@ -200,16 +215,16 @@
 
 		    <!-- No Route name dialog -->
 	        <div class="modal hide fade" id="noRouteName">
-			    <div class="modal-header">
-				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				    <h3 id="dialogTitle"></h3>
-			    </div>
-			    <div class="modal-body">
-			    	<p id="dialogMessage"></p>
-			    </div>
-			    <div class="modal-footer">
-				    <button class="btn" data-dismiss="modal" aria-hidden="true">Ok</button>
-			    </div>
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 id="dialogTitle"></h3>
+				</div>
+				<div class="modal-body">
+					<p id="dialogMessage"></p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn" data-dismiss="modal"><i class="icon-ok"></i> ok</a>
+				</div>
 			</div>
 
 		    <!-- Weather Legende -->
