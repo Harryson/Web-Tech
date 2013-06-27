@@ -35,7 +35,7 @@ $(function() {
 	        var lng = Geo.parseDMS(data['lng']).toFixed(6);
 	        $('#googleimage').remove();
 			$('#markerMap').append('<img id="googleimage" border="0" alt="Weg Punkt" src="http://maps.googleapis.com/maps/api/staticmap?center='+ 
-				lat+','+lng+'&zoom=12&size=360x360&maptype=roadmap&markers=color:red%7Clabel:W%7C'+lat+','+lng+'&sensor=false" />');
+				lat+','+lng+'&zoom=12&size=400x360&maptype=roadmap&markers=color:red%7Clabel:W%7C'+lat+','+lng+'&sensor=false" />');
 	    }, "json");
 
 	    $('#wnrvalue').attr('value', waypnr);
@@ -171,7 +171,6 @@ $(function() {
 		// Aktuelle URL kopieren
 		var query = window.location.search;
 		var wnr = $('#wnrvalue').attr('value');
-		alert(wnr);
 		// Nummer des ausgewählten Trip aus der URL bekommen 
 		var tripnrQuery = query.match(/tnr=\d/);
 		var tripnr = tripnrQuery[0].replace(/tnr=/, "");

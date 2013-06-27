@@ -468,7 +468,7 @@ function saveWaypointWithWeatherByTrip(waypoint) {
         "cog": 0,
         "manoever": "",
         "vorsegel": "",
-        "wdate": day + '.' + month + '.' + newDate.getFullYear(),
+        "wdate": month + '/' + day + '/' + newDate.getFullYear(),
         "wtime": hour + ':' + min,
         "marker": "Marker" + (waypoint + 1),
         "windStrength": "",
@@ -482,22 +482,17 @@ function saveWaypointWithWeatherByTrip(waypoint) {
     };
 
     jQuery.post("app_tripinfo_insert.html", json, function(data) { 
-            // alert('test1');
             if (data['wnr'].match(/Error/)) {
-                alert('test1,5');
                 $('#dialogTitle').text('Error');
                 $('#dialogMessage').text(data['wnr'].replace(/Error: /, ""));
                 $('#noRouteName').modal('show');
             } 
-            // alert('test2');
 
         }, "json");
-            // alert('test3');
 }
 
 function saveRouteAndGetNumber() {
     // var selectedBoat = $('#bootSelect').val().replace("item", "");
-    // alert();
     var json = {
             "bnr": '1',
             "titel": currentRoute.markerArray.name,
