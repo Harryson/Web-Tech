@@ -3,134 +3,136 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-    	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-    	<!-- Header -->
-        @header
-        
-    </head>
-    <body>
-    	<!-- SOS -->
-    	@sos
-    	<!-- Clock -->
-    	@clock
+<head>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+	<!-- Header -->
+	@header
 
-    	<!-- Navigation -->
-    	@navigation
-    	
-    	<!-- Container -->
-    	<div class="container-fluid">
-    	
-	    	<!-- Navigation -->
-	    	@navigation_app
+</head>
+<body>
+	<!-- SOS -->
+	@sos
+	<!-- Clock -->
+	@clock
 
-			<!-- Content -->
-			<div id="appWrapper" align="center">
-	            <br />
-	            <h2>Routen</h2>
-	            <br />
-	            <div class="container-fluid">
-	            	<form class="form-horizontal"> 
-		            	<div class="row well" style="margin-left: 0px;">
-		            		<div class="span4" align="center">	            		
-			            		<div class="control-group">
-			            			<label class="control-label">Titel</label>
-			            			<input class="input-medium" type="text" name="titel" id="titel"/>
-			            		</div>
-			            		<div class="control-group">
-			            			<label class="control-label">Von</label>
-			            			<input class="input-medium" type="text" name="von" id="von"/>
-			                    </div>
-			                    <div class="control-group">
-			            			<label class="control-label">Nach</label>
-			            			<input class="input-medium" type="text" name="von" id="nach"/>
-			                    </div>        
-		            		</div>
-		            		<div class="span4">
-		            			<div class="control-group">
-			            			<label class="control-label">Start</label>
-			            			<input class="input-medium" type="text" name="titel" id="tstart" data-toggle="tooltip" title="Click auf Feld um Datum zu wählen"/>
-			            		</div>
-			            		<div class="control-group">
-			            			<label class="control-label">Ende</label>
-			            			<input class="input-medium" type="text" name="von" id="tende" data-toggle="tooltip" title="Click auf Feld um Datum zu wählen"/>
-			                    </div>
-			                    <div class="control-group">
-			            			<label class="control-label">Dauer</label>
-			            			<input class="input-medium" type="text" name="von" id="tdauer"/>
-			                    </div>
-		            		</div>
-		            		<div class="span4">
-		            			<div class="control-group">
-			            			<label class="control-label">Skipper</label>
-			            			<input type="text" name="von" id="skipper"/>
-			                    </div>
-			                    <div class="control-group">
-			            			<label class="control-label">Crew</label>
-			            			<textarea cols="20" rows="3" id="crew"></textarea>
-			                    </div>			                            
-		            		</div>
-		            		<div class="span4">
-			                    <div class="control-group">
-									<label class="control-label">Boot</label>
-									<select name="boot" id="boot"></select>
-								</div>
-								<div class="control-group">
-			            			<label class="control-label">Motor</label>
-			            			<input type="text" name="von" id="motor"/>
-			                    </div>
-							</div>	
-			                    <div class="control-group">
-			            			<label class="control-label"></label>
-			            			<span>Tank gefüllt<input type="checkbox" value="false" name="tank" id="tank" style="margin-left:20px; margin-top:-5px;"/></span>
-			                    </div>			                            
-		            		</div>
-		            	</div>      	 
-		            	<div class="control-group">
-			            	<input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
-			                <input type="submit" class="btn" id="save" name="submit" value="Speichern" class="button"/>
-			            </div>  
-		            </form>
-	            </div>
-	            <br />
-	            <br />
-	            <div class="appTableDiv" id="appRoutelist" align="center">
-	                <table class="appTable table table-hover" id="tableLinesClickable" cellspacing="0px" cellpadding="5px">
-	                    <thead>
-	                        <tr>
-	                            <th>Titel</th>
-	                            <th>Skipper</th>
-	                            <th>Start</th>
-	                            <th>Ende</th>
-	                            <th>Dauer</th>
-	                            <th>Motor</th>     
-	                            <th></th>
-	                        </tr>
-	                    </thead>
-	                    <tbody id="entries">
-	                        @Html(data)
-	                    </tbody>
-	                </table>
-	            </div>    
-	        </div><!-- Content --> 
-		</div><!-- Container -->
-		
-		<!-- Menu Modal -->
-		<div class="modal hide fade" id="messageBox">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h3 id="dialogTitle"></h3>
+	<!-- Navigation -->
+	@navigation
+
+	<!-- Container -->
+	<div class="container-fluid">
+
+		<!-- Navigation -->
+		@navigation_app
+
+		<!-- Content -->
+		<div id="appWrapper" align="center">
+			<br />
+			<h2>Routen</h2>
+			<br />
+			<div class="container-fluid">
+				<form class="form-horizontal"> 
+					<div class="row well" style="margin-left: 0px;">
+						<div class="span4" align="center">	            		
+							<div class="control-group">
+								<label class="control-label">Titel</label>
+								<input class="input-medium" type="text" name="titel" id="titel"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Von</label>
+								<input class="input-medium" type="text" name="von" id="von"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Nach</label>
+								<input class="input-medium" type="text" name="von" id="nach"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Boot</label>
+								<select class="input-medium" name="boot" id="boot"></select>
+							</div>	        
+						</div>
+						<div class="span4">
+							<div class="control-group">
+								<label class="control-label">Start</label>
+								<input class="input-medium" type="text" name="titel" id="tstart" data-toggle="tooltip" title="Click auf Feld um Datum zu wählen"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Ende</label>
+								<input class="input-medium" type="text" name="von" id="tende" data-toggle="tooltip" title="Click auf Feld um Datum zu wählen"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Dauer</label>
+								<input class="input-medium" type="text" name="von" id="tdauer"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Motor</label>
+								<input class="input-medium" type="text" name="von" id="motor"/>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="control-group">
+								<label class="control-label">Skipper</label>
+								<input type="text" name="von" id="skipper"/>
+							</div>
+							<div class="control-group">
+								<label class="control-label">Crew</label>
+								<textarea cols="20" rows="3" id="crew"></textarea>
+							</div>
+							<div class="control-group">
+								<label class="control-label"></label>
+								<span>Tank gefüllt<input type="checkbox" value="false" name="tank" id="tank" style="margin-left:20px; margin-top:-5px;"/></span>
+							</div>
+						</div>
+						<div class="span4">
+							
+							
+									
+						</div>	                            
+					</div>     	 
+					<div class="control-group">
+						<input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
+						<input type="submit" class="btn" id="save" name="submit" value="Speichern" class="button"/>
+					</div>  
+				</form>
 			</div>
-			<div class="modal-body">
-				<p id="dialogMessage"></p>
-			</div>
-			<div class="modal-footer">
-				<a href="#" class="btn" data-dismiss="modal"><i class="icon-ok"></i> ok</a>
-			</div>
+			<br />
+			<br />
+			<div class="appTableDiv" id="appRoutelist" align="center">
+				<table class="appTable table table-hover" id="tableLinesClickable" cellspacing="0px" cellpadding="5px">
+					<thead>
+						<tr>
+							<th>Titel</th>
+							<th>Skipper</th>
+							<th>Start</th>
+							<th>Ende</th>
+							<th>Dauer</th>
+							<th>Motor</th>     
+							<th></th>
+						</tr>
+					</thead>
+					<tbody id="entries">
+						@Html(data)
+					</tbody>
+				</table>
+			</div>    
+		</div><!-- Content --> 
+	</div><!-- Container -->
+
+	<!-- Menu Modal -->
+	<div class="modal hide fade" id="messageBox">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h3 id="dialogTitle"></h3>
 		</div>
-		
-		<!-- Additional Scripts -->
-		<script src="@routes.Assets.at("javascripts/app/ajax/trip.js")" type="text/javascript"></script>
-		<script src="@routes.Assets.at("javascripts/bootstrap/bootstrap-tooltip.js")" type="text/javascript"></script>	
-    </body>
+		<div class="modal-body">
+			<p id="dialogMessage"></p>
+		</div>
+		<div class="modal-footer">
+			<a href="#" class="btn" data-dismiss="modal"><i class="icon-ok"></i> ok</a>
+		</div>
+	</div>
+
+	<!-- Additional Scripts -->
+	<script src="@routes.Assets.at("javascripts/app/ajax/trip.js")" type="text/javascript"></script>
+	<script src="@routes.Assets.at("javascripts/bootstrap/bootstrap-tooltip.js")" type="text/javascript"></script>	
+</body>
 </html>
