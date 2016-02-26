@@ -17,13 +17,13 @@ public class Boatinfo extends Controller {
   
     DynamicForm data = form().bindFromRequest();
     Connection conn = DB.getConnection();
-		Statement query;            
+	Statement query;            
     ResultSet result;
     ObjectNode respJSON = Json.newObject();
     int nextId = 0;
 
     try {
-	      query = conn.createStatement();
+		query = conn.createStatement();
 
         query.execute("INSERT INTO seapal.bootinfo(bootname, registernummer, segelzeichen, heimathafen, yachtclub, eigner, versicherung,"
                 + "rufzeichen, typ, konstrukteur, laenge, breite, tiefgang, masthoehe, verdraengung, rigart,"
@@ -129,10 +129,7 @@ public class Boatinfo extends Controller {
 	    
 	  String data = loadEntries();
 		
-	  return ok(boatinfo.render(header.render(), 
-    						    navigation.render("app_map"), 
-    						    navigation_app.render("app_boatinfo"), 
-    						    data));
+	  return ok(boatinfo.render(header.render(), navigation.render("app_map"), navigation_app.render("app_boatinfo"), data, clock.render(), sos_header.render()));
   }
 
 	public static String loadEntries() {
@@ -188,5 +185,8 @@ public class Boatinfo extends Controller {
         return data;
 	}
 
+	public static void main(String args[]) {
+		loadEntries();
+	}
   
 }

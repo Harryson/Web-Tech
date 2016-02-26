@@ -13,6 +13,43 @@ import views.html._include.*;
 
 public class Trip extends Controller {
   
+	public static Result boat() {
+	Connection conn = DB.getConnection();
+	Statement query;
+    ResultSet result;
+    ObjectNode respJSON = Json.newObject();
+
+		if(conn != null) {
+	        try {
+	            	
+			  query = conn.createStatement();
+			
+			  String sql = "SELECT bootname FROM seapal.bootinfo";
+			
+			  result = query.executeQuery(sql);
+			  int count = 0;
+	
+				while (result.next()) {
+					count++;   
+			        String item = "item" + count;
+			        respJSON.put(item, result.getString("bootname"));
+				}
+			  
+			  result.next();
+			  
+				
+			  respJSON.put("length", count);
+			  conn.close();
+	
+	        } catch (Exception e) {
+		    	   e.printStackTrace();
+	        }
+		}
+		
+    return ok(respJSON);
+    
+	}
+
   public static Result insert() {
   
     DynamicForm data = form().bindFromRequest();
@@ -25,7 +62,8 @@ public class Trip extends Controller {
     try {
 	      query = conn.createStatement();
 
-        query.execute("INSERT INTO seapal.tripinfo (titel, von, nach, skipper, crew, tstart, tende, tdauer, motor, tank) VALUES ("
+        query.execute("INSERT INTO seapal.tripinfo (bnr, titel, von, nach, skipper, crew, tstart, tende, tdauer, motor, tank) VALUES ("
+                + "'" + data.get("bnr") + "',"
                 + "'" + data.get("titel") + "',"
                 + "'" + data.get("von") + "',"
                 + "'" + data.get("nach") + "',"
@@ -55,8 +93,7 @@ public class Trip extends Controller {
   public static Result delete(int tnr) {
 
     Connection conn = DB.getConnection();
-		Statement query;            
-    ResultSet result;
+    Statement query;            
     ObjectNode respJSON = Json.newObject();
   
     try {
@@ -155,7 +192,7 @@ public class Trip extends Controller {
 	    	   e.printStackTrace();
 	       }
     }
-    return ok(trip.render(header.render(), navigation.render("app_map"), navigation_app.render("app_trip"), data));
+    return ok(trip.render(header.render(), navigation.render("app_map"), navigation_app.render("app_trip"), data, clock.render(), sos_header.render()));
   }
   
 }

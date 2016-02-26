@@ -1,4 +1,25 @@
 $(function() {
+	$(document).ready(function(event) {
+		loadBoat();
+	});
+
+	$('#tstart').tooltip();
+	$('#tende').tooltip();
+
+	$('#tstart').datepicker();
+	$('#tende').datepicker();
+
+	function loadBoat() {
+		jQuery.get("app_trip_load_boat.html", function(data) {
+			var length= parseInt(data['length']);
+			
+			for(var i = 1; i < length + 1; i++) {
+				var name = "item" + i;
+				$('#boot').append('<option value=' + name + '>' + data[name] + '</option>');
+			}
+
+		}, "json");
+	}
 
 	function loadEntry(routenr) { 
 			        	
@@ -79,7 +100,9 @@ $(function() {
 	        "skipper": $('#skipper').val(),
 	        "crew": $('#crew').val(),
 	        "motor": $('#motor').val(),
-	        "tank": $('#tank').val()        
+	        "tank": $('#tank').val(),
+	        "motor": $('#motor').val(),
+	        "boot": $('#boot').val().replace("item", "")        
 	    };
 	
 	    jQuery.post("app_trip_insert.html", json, function(data) { 

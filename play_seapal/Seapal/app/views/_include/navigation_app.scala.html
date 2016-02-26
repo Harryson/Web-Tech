@@ -8,7 +8,42 @@
 				@if(file == "app_map") { <li class="active"> } else { <li> } <a href="app_map.html">Map</a></li>
 				@if(file == "app_boatinfo") { <li class="active"> } else { <li> } <a href="app_boatinfo.html">Logbuch</a></li>
 				@if(file == "app_trip" || file == "app_tripinfo" || file == "app_waypoint") { <li class="active"> } else { <li> } <a href="app_trip.html">Routen</a></li>
-			</ul>
+				@if(file == "app_chat") { <li class="active"> } else { <li> } <a href="app_chat.html" target="_blank">Wetter Chat</a></li>
+				@if(file == "app_sun") { <li class="active"> } else { <li> } <a href="app_sun.html">Sonne</a></li>
+				@if(file == "app_sos") { <li class="active"> } else { <li> } <a href="app_sos.html">SOS</a></li>
+
+				<!-- clock --
+				<h4 id="clock"></h4>
+                     
+                <script type="text/javascript" charset="utf-8">
+                    // Called for each Comet message
+                    var clockChanged = function(time) {
+                        $('#clock').html(time.replace(/(\d)/g, '<span>$1</span>'))
+                    }
+                </script>
+                
+                <iframe id="comet" src="@routes.NaviClock.liveClock.unique"></iframe>
+
+                <!-- clock -->
+
+
+                <!-- sos -
+					<div>
+					<script type="text/javascript" charset="utf-8">
+				        // Called for each Comet message
+				        var sosCall = function(message) {
+							alert(message);
+							//$('#clock').html(time.replace(/(\S)/g, '<span>$1</span>'));
+				        }
+    				</script>
+    
+    				<iframe id="comet" src="@routes.Sos.liveSos.unique"></iframe>
+				</div>
+            	<!-- sos -->
+
+
+		    </ul>
+
 			<ul class="navbar-form pull-right" style="list-style-type: none;">
 				<li><a class="btn" id="startSimulation"><i class="icon-play"></i></a><li>
 			</ul>

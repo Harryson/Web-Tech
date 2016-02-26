@@ -1,0 +1,114 @@
+@(header: Html)(navigation: Html)(navigation_app: Html)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Ist ein alter Chat und braucht man nicht. Neuer Chat ist mit Web-Socket -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    	<title>Comet Chat</title>
+
+	    <link rel="stylesheet" href="chat.css" type="text/css" />
+	 
+	    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	    
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	    
+		<script type="text/javascript" src="javascripts/app/ajax/chat.js"></script>
+
+    	<!-- Header -->
+        @header
+        
+    </head>
+    <body onload="connect()">
+    
+    	<!-- Navigation -->
+    	@navigation
+    	
+    	<!-- Container -->
+    	<div class="container-fluid">
+    	
+	    	<!-- Navigation -->
+	    	@navigation_app
+
+
+	    	<!-- Content -->
+		  	<div id="page-wrap">
+		   
+		        <h2>Wetter Chat</h2>
+		        
+		        <div id="chat-area"></div>
+		        
+		        <form id="send-message-form">
+		            
+					<p>Deine Nachricht: </p>
+
+					<textarea id="send-message-box" maxlength = '100' ></textarea>
+		        </form>  
+
+
+		        <div class="control-group">
+			        <input type="reset" class="btn" id="delete" value="L&ouml;schen" class="button"/>
+			        <input type="submit" class="btn" id="send" name="submit" value="Senden" class="button"/>
+			    </div>
+
+		    </div><!-- Content -->
+		
+			<!-- Menu Modal -->
+			<div class="modal hide fade" id="messageBox">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h3 id="dialogTitle"></h3>
+				</div>
+				<div class="modal-body">
+					<p id="dialogMessage"></p>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="btn" data-dismiss="modal"><i class="icon-ok"></i> ok</a>
+				</div>
+			</div>
+
+		<!-- Container -->
+    	</div>
+		
+		<!-- Additional Scripts -->
+		<script src="@routes.Assets.at("javascripts/app/ajax/trip.js")" type="text/javascript"></script>
+		
+    </body>
+</html>

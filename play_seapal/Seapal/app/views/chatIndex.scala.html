@@ -1,0 +1,20 @@
+@chatMain(null) {
+    
+    @if(flash.containsKey("error")) {
+        
+        <div class="alert-message error">
+            <p>
+                <strong>Oops! Ein Fehler ist aufgetreten. Versuchen Sie es bitte nochmals</strong> @flash.get("error")
+            </p>
+        </div>
+        
+    }
+        
+    <div class="alert-message block-message info">
+        <p>
+            <strong>Dies ist ein Wetterforum, bitte machen Sie nur Angaben wahrheitsgemäße Angaben über die aktuelle Wetterlage an Ihrem Standort!</strong> 
+            <p>Um sich Anzumelden, tragen Sie sich bitte oben rechts ein. Anschließend bitte den Button "beitreten" drücken.</p>
+        </p>
+    </div>
+    
+}
